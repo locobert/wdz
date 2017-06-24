@@ -6665,11 +6665,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:01
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -7109,11 +7110,12 @@ IEEE 802.15.4 Data, Dst: 14:15:92:cc:00:00:00:01, Src: 14:15:92:cc:00:00:00:02
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, IETF IE, Length: 17
             Payload IE TLV: 0x9811, Type: Payload, Id: IETF IE
@@ -7224,14 +7226,15 @@ IEEE 802.15.4 Ack, Sequence Number: 0, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0x9205 (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -7313,11 +7316,12 @@ IEEE 802.15.4 Data, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:92:cc:00:00:00:01
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, IETF IE, Length: 7
             Payload IE TLV: 0x9807, Type: Payload, Id: IETF IE
@@ -7562,11 +7566,12 @@ IEEE 802.15.4 Data, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:92:cc:00:00:00:01
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, IETF IE, Length: 7
             Payload IE TLV: 0x9807, Type: Payload, Id: IETF IE
@@ -7673,14 +7678,15 @@ IEEE 802.15.4 Ack, Sequence Number: 3, Dst: 14:15:92:cc:00:00:00:01, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0xee4a (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -8492,11 +8498,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:01
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -8618,11 +8625,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:02
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -9109,11 +9117,12 @@ IEEE 802.15.4 Data, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:92:cc:00:00:00:03
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:03 (14:15:92:cc:00:00:00:03)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, IETF IE, Length: 13
             Payload IE TLV: 0x980d, Type: Payload, Id: IETF IE
@@ -9224,14 +9233,15 @@ IEEE 802.15.4 Ack, Sequence Number: 0, Dst: 14:15:92:cc:00:00:00:03, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:03 (14:15:92:cc:00:00:00:03)
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0xcabd (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -9313,11 +9323,12 @@ IEEE 802.15.4 Data, Dst: 14:15:92:cc:00:00:00:03, Src: 14:15:92:cc:00:00:00:02
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:03 (14:15:92:cc:00:00:00:03)
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, IETF IE, Length: 7
             Payload IE TLV: 0x9807, Type: Payload, Id: IETF IE
@@ -9424,14 +9435,15 @@ IEEE 802.15.4 Ack, Sequence Number: 6, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:03 (14:15:92:cc:00:00:00:03)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0xbc3b (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -9513,11 +9525,12 @@ IEEE 802.15.4 Data, Dst: 14:15:92:cc:00:00:00:01, Src: 14:15:92:cc:00:00:00:02
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, IETF IE, Length: 13
             Payload IE TLV: 0x980d, Type: Payload, Id: IETF IE
@@ -9631,14 +9644,15 @@ IEEE 802.15.4 Ack, Sequence Number: 7, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0x3749 (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -9720,11 +9734,12 @@ IEEE 802.15.4 Data, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:92:cc:00:00:00:01
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, IETF IE, Length: 7
             Payload IE TLV: 0x9807, Type: Payload, Id: IETF IE
@@ -9831,14 +9846,15 @@ IEEE 802.15.4 Ack, Sequence Number: 8, Dst: 14:15:92:cc:00:00:00:01, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0x120c (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -10715,14 +10731,15 @@ IEEE 802.15.4 Ack, Sequence Number: 9, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0x75c0 (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -10892,14 +10909,15 @@ IEEE 802.15.4 Ack, Sequence Number: 2, Dst: 14:15:92:cc:00:00:00:03, Src: 14:15:
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:03 (14:15:92:cc:00:00:00:03)
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0xd13e (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -11069,14 +11087,15 @@ IEEE 802.15.4 Ack, Sequence Number: 10, Dst: 14:15:92:cc:00:00:00:02, Src: 14:15
     Destination PAN: 0xcafe
     Destination: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 0 us | Non-acknowledgement: False
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Time Correction IE
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0000, Time Correction: 0, Nack: Acknowledgement
+                .... 0000 0000 0000 = Time Correction: 0µs
+                0... .... .... .... = Nack: Acknowledgement
     FCS: 0xe78a (Correct)
 
 0000  00 ff 7e 5a 8e a0 00 ff 7f 5a 8e a0 86 dd 60 00   ..~Z.....Z....`.
@@ -11339,11 +11358,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:03
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:03 (14:15:92:cc:00:00:00:03)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -11465,11 +11485,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:01
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -12094,11 +12115,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:02
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -13701,11 +13723,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:03
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:03 (14:15:92:cc:00:00:00:03)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -14241,11 +14264,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:01
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:01 (14:15:92:cc:00:00:00:01)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE
@@ -14367,11 +14391,12 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: 14:15:92:cc:00:00:00:02
     Destination PAN: 0xcafe
     Destination: 0xffff
     Extended Source: 14:15:92:cc:00:00:00:02 (14:15:92:cc:00:00:00:02)
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         MLME IE
             Payload IE TLV: 0x881c, Type: Payload, Id: MLME IE

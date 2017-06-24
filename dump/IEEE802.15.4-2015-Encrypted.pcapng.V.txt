@@ -38,11 +38,12 @@ IEEE 802.15.4 Data, Src: 1e:af:fa:00:00:00:00:01
         Frame Counter: 1
         Key Identifier Field
             Key Index: 0x03
-    Header IE, Element ID: Header Termination 1, Length: 0
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Header Termination 1 IE
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, Unknown IE, Length: 34
             Payload IE TLV: 0xf022, Type: Payload, Id: Unknown

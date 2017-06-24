@@ -24,19 +24,22 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Header Termination 2, Length: 0
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        Header Termination: 0x3f80, Type: Header, Id: Header Termination 2
-            0... .... .... .... = Type: Header (0)
-            .011 1111 1... .... = Id: Header Termination 2 (0x7f)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Unknown IE 0xff, Header Termination 2 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 48 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 2 IE (Payload follows)
+            IE Header: 0x3f80, Type: Header, Id: Header Termination 2 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 1... .... = Id: Header Termination 2 IE (0x7f)
+                .... .... .000 0000 = Length: 0
 Data (3 bytes)
     Data: 031415
     [Length: 3]
@@ -72,23 +75,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Header Termination 2, Length: 1
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x3f81, Type: Header, Id: Header Termination 2
-            0... .... .... .... = Type: Header (0)
-            .011 1111 1... .... = Id: Header Termination 2 (0x7f)
-            .... .... .000 0001 = Length: 1
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
+    Header IEs, Unknown IE 0xff, Header Termination 2 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 48 54 32 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 2 IE (Payload follows)
+            IE Header: 0x3f81, Type: Header, Id: Header Termination 2 IE, Length: 1
+                0... .... .... .... = Type: Header (0)
+                .011 1111 1... .... = Id: Header Termination 2 IE (0x7f)
+                .... .... .000 0001 = Length: 1
+            Unknown Content: 77
+            [Expert Info (Warning/Protocol): Unexpected extra content for IE]
+                [Unexpected extra content for IE]
+                [Severity level: Warning]
+                [Group: Protocol]
 Data (3 bytes)
     Data: 031415
     [Length: 3]
@@ -124,22 +131,25 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 5 us | Non-acknowledgement: False
-            [.... 0000 0000 0101 = Time correction: 5]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Unknown IE 0xff, Time Correction IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 54 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0005, Time Correction: 5, Nack: Acknowledgement
+                .... 0000 0000 0101 = Time Correction: 5µs
+                0... .... .... .... = Nack: Acknowledgement
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  4f 4b 20 54 43 20 2b 35 20 2b 41 43 4b 20 20 20   OK TC +5 +ACK   
@@ -172,22 +182,25 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 5 us | Non-acknowledgement: True
-            [.... 0000 0000 0101 = Time correction: 5]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Unknown IE 0xff, Time Correction IE: NACK
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 54 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x8005, Time Correction: 5, Nack: Negative Acknowledgement
+                .... 0000 0000 0101 = Time Correction: 5µs
+                1... .... .... .... = Nack: Negative Acknowledgement
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  4f 4b 20 54 43 20 2b 35 20 4e 41 43 4b 20 20 20   OK TC +5 NACK   
@@ -220,22 +233,25 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: -7 us | Non-acknowledgement: False
-            [.... 1111 1111 1001 = Time correction: -7]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Unknown IE 0xff, Time Correction IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 54 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0ff9, Time Correction: -7, Nack: Acknowledgement
+                .... 1111 1111 1001 = Time Correction: -7µs
+                0... .... .... .... = Nack: Acknowledgement
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  4f 4b 20 54 43 20 2d 37 20 2b 41 43 4b 20 20 20   OK TC -7 +ACK   
@@ -268,22 +284,25 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: -7 us | Non-acknowledgement: True
-            [.... 1111 1111 1001 = Time correction: -7]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Unknown IE 0xff, Time Correction IE: NACK
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 54 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x8ff9, Time Correction: -7, Nack: Negative Acknowledgement
+                .... 1111 1111 1001 = Time Correction: -7µs
+                1... .... .... .... = Nack: Negative Acknowledgement
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  4f 4b 20 54 43 20 2d 37 20 4e 41 43 4b 20 20 20   OK TC -7 NACK   
@@ -316,20 +335,25 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 2
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 3 us | Non-acknowledgement: True
+    Header IEs, Unknown IE 0xff, Time Correction IE: NACK
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 49 6c 6c 65 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x9003, Time Correction: 3, Nack: Negative Acknowledgement
+                .... 0000 0000 0011 = Time Correction: 3µs
+                1... .... .... .... = Nack: Negative Acknowledgement
             [Expert Info (Warning/Protocol): Incorrect value. Reference: IEEE-802.15.4-2015. Table 7-8: Values of the Time Sync Info field for ACK with timing Information]
                 [Incorrect value. Reference: IEEE-802.15.4-2015. Table 7-8: Values of the Time Sync Info field for ACK with timing Information]
                 [Severity level: Warning]
@@ -366,20 +390,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 1
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f01, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0001 = Length: 1
-[Packet size limited during capture: IEEE 802.15.4 truncated]
+    Header IEs, Unknown IE 0xff, Time Correction IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 54 43 20 74 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f01, Type: Header, Id: Time Correction IE, Length: 1
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0001 = Length: 1
+            [Malformed Packet: IEEE 802.15.4]
+                [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
+                    [Malformed Packet (Exception occurred)]
+                    [Severity level: Error]
+                    [Group: Malformed]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  54 43 20 74 6f 6f 20 20 73 68 6f 72 74 20 20 20   TC too  short   
@@ -412,26 +443,32 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 1, Element ID: Header Termination 2, Length: 0
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f01, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0001 = Length: 1
-        Time correction: Time correction: 0 us | Non-acknowledgement: True
-            [.... 0000 0000 0000 = Time correction: 0]
-            [0... .... .... .... = Non-acknowledgement: False]
-        Header Termination: 0x3f80, Type: Header, Id: Header Termination 2
-            0... .... .... .... = Type: Header (0)
-            .011 1111 1... .... = Id: Header Termination 2 (0x7f)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Unknown IE 0xff, Time Correction IE, Header Termination 2 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 54 43 20 74 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f01, Type: Header, Id: Time Correction IE, Length: 1
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0001 = Length: 1
+            [Malformed Packet: IEEE 802.15.4]
+                [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
+                    [Malformed Packet (Exception occurred)]
+                    [Severity level: Error]
+                    [Group: Malformed]
+        Header Termination 2 IE (Payload follows)
+            IE Header: 0x3f80, Type: Header, Id: Header Termination 2 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 1... .... = Id: Header Termination 2 IE (0x7f)
+                .... .... .000 0000 = Length: 0
 Data (3 bytes)
     Data: 031415
     [Length: 3]
@@ -467,22 +504,30 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 3
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f03, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0011 = Length: 3
-        Time correction: Time correction: 5 us | Non-acknowledgement: False
-            [.... 0000 0000 0101 = Time correction: 5]
-            [0... .... .... .... = Non-acknowledgement: False]
+    Header IEs, Unknown IE 0xff, Time Correction IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 54 43 20 74 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f03, Type: Header, Id: Time Correction IE, Length: 3
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0011 = Length: 3
+            Time Sync Info: 0x0005, Time Correction: 5, Nack: Acknowledgement
+                .... 0000 0000 0101 = Time Correction: 5µs
+                0... .... .... .... = Nack: Acknowledgement
+            Unknown Content: 77
+            [Expert Info (Warning/Protocol): Unexpected extra content for IE]
+                [Unexpected extra content for IE]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  54 43 20 74 6f 6f 20 20 6c 6f 6e 67 20 20 20 20   TC too  long    
@@ -515,23 +560,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: CSL IE, Length: 4
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0d04, Type: Header, Id: CSL IE
-            0... .... .... .... = Type: Header (0)
-            .000 1101 0... .... = Id: CSL IE (0x1a)
-            .... .... .000 0100 = Length: 4
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
+    Header IEs, Unknown IE 0xff, Unsupported: CSL IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 43 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Unsupported Header IE: CSL IE
+            IE Header: 0x0d04, Type: Header, Id: CSL IE, Length: 4
+                0... .... .... .... = Type: Header (0)
+                .000 1101 0... .... = Id: CSL IE (0x1a)
+                .... .... .000 0100 = Length: 4
+            Unknown Content: 00 01 00 02
+            [Expert Info (Warning/Protocol): Unsupported IE element ID]
+                [Unsupported IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  4f 4b 20 43 53 4c 20 20 6e 6f 20 52 54 20 20 20   OK CSL  no RT   
@@ -564,23 +613,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: CSL IE, Length: 6
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0d06, Type: Header, Id: CSL IE
-            0... .... .... .... = Type: Header (0)
-            .000 1101 0... .... = Id: CSL IE (0x1a)
-            .... .... .000 0110 = Length: 6
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
+    Header IEs, Unknown IE 0xff, Unsupported: CSL IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 43 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Unsupported Header IE: CSL IE
+            IE Header: 0x0d06, Type: Header, Id: CSL IE, Length: 6
+                0... .... .... .... = Type: Header (0)
+                .000 1101 0... .... = Id: CSL IE (0x1a)
+                .... .... .000 0110 = Length: 6
+            Unknown Content: 00 01 00 02 00 03
+            [Expert Info (Warning/Protocol): Unsupported IE element ID]
+                [Unsupported IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  4f 4b 20 43 53 4c 20 20 77 69 74 68 20 52 54 20   OK CSL  with RT 
@@ -613,23 +666,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: CSL IE, Length: 7
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0d07, Type: Header, Id: CSL IE
-            0... .... .... .... = Type: Header (0)
-            .000 1101 0... .... = Id: CSL IE (0x1a)
-            .... .... .000 0111 = Length: 7
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
+    Header IEs, Unknown IE 0xff, Unsupported: CSL IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 43 53 4c 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Unsupported Header IE: CSL IE
+            IE Header: 0x0d07, Type: Header, Id: CSL IE, Length: 7
+                0... .... .... .... = Type: Header (0)
+                .000 1101 0... .... = Id: CSL IE (0x1a)
+                .... .... .000 0111 = Length: 7
+            Unknown Content: 00 01 00 02 00 03 77
+            [Expert Info (Warning/Protocol): Unsupported IE element ID]
+                [Unsupported IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  43 53 4c 20 74 6f 6f 20 6c 6f 6e 67 20 20 20 20   CSL too long    
@@ -662,23 +719,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: CSL IE, Length: 3
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0d03, Type: Header, Id: CSL IE
-            0... .... .... .... = Type: Header (0)
-            .000 1101 0... .... = Id: CSL IE (0x1a)
-            .... .... .000 0011 = Length: 3
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
+    Header IEs, Unknown IE 0xff, Unsupported: CSL IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 43 53 4c 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Unsupported Header IE: CSL IE
+            IE Header: 0x0d03, Type: Header, Id: CSL IE, Length: 3
+                0... .... .... .... = Type: Header (0)
+                .000 1101 0... .... = Id: CSL IE (0x1a)
+                .... .... .000 0011 = Length: 3
+            Unknown Content: 00 01 00
+            [Expert Info (Warning/Protocol): Unsupported IE element ID]
+                [Unsupported IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  43 53 4c 20 74 6f 6f 20 73 68 6f 72 74 20 20 20   CSL too short   
@@ -711,23 +772,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: CSL IE, Length: 5
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0d05, Type: Header, Id: CSL IE
-            0... .... .... .... = Type: Header (0)
-            .000 1101 0... .... = Id: CSL IE (0x1a)
-            .... .... .000 0101 = Length: 5
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
+    Header IEs, Unknown IE 0xff, Unsupported: CSL IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 43 53 4c 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Unsupported Header IE: CSL IE
+            IE Header: 0x0d05, Type: Header, Id: CSL IE, Length: 5
+                0... .... .... .... = Type: Header (0)
+                .000 1101 0... .... = Id: CSL IE (0x1a)
+                .... .... .000 0101 = Length: 5
+            Unknown Content: 00 01 00 02 00
+            [Expert Info (Warning/Protocol): Unsupported IE element ID]
+                [Unsupported IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  43 53 4c 20 69 6c 6c 2e 20 6c 65 6e 67 74 68 20   CSL ill. length 
@@ -760,19 +825,22 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Header Termination 1, Length: 0
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Unknown IE 0xff, Header Termination 1 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 48 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, Payload Termination IE, Length: 0
             Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
@@ -814,23 +882,27 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Header Termination 1, Length: 1
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x3f01, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0001 = Length: 1
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
+    Header IEs, Unknown IE 0xff, Header Termination 1 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 48 54 31 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f01, Type: Header, Id: Header Termination 1 IE, Length: 1
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0001 = Length: 1
+            Unknown Content: 77
+            [Expert Info (Warning/Protocol): Unexpected extra content for IE]
+                [Unexpected extra content for IE]
+                [Severity level: Warning]
+                [Group: Protocol]
     Payload IE
         Payload IE, Payload Termination IE, Length: 0
             Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
@@ -872,19 +944,22 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Header Termination 1, Length: 0
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Unknown IE 0xff, Header Termination 1 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 48 54 31 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
 [Malformed Packet: IEEE 802.15.4]
     [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
@@ -923,19 +998,22 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Header Termination 1, Length: 0
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Unknown IE 0xff, Header Termination 1 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 48 54 31 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
 [Malformed Packet: IEEE 802.15.4]
     [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
@@ -974,19 +1052,22 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Header Termination 1, Length: 0
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Unknown IE 0xff, Header Termination 1 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 50 54 20 74 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, Payload Termination IE, Length: 1
             Payload IE TLV: 0xf801, Type: Payload, Id: Payload Termination IE
@@ -1031,49 +1112,58 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IE, Element ID: Unknown IE, Length: 44, Element ID: Time Correction IE, Length: 2, Element ID: CSL IE, Length: 4, Element ID: Time Correction IE, Length: 2, Element ID: CSL IE, Length: 6, Element ID: Header Termination 1, Length: 0
-        IE Header: 0x7fac, Type: Header, Id: Unknown
-            0... .... .... .... = Type: Header (0)
-            .111 1111 1... .... = Id: Unknown (0xff)
-            .... .... .010 1100 = Length: 44
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: 5 us | Non-acknowledgement: False
-            [.... 0000 0000 0101 = Time correction: 5]
-            [0... .... .... .... = Non-acknowledgement: False]
-        IE Header: 0x0d04, Type: Header, Id: CSL IE
-            0... .... .... .... = Type: Header (0)
-            .000 1101 0... .... = Id: CSL IE (0x1a)
-            .... .... .000 0100 = Length: 4
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        IE Header: 0x0f02, Type: Header, Id: Time Correction IE
-            0... .... .... .... = Type: Header (0)
-            .000 1111 0... .... = Id: Time Correction IE (0x1e)
-            .... .... .000 0010 = Length: 2
-        Time correction: Time correction: -7 us | Non-acknowledgement: True
-            [.... 1111 1111 1001 = Time correction: -7]
-            [0... .... .... .... = Non-acknowledgement: False]
-        IE Header: 0x0d06, Type: Header, Id: CSL IE
-            0... .... .... .... = Type: Header (0)
-            .000 1101 0... .... = Id: CSL IE (0x1a)
-            .... .... .000 0110 = Length: 6
-        [Expert Info (Warning/Protocol): Unsupported Header IE element ID]
-            [Unsupported Header IE element ID]
-            [Severity level: Warning]
-            [Group: Protocol]
-        Header Termination: 0x3f00, Type: Header, Id: Header Termination 1
-            0... .... .... .... = Type: Header (0)
-            .011 1111 0... .... = Id: Header Termination 1 (0x7e)
-            .... .... .000 0000 = Length: 0
+    Header IEs, Unknown IE 0xff, Time Correction IE, Unsupported: CSL IE, Time Correction IE: NACK, Unsupported: CSL IE, Header Termination 1 IE
+        Unknown Header IE: 0xff
+            IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
+                0... .... .... .... = Type: Header (0)
+                .111 1111 1... .... = Id: Unknown (0xff)
+                .... .... .010 1100 = Length: 44
+            Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4f 4b 20 20 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x0005, Time Correction: 5, Nack: Acknowledgement
+                .... 0000 0000 0101 = Time Correction: 5µs
+                0... .... .... .... = Nack: Acknowledgement
+        Unsupported Header IE: CSL IE
+            IE Header: 0x0d04, Type: Header, Id: CSL IE, Length: 4
+                0... .... .... .... = Type: Header (0)
+                .000 1101 0... .... = Id: CSL IE (0x1a)
+                .... .... .000 0100 = Length: 4
+            Unknown Content: 00 01 00 02
+            [Expert Info (Warning/Protocol): Unsupported IE element ID]
+                [Unsupported IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Time Correction IE
+            IE Header: 0x0f02, Type: Header, Id: Time Correction IE, Length: 2
+                0... .... .... .... = Type: Header (0)
+                .000 1111 0... .... = Id: Time Correction IE (0x1e)
+                .... .... .000 0010 = Length: 2
+            Time Sync Info: 0x8ff9, Time Correction: -7, Nack: Negative Acknowledgement
+                .... 1111 1111 1001 = Time Correction: -7µs
+                1... .... .... .... = Nack: Negative Acknowledgement
+        Unsupported Header IE: CSL IE
+            IE Header: 0x0d06, Type: Header, Id: CSL IE, Length: 6
+                0... .... .... .... = Type: Header (0)
+                .000 1101 0... .... = Id: CSL IE (0x1a)
+                .... .... .000 0110 = Length: 6
+            Unknown Content: 00 01 00 02 00 03
+            [Expert Info (Warning/Protocol): Unsupported IE element ID]
+                [Unsupported IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
+        Header Termination 1 IE (Payload IEs follow)
+            IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
+                0... .... .... .... = Type: Header (0)
+                .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
+                .... .... .000 0000 = Length: 0
     Payload IE
         Payload IE, Payload Termination IE, Length: 0
             Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
