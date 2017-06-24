@@ -1,0 +1,969 @@
+Frame 1: 23 bytes on wire (184 bits), 23 bytes captured (184 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000000000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000000000 seconds
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.000000000 seconds]
+    Frame Number: 1
+    Frame Length: 23 bytes (184 bits)
+    Capture Length: 23 bytes (184 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:11:11:11:11:11 (0a:11:11:11:11:11), Dst: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+    Destination: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 5
+Extensible Authentication Protocol
+    Code: Request (1)
+    Id: 167
+    Length: 5
+    Type: Identity (1)
+
+0000  0a 22 22 22 22 22 0a 11 11 11 11 11 88 8e 02 00   ."""""..........
+0010  00 05 01 a7 00 05 01                              .......
+
+Frame 2: 27 bytes on wire (216 bits), 27 bytes captured (216 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000001000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000001000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000001000 seconds]
+    Frame Number: 2
+    Frame Length: 27 bytes (216 bits)
+    Capture Length: 27 bytes (216 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:22:22:22:22:22 (0a:22:22:22:22:22), Dst: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+    Destination: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 9
+Extensible Authentication Protocol
+    Code: Response (2)
+    Id: 167
+    Length: 9
+    Type: Identity (1)
+    Identity: user
+
+0000  0a 11 11 11 11 11 0a 22 22 22 22 22 88 8e 02 00   ......."""""....
+0010  00 09 02 a7 00 09 01 75 73 65 72                  .......user
+
+Frame 3: 24 bytes on wire (192 bits), 24 bytes captured (192 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000002000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000002000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000002000 seconds]
+    Frame Number: 3
+    Frame Length: 24 bytes (192 bits)
+    Capture Length: 24 bytes (192 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:11:11:11:11:11 (0a:11:11:11:11:11), Dst: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+    Destination: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 6
+Extensible Authentication Protocol
+    Code: Request (1)
+    Id: 168
+    Length: 6
+    Type: TLS EAP (EAP-TLS) (13)
+    EAP-TLS Flags: 0x20
+        0... .... = Length Included: False
+        .0.. .... = More Fragments: False
+        ..1. .... = Start: True
+
+0000  0a 22 22 22 22 22 0a 11 11 11 11 11 88 8e 02 00   ."""""..........
+0010  00 06 01 a8 00 06 0d 20                           ....... 
+
+Frame 4: 114 bytes on wire (912 bits), 114 bytes captured (912 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000003000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000003000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000003000 seconds]
+    Frame Number: 4
+    Frame Length: 114 bytes (912 bits)
+    Capture Length: 114 bytes (912 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol:ssl]
+Ethernet II, Src: 0a:22:22:22:22:22 (0a:22:22:22:22:22), Dst: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+    Destination: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 96
+Extensible Authentication Protocol
+    Code: Response (2)
+    Id: 168
+    Length: 96
+    Type: TLS EAP (EAP-TLS) (13)
+    EAP-TLS Flags: 0x00
+        0... .... = Length Included: False
+        .0.. .... = More Fragments: False
+        ..0. .... = Start: False
+    Secure Sockets Layer
+        TLSv1 Record Layer: Handshake Protocol: Client Hello
+            Content Type: Handshake (22)
+            Version: TLS 1.0 (0x0301)
+            Length: 85
+            Handshake Protocol: Client Hello
+                Handshake Type: Client Hello (1)
+                Length: 81
+                Version: TLS 1.2 (0x0303)
+                Random: 593665011cfd1dae3bdccbe1e4b92664e11246c85bbda786...
+                    GMT Unix Time: Jun  6, 2017 10:17:05.000000000 CEST
+                    Random Bytes: 1cfd1dae3bdccbe1e4b92664e11246c85bbda78638882334...
+                Session ID Length: 0
+                Cipher Suites Length: 6
+                Cipher Suites (3 suites)
+                    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (0xc0ae)
+                    Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 (0xc025)
+                    Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
+                Compression Methods Length: 1
+                Compression Methods (1 method)
+                    Compression Method: null (0)
+                Extensions Length: 34
+                Extension: signature_algorithms (len=8)
+                    Type: signature_algorithms (13)
+                    Length: 8
+                    Signature Hash Algorithms Length: 6
+                    Signature Hash Algorithms (3 algorithms)
+                        Signature Hash Algorithm: 0x0403
+                            Signature Hash Algorithm Hash: SHA256 (4)
+                            Signature Hash Algorithm Signature: ECDSA (3)
+                        Signature Hash Algorithm: 0x0303
+                            Signature Hash Algorithm Hash: SHA224 (3)
+                            Signature Hash Algorithm Signature: ECDSA (3)
+                        Signature Hash Algorithm: 0x0203
+                            Signature Hash Algorithm Hash: SHA1 (2)
+                            Signature Hash Algorithm Signature: ECDSA (3)
+                Extension: supported_groups (len=4)
+                    Type: supported_groups (10)
+                    Length: 4
+                    Supported Groups List Length: 2
+                    Supported Groups (1 group)
+                        Supported Group: secp256r1 (0x0017)
+                Extension: ec_point_formats (len=2)
+                    Type: ec_point_formats (11)
+                    Length: 2
+                    EC point formats Length: 1
+                    Elliptic curves point formats (1)
+                        EC point format: uncompressed (0)
+                Extension: encrypt_then_mac (len=0)
+                    Type: encrypt_then_mac (22)
+                    Length: 0
+                Extension: extended_master_secret (len=0)
+                    Type: extended_master_secret (23)
+                    Length: 0
+
+0000  0a 11 11 11 11 11 0a 22 22 22 22 22 88 8e 02 00   ......."""""....
+0010  00 60 02 a8 00 60 0d 00 16 03 01 00 55 01 00 00   .`...`......U...
+0020  51 03 03 59 36 65 01 1c fd 1d ae 3b dc cb e1 e4   Q..Y6e.....;....
+0030  b9 26 64 e1 12 46 c8 5b bd a7 86 38 88 23 34 d7   .&d..F.[...8.#4.
+0040  54 b4 ee 00 00 06 c0 ae c0 25 00 ff 01 00 00 22   T........%....."
+0050  00 0d 00 08 00 06 04 03 03 03 02 03 00 0a 00 04   ................
+0060  00 02 00 17 00 0b 00 02 01 00 00 16 00 00 00 17   ................
+0070  00 00                                             ..
+
+Frame 5: 618 bytes on wire (4944 bits), 618 bytes captured (4944 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000004000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000004000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000004000 seconds]
+    Frame Number: 5
+    Frame Length: 618 bytes (4944 bits)
+    Capture Length: 618 bytes (4944 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol:ssl:x509sat:pkcs-1:x509sat]
+Ethernet II, Src: 0a:11:11:11:11:11 (0a:11:11:11:11:11), Dst: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+    Destination: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 600
+Extensible Authentication Protocol
+    Code: Request (1)
+    Id: 169
+    Length: 600
+    Type: TLS EAP (EAP-TLS) (13)
+    EAP-TLS Flags: 0x00
+        0... .... = Length Included: False
+        .0.. .... = More Fragments: False
+        ..0. .... = Start: False
+    Secure Sockets Layer
+        TLSv1.2 Record Layer: Handshake Protocol: Server Hello
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 91
+            Handshake Protocol: Server Hello
+                Handshake Type: Server Hello (2)
+                Length: 87
+                Version: TLS 1.2 (0x0303)
+                Random: 593665015b200773056c77fe88bdd8c5dd025f10c268bdd2...
+                    GMT Unix Time: Jun  6, 2017 10:17:05.000000000 CEST
+                    Random Bytes: 5b200773056c77fe88bdd8c5dd025f10c268bdd2a0997ae7...
+                Session ID Length: 32
+                Session ID: 2eb5cc04e337dc12890f0bf69d64764df604b580a0983235...
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (0xc0ae)
+                Compression Method: null (0)
+                Extensions Length: 15
+                Extension: renegotiation_info (len=1)
+                    Type: renegotiation_info (65281)
+                    Length: 1
+                    Renegotiation Info extension
+                        Renegotiation info extension length: 0
+                Extension: extended_master_secret (len=0)
+                    Type: extended_master_secret (23)
+                    Length: 0
+                Extension: ec_point_formats (len=2)
+                    Type: ec_point_formats (11)
+                    Length: 2
+                    EC point formats Length: 1
+                    Elliptic curves point formats (1)
+                        EC point format: uncompressed (0)
+        TLSv1.2 Record Layer: Handshake Protocol: Certificate
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 281
+            Handshake Protocol: Certificate
+                Handshake Type: Certificate (11)
+                Length: 277
+                Certificates Length: 274
+                Certificates (274 bytes)
+                    Certificate Length: 271
+                    Certificate: 3082010b3081b2020900b3660fe12d913054300a06082a86... ()
+                        signedCertificate
+                            serialNumber: -5519706833489416108
+                            signature (ecdsa-with-SHA256)
+                                Algorithm Id: 1.2.840.10045.4.3.2 (ecdsa-with-SHA256)
+                            issuer: rdnSequence (0)
+                                rdnSequence: 1 item (id-at-commonName=locoslab-wisun-ca)
+                                    RDNSequence item: 1 item (id-at-commonName=locoslab-wisun-ca)
+                                        RelativeDistinguishedName item (id-at-commonName=locoslab-wisun-ca)
+                                            Id: 2.5.4.3 (id-at-commonName)
+                                            DirectoryString: uTF8String (4)
+                                                uTF8String: locoslab-wisun-ca
+                            validity
+                                notBefore: utcTime (0)
+                                    utcTime: 17-04-05 13:58:53 (UTC)
+                                notAfter: utcTime (0)
+                                    utcTime: 44-08-20 13:58:53 (UTC)
+                            subject: rdnSequence (0)
+                                rdnSequence: 0 items
+                            subjectPublicKeyInfo
+                                algorithm (id-ecPublicKey)
+                                    Algorithm Id: 1.2.840.10045.2.1 (id-ecPublicKey)
+                                    ECParameters: namedCurve (0)
+                                        namedCurve: 1.2.840.10045.3.1.7 (secp256r1)
+                                Padding: 0
+                                subjectPublicKey: 04a17b8c63b7a1ff2be4f6345fe1f451677c9157101392b6...
+                        algorithmIdentifier (ecdsa-with-SHA256)
+                            Algorithm Id: 1.2.840.10045.4.3.2 (ecdsa-with-SHA256)
+                        Padding: 0
+                        encrypted: 304502207197333e8b2e9d28c92a402bdbb1adc4e40eaedb...
+        TLSv1.2 Record Layer: Handshake Protocol: Server Key Exchange
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 147
+            Handshake Protocol: Server Key Exchange
+                Handshake Type: Server Key Exchange (12)
+                Length: 143
+                EC Diffie-Hellman Server Params
+                    Curve Type: named_curve (0x03)
+                    Named Curve: secp256r1 (0x0017)
+                    Pubkey Length: 65
+                    Pubkey: 042ad5b745848cd714d414f10d92503eecb6f0853f1537e9...
+                    Signature Hash Algorithm: 0x0403
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Length: 70
+                    Signature: 304402205765d9ed258ad8b6f06f4a900ae50d8cf2e319c9...
+        TLSv1.2 Record Layer: Handshake Protocol: Certificate Request
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 46
+            Handshake Protocol: Certificate Request
+                Handshake Type: Certificate Request (13)
+                Length: 42
+                Certificate types count: 1
+                Certificate types (1 type)
+                    Certificate type: ECDSA Sign (64)
+                Signature Hash Algorithms Length: 4
+                Signature Hash Algorithms (2 algorithms)
+                    Signature Hash Algorithm: 0x0403
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0203
+                        Signature Hash Algorithm Hash: SHA1 (2)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                Distinguished Names Length: 32
+                Distinguished Names (32 bytes)
+                    Distinguished Name Length: 30
+                    Distinguished Name: (id-at-commonName=locoslab-wisun-ca)
+                        RDNSequence item: 1 item (id-at-commonName=locoslab-wisun-ca)
+                            RelativeDistinguishedName item (id-at-commonName=locoslab-wisun-ca)
+                                Id: 2.5.4.3 (id-at-commonName)
+                                DirectoryString: uTF8String (4)
+                                    uTF8String: locoslab-wisun-ca
+        TLSv1.2 Record Layer: Handshake Protocol: Server Hello Done
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 4
+            Handshake Protocol: Server Hello Done
+                Handshake Type: Server Hello Done (14)
+                Length: 0
+
+0000  0a 22 22 22 22 22 0a 11 11 11 11 11 88 8e 02 00   ."""""..........
+0010  02 58 01 a9 02 58 0d 00 16 03 03 00 5b 02 00 00   .X...X......[...
+0020  57 03 03 59 36 65 01 5b 20 07 73 05 6c 77 fe 88   W..Y6e.[ .s.lw..
+0030  bd d8 c5 dd 02 5f 10 c2 68 bd d2 a0 99 7a e7 2d   ....._..h....z.-
+0040  e4 f9 11 20 2e b5 cc 04 e3 37 dc 12 89 0f 0b f6   ... .....7......
+0050  9d 64 76 4d f6 04 b5 80 a0 98 32 35 f6 00 93 a9   .dvM......25....
+0060  99 f0 89 89 c0 ae 00 00 0f ff 01 00 01 00 00 17   ................
+0070  00 00 00 0b 00 02 01 00 16 03 03 01 19 0b 00 01   ................
+0080  15 00 01 12 00 01 0f 30 82 01 0b 30 81 b2 02 09   .......0...0....
+0090  00 b3 66 0f e1 2d 91 30 54 30 0a 06 08 2a 86 48   ..f..-.0T0...*.H
+00a0  ce 3d 04 03 02 30 1c 31 1a 30 18 06 03 55 04 03   .=...0.1.0...U..
+00b0  0c 11 6c 6f 63 6f 73 6c 61 62 2d 77 69 73 75 6e   ..locoslab-wisun
+00c0  2d 63 61 30 1e 17 0d 31 37 30 34 30 35 31 33 35   -ca0...170405135
+00d0  38 35 33 5a 17 0d 34 34 30 38 32 30 31 33 35 38   853Z..4408201358
+00e0  35 33 5a 30 00 30 59 30 13 06 07 2a 86 48 ce 3d   53Z0.0Y0...*.H.=
+00f0  02 01 06 08 2a 86 48 ce 3d 03 01 07 03 42 00 04   ....*.H.=....B..
+0100  a1 7b 8c 63 b7 a1 ff 2b e4 f6 34 5f e1 f4 51 67   .{.c...+..4_..Qg
+0110  7c 91 57 10 13 92 b6 0f 15 d1 d7 ab 0e 19 e7 0f   |.W.............
+0120  ba 49 b2 48 4d dd 89 f1 86 4c 30 b1 ae ce cf b8   .I.HM....L0.....
+0130  6c d8 6d 59 f7 99 32 00 a1 e4 a2 e6 1b cf 61 ec   l.mY..2.......a.
+0140  30 0a 06 08 2a 86 48 ce 3d 04 03 02 03 48 00 30   0...*.H.=....H.0
+0150  45 02 20 71 97 33 3e 8b 2e 9d 28 c9 2a 40 2b db   E. q.3>...(.*@+.
+0160  b1 ad c4 e4 0e ae db 1a 3d d4 a4 8f ab 75 87 9e   ........=....u..
+0170  c3 0a 63 02 21 00 e1 bd 9e c1 8a f1 49 e1 02 ca   ..c.!.......I...
+0180  25 e5 dc a1 f4 f3 96 f0 3c 08 a5 0f 67 bb fd a7   %.......<...g...
+0190  c1 22 6a b6 50 c2 16 03 03 00 93 0c 00 00 8f 03   ."j.P...........
+01a0  00 17 41 04 2a d5 b7 45 84 8c d7 14 d4 14 f1 0d   ..A.*..E........
+01b0  92 50 3e ec b6 f0 85 3f 15 37 e9 a6 fa 4a 76 0b   .P>....?.7...Jv.
+01c0  53 6e 9c 69 27 74 dd 50 29 79 23 8e ae ec e6 ec   Sn.i't.P)y#.....
+01d0  f3 b9 39 47 28 a4 c9 3a bf 08 b6 6d bc c5 3e 1e   ..9G(..:...m..>.
+01e0  66 9a a8 99 04 03 00 46 30 44 02 20 57 65 d9 ed   f......F0D. We..
+01f0  25 8a d8 b6 f0 6f 4a 90 0a e5 0d 8c f2 e3 19 c9   %....oJ.........
+0200  90 af bf dc ea 3d 8e 3a e1 4c 35 f8 02 20 25 44   .....=.:.L5.. %D
+0210  fa 77 7b 05 1c ff 8c bc cb 49 cb 98 0a 1b 56 13   .w{......I....V.
+0220  21 7c fa e5 cf f4 57 41 82 cb b5 e4 2b 9b 16 03   !|....WA....+...
+0230  03 00 2e 0d 00 00 2a 01 40 00 04 04 03 02 03 00   ......*.@.......
+0240  20 00 1e 30 1c 31 1a 30 18 06 03 55 04 03 0c 11    ..0.1.0...U....
+0250  6c 6f 63 6f 73 6c 61 62 2d 77 69 73 75 6e 2d 63   locoslab-wisun-c
+0260  61 16 03 03 00 04 0e 00 00 00                     a.........
+
+Frame 6: 512 bytes on wire (4096 bits), 512 bytes captured (4096 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000005000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000005000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000005000 seconds]
+    Frame Number: 6
+    Frame Length: 512 bytes (4096 bits)
+    Capture Length: 512 bytes (4096 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol:ssl:x509sat:pkcs-1]
+Ethernet II, Src: 0a:22:22:22:22:22 (0a:22:22:22:22:22), Dst: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+    Destination: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 494
+Extensible Authentication Protocol
+    Code: Response (2)
+    Id: 169
+    Length: 494
+    Type: TLS EAP (EAP-TLS) (13)
+    EAP-TLS Flags: 0x00
+        0... .... = Length Included: False
+        .0.. .... = More Fragments: False
+        ..0. .... = Start: False
+    Secure Sockets Layer
+        TLSv1.2 Record Layer: Handshake Protocol: Certificate
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 281
+            Handshake Protocol: Certificate
+                Handshake Type: Certificate (11)
+                Length: 277
+                Certificates Length: 274
+                Certificates (274 bytes)
+                    Certificate Length: 271
+                    Certificate: 3082010b3081b2020900b3660fe12d913053300a06082a86... ()
+                        signedCertificate
+                            serialNumber: -5519706833489416109
+                            signature (ecdsa-with-SHA256)
+                                Algorithm Id: 1.2.840.10045.4.3.2 (ecdsa-with-SHA256)
+                            issuer: rdnSequence (0)
+                                rdnSequence: 1 item (id-at-commonName=locoslab-wisun-ca)
+                                    RDNSequence item: 1 item (id-at-commonName=locoslab-wisun-ca)
+                                        RelativeDistinguishedName item (id-at-commonName=locoslab-wisun-ca)
+                                            Id: 2.5.4.3 (id-at-commonName)
+                                            DirectoryString: uTF8String (4)
+                                                uTF8String: locoslab-wisun-ca
+                            validity
+                                notBefore: utcTime (0)
+                                    utcTime: 17-04-05 13:58:53 (UTC)
+                                notAfter: utcTime (0)
+                                    utcTime: 44-08-20 13:58:53 (UTC)
+                            subject: rdnSequence (0)
+                                rdnSequence: 0 items
+                            subjectPublicKeyInfo
+                                algorithm (id-ecPublicKey)
+                                    Algorithm Id: 1.2.840.10045.2.1 (id-ecPublicKey)
+                                    ECParameters: namedCurve (0)
+                                        namedCurve: 1.2.840.10045.3.1.7 (secp256r1)
+                                Padding: 0
+                                subjectPublicKey: 04aa52c4b4e2470acf61fd7f36907a43483629a67335aa9b...
+                        algorithmIdentifier (ecdsa-with-SHA256)
+                            Algorithm Id: 1.2.840.10045.4.3.2 (ecdsa-with-SHA256)
+                        Padding: 0
+                        encrypted: 3045022038731ebef1361e477eec02f11246876409dfccf2...
+        TLSv1.2 Record Layer: Handshake Protocol: Client Key Exchange
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 70
+            Handshake Protocol: Client Key Exchange
+                Handshake Type: Client Key Exchange (16)
+                Length: 66
+                EC Diffie-Hellman Client Params
+                    Pubkey Length: 65
+                    Pubkey: 044f5b83d13f810d9c21cfc9ce11219f3fa122ce156eef9e...
+        TLSv1.2 Record Layer: Handshake Protocol: Certificate Verify
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 79
+            Handshake Protocol: Certificate Verify
+                Handshake Type: Certificate Verify (15)
+                Length: 75
+                Signature Hash Algorithm: 0x0403
+                    Signature Hash Algorithm Hash: SHA256 (4)
+                    Signature Hash Algorithm Signature: ECDSA (3)
+                Signature length: 71
+                Signature: 304502210097d0fd0c2219f8fbd5c9b12ef16dc5a13c9f33...
+        TLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+            Content Type: Change Cipher Spec (20)
+            Version: TLS 1.2 (0x0303)
+            Length: 1
+            Change Cipher Spec Message
+        TLSv1.2 Record Layer: Handshake Protocol: Encrypted Handshake Message
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 32
+            Handshake Protocol: Encrypted Handshake Message
+
+0000  0a 11 11 11 11 11 0a 22 22 22 22 22 88 8e 02 00   ......."""""....
+0010  01 ee 02 a9 01 ee 0d 00 16 03 03 01 19 0b 00 01   ................
+0020  15 00 01 12 00 01 0f 30 82 01 0b 30 81 b2 02 09   .......0...0....
+0030  00 b3 66 0f e1 2d 91 30 53 30 0a 06 08 2a 86 48   ..f..-.0S0...*.H
+0040  ce 3d 04 03 02 30 1c 31 1a 30 18 06 03 55 04 03   .=...0.1.0...U..
+0050  0c 11 6c 6f 63 6f 73 6c 61 62 2d 77 69 73 75 6e   ..locoslab-wisun
+0060  2d 63 61 30 1e 17 0d 31 37 30 34 30 35 31 33 35   -ca0...170405135
+0070  38 35 33 5a 17 0d 34 34 30 38 32 30 31 33 35 38   853Z..4408201358
+0080  35 33 5a 30 00 30 59 30 13 06 07 2a 86 48 ce 3d   53Z0.0Y0...*.H.=
+0090  02 01 06 08 2a 86 48 ce 3d 03 01 07 03 42 00 04   ....*.H.=....B..
+00a0  aa 52 c4 b4 e2 47 0a cf 61 fd 7f 36 90 7a 43 48   .R...G..a..6.zCH
+00b0  36 29 a6 73 35 aa 9b 5c 4b 33 de 58 66 9f 00 74   6).s5..\K3.Xf..t
+00c0  3b a5 b5 63 4c 86 6c 33 4a d4 1f 68 71 e2 07 1e   ;..cL.l3J..hq...
+00d0  e8 e8 60 37 de ef 9f 8a 0e d8 6f b3 0d c7 8d a8   ..`7......o.....
+00e0  30 0a 06 08 2a 86 48 ce 3d 04 03 02 03 48 00 30   0...*.H.=....H.0
+00f0  45 02 20 38 73 1e be f1 36 1e 47 7e ec 02 f1 12   E. 8s...6.G~....
+0100  46 87 64 09 df cc f2 bc 79 44 1c 1f 70 da 4d c3   F.d.....yD..p.M.
+0110  4c da 98 02 21 00 a3 c5 59 76 67 41 ab f0 ab da   L...!...YvgA....
+0120  b5 76 13 47 d2 4f ba 4e 05 07 89 78 22 d0 fc 19   .v.G.O.N...x"...
+0130  e2 af 0d b5 f9 31 16 03 03 00 46 10 00 00 42 41   .....1....F...BA
+0140  04 4f 5b 83 d1 3f 81 0d 9c 21 cf c9 ce 11 21 9f   .O[..?...!....!.
+0150  3f a1 22 ce 15 6e ef 9e 27 a9 db a2 a5 e3 b1 0f   ?."..n..'.......
+0160  0a fc 24 fb 81 8a 98 35 ce de cb 0b d0 94 bb a1   ..$....5........
+0170  00 44 6c 0b bb f4 ec d3 2f ef f4 7b 89 b1 81 8f   .Dl...../..{....
+0180  34 16 03 03 00 4f 0f 00 00 4b 04 03 00 47 30 45   4....O...K...G0E
+0190  02 21 00 97 d0 fd 0c 22 19 f8 fb d5 c9 b1 2e f1   .!....."........
+01a0  6d c5 a1 3c 9f 33 16 a4 a4 dc ef 99 4d 63 b1 50   m..<.3......Mc.P
+01b0  bd 58 ff 02 20 6a 8f 6e 82 1a e3 bb 39 bc 2e f1   .X.. j.n....9...
+01c0  3b 7f e1 24 d9 c1 c9 ac 0f d9 10 04 cd b8 a6 7c   ;..$...........|
+01d0  3f 54 10 1f f0 14 03 03 00 01 01 16 03 03 00 20   ?T............. 
+01e0  00 00 00 00 00 00 00 00 a5 ce 0d 9e 5e 4b ce 66   ............^K.f
+01f0  92 c6 23 df 71 ee a3 1c 1b 09 d5 88 4e cb 4b e4   ..#.q.......N.K.
+
+Frame 7: 67 bytes on wire (536 bits), 67 bytes captured (536 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000006000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000006000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000006000 seconds]
+    Frame Number: 7
+    Frame Length: 67 bytes (536 bits)
+    Capture Length: 67 bytes (536 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol:ssl]
+Ethernet II, Src: 0a:11:11:11:11:11 (0a:11:11:11:11:11), Dst: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+    Destination: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 49
+Extensible Authentication Protocol
+    Code: Request (1)
+    Id: 170
+    Length: 49
+    Type: TLS EAP (EAP-TLS) (13)
+    EAP-TLS Flags: 0x00
+        0... .... = Length Included: False
+        .0.. .... = More Fragments: False
+        ..0. .... = Start: False
+    Secure Sockets Layer
+        TLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+            Content Type: Change Cipher Spec (20)
+            Version: TLS 1.2 (0x0303)
+            Length: 1
+            Change Cipher Spec Message
+        TLSv1.2 Record Layer: Handshake Protocol: Encrypted Handshake Message
+            Content Type: Handshake (22)
+            Version: TLS 1.2 (0x0303)
+            Length: 32
+            Handshake Protocol: Encrypted Handshake Message
+
+0000  0a 22 22 22 22 22 0a 11 11 11 11 11 88 8e 02 00   ."""""..........
+0010  00 31 01 aa 00 31 0d 00 14 03 03 00 01 01 16 03   .1...1..........
+0020  03 00 20 00 00 00 00 00 00 00 00 0f d8 0e 8e 81   .. .............
+0030  63 39 40 63 27 22 3f e3 69 6f dc 4a fd 9c 7e 7d   c9@c'"?.io.J..~}
+0040  34 77 fa                                          4w.
+
+Frame 8: 24 bytes on wire (192 bits), 24 bytes captured (192 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000007000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000007000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000007000 seconds]
+    Frame Number: 8
+    Frame Length: 24 bytes (192 bits)
+    Capture Length: 24 bytes (192 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:22:22:22:22:22 (0a:22:22:22:22:22), Dst: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+    Destination: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 6
+Extensible Authentication Protocol
+    Code: Response (2)
+    Id: 170
+    Length: 6
+    Type: TLS EAP (EAP-TLS) (13)
+    EAP-TLS Flags: 0x00
+        0... .... = Length Included: False
+        .0.. .... = More Fragments: False
+        ..0. .... = Start: False
+
+0000  0a 11 11 11 11 11 0a 22 22 22 22 22 88 8e 02 00   ......."""""....
+0010  00 06 02 aa 00 06 0d 00                           ........
+
+Frame 9: 22 bytes on wire (176 bits), 22 bytes captured (176 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000008000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000008000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000008000 seconds]
+    Frame Number: 9
+    Frame Length: 22 bytes (176 bits)
+    Capture Length: 22 bytes (176 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:11:11:11:11:11 (0a:11:11:11:11:11), Dst: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+    Destination: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: EAP Packet (0)
+    Length: 4
+Extensible Authentication Protocol
+    Code: Success (3)
+    Id: 170
+    Length: 4
+
+0000  0a 22 22 22 22 22 0a 11 11 11 11 11 88 8e 02 00   ."""""..........
+0010  00 04 03 aa 00 04                                 ......
+
+Frame 10: 135 bytes on wire (1080 bits), 135 bytes captured (1080 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000009000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000009000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000009000 seconds]
+    Frame Number: 10
+    Frame Length: 135 bytes (1080 bits)
+    Capture Length: 135 bytes (1080 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:22:22:22:22:22 (0a:22:22:22:22:22), Dst: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+    Destination: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: Key (3)
+    Length: 117
+    Key Descriptor Type: EAPOL RSN Key (2)
+    Key Information: 0x008a
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .0.. .... = Install: Not set
+        .... .... 1... .... = Key ACK: Set
+        .... ...0 .... .... = Key MIC: Not set
+        .... ..0. .... .... = Secure: Not set
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...0 .... .... .... = Encrypted Key Data: Not set
+        ..0. .... .... .... = SMK Message: Not set
+    Key Length: 16
+    Replay Counter: 1
+    WPA Key Nonce: 328c894d2d8fe8c4b81f971a3f67ab67288dc92d42ff422f...
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: 00000000000000000000000000000000
+    WPA Key Data Length: 22
+    WPA Key Data: dd14000fac0403bd8c1df0e83ec9fe50d4cf7caae138
+        Tag: Vendor Specific: Ieee8021: RSN
+            Tag Number: Vendor Specific (221)
+            Tag length: 20
+            OUI: 00-0f-ac (Ieee8021)
+            Vendor Specific OUI Type: 4
+            RSN PMKID: 03bd8c1df0e83ec9fe50d4cf7caae138
+
+0000  0a 11 11 11 11 11 0a 22 22 22 22 22 88 8e 02 03   ......."""""....
+0010  00 75 02 00 8a 00 10 00 00 00 00 00 00 00 01 32   .u.............2
+0020  8c 89 4d 2d 8f e8 c4 b8 1f 97 1a 3f 67 ab 67 28   ..M-.......?g.g(
+0030  8d c9 2d 42 ff 42 2f 80 2a 69 d3 c0 58 3d d0 00   ..-B.B/.*i..X=..
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  16 dd 14 00 0f ac 04 03 bd 8c 1d f0 e8 3e c9 fe   .............>..
+0080  50 d4 cf 7c aa e1 38                              P..|..8
+
+Frame 11: 135 bytes on wire (1080 bits), 135 bytes captured (1080 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000010000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000010000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000010000 seconds]
+    Frame Number: 11
+    Frame Length: 135 bytes (1080 bits)
+    Capture Length: 135 bytes (1080 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:11:11:11:11:11 (0a:11:11:11:11:11), Dst: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+    Destination: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: Key (3)
+    Length: 117
+    Key Descriptor Type: EAPOL RSN Key (2)
+    Key Information: 0x010a
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .0.. .... = Install: Not set
+        .... .... 0... .... = Key ACK: Not set
+        .... ...1 .... .... = Key MIC: Set
+        .... ..0. .... .... = Secure: Not set
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...0 .... .... .... = Encrypted Key Data: Not set
+        ..0. .... .... .... = SMK Message: Not set
+    Key Length: 0
+    Replay Counter: 1
+    WPA Key Nonce: 639f9cc47f10d2de4a66523ba21a6886193aac9fc70dcc1c...
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: 1d7e8ff4efec445495b8ac784b35a767
+    WPA Key Data Length: 22
+    WPA Key Data: 30140100000fac040100000fac040100000fac010000
+        Tag: RSN Information
+            Tag Number: RSN Information (48)
+            Tag length: 20
+            RSN Version: 1
+            Group Cipher Suite: 00-0f-ac (Ieee8021) AES (CCM)
+                Group Cipher Suite OUI: 00-0f-ac (Ieee8021)
+                Group Cipher Suite type: AES (CCM) (4)
+            Pairwise Cipher Suite Count: 1
+            Pairwise Cipher Suite List 00-0f-ac (Ieee8021) AES (CCM)
+                Pairwise Cipher Suite: 00-0f-ac (Ieee8021) AES (CCM)
+                    Pairwise Cipher Suite OUI: 00-0f-ac (Ieee8021)
+                    Pairwise Cipher Suite type: AES (CCM) (4)
+            Auth Key Management (AKM) Suite Count: 1
+            Auth Key Management (AKM) List 00-0f-ac (Ieee8021) WPA
+                Auth Key Management (AKM) Suite: 00-0f-ac (Ieee8021) WPA
+                    Auth Key Management (AKM) OUI: 00-0f-ac (Ieee8021)
+                    Auth Key Management (AKM) type: WPA (1)
+            RSN Capabilities: 0x0000
+                .... .... .... ...0 = RSN Pre-Auth capabilities: Transmitter does not support pre-authentication
+                .... .... .... ..0. = RSN No Pairwise capabilities: Transmitter can support WEP default key 0 simultaneously with Pairwise key
+                .... .... .... 00.. = RSN PTKSA Replay Counter capabilities: 1 replay counter per PTKSA/GTKSA/STAKeySA (0x0)
+                .... .... ..00 .... = RSN GTKSA Replay Counter capabilities: 1 replay counter per PTKSA/GTKSA/STAKeySA (0x0)
+                .... .... .0.. .... = Management Frame Protection Required: False
+                .... .... 0... .... = Management Frame Protection Capable: False
+                .... ...0 .... .... = Joint Multi-band RSNA: False
+                .... ..0. .... .... = PeerKey Enabled: False
+
+0000  0a 22 22 22 22 22 0a 11 11 11 11 11 88 8e 02 03   ."""""..........
+0010  00 75 02 01 0a 00 00 00 00 00 00 00 00 00 01 63   .u.............c
+0020  9f 9c c4 7f 10 d2 de 4a 66 52 3b a2 1a 68 86 19   .......JfR;..h..
+0030  3a ac 9f c7 0d cc 1c d2 ce e1 b1 46 dd 31 dd 00   :..........F.1..
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1d   ................
+0060  7e 8f f4 ef ec 44 54 95 b8 ac 78 4b 35 a7 67 00   ~....DT...xK5.g.
+0070  16 30 14 01 00 00 0f ac 04 01 00 00 0f ac 04 01   .0..............
+0080  00 00 0f ac 01 00 00                              .......
+
+Frame 12: 169 bytes on wire (1352 bits), 169 bytes captured (1352 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000011000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000011000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000011000 seconds]
+    Frame Number: 12
+    Frame Length: 169 bytes (1352 bits)
+    Capture Length: 169 bytes (1352 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:22:22:22:22:22 (0a:22:22:22:22:22), Dst: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+    Destination: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: Key (3)
+    Length: 151
+    Key Descriptor Type: EAPOL RSN Key (2)
+    Key Information: 0x13ca
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .1.. .... = Install: Set
+        .... .... 1... .... = Key ACK: Set
+        .... ...1 .... .... = Key MIC: Set
+        .... ..1. .... .... = Secure: Set
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...1 .... .... .... = Encrypted Key Data: Set
+        ..0. .... .... .... = SMK Message: Not set
+    Key Length: 16
+    Replay Counter: 2
+    WPA Key Nonce: 328c894d2d8fe8c4b81f971a3f67ab67288dc92d42ff422f...
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: 60ed8bc0fbaf6e20c65874dfad818dcc
+    WPA Key Data Length: 56
+    WPA Key Data: 55293c6e3b2951f5cda4adf206b315ab887dc51547117dbf...
+
+0000  0a 11 11 11 11 11 0a 22 22 22 22 22 88 8e 02 03   ......."""""....
+0010  00 97 02 13 ca 00 10 00 00 00 00 00 00 00 02 32   ...............2
+0020  8c 89 4d 2d 8f e8 c4 b8 1f 97 1a 3f 67 ab 67 28   ..M-.......?g.g(
+0030  8d c9 2d 42 ff 42 2f 80 2a 69 d3 c0 58 3d d0 00   ..-B.B/.*i..X=..
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 60   ...............`
+0060  ed 8b c0 fb af 6e 20 c6 58 74 df ad 81 8d cc 00   .....n .Xt......
+0070  38 55 29 3c 6e 3b 29 51 f5 cd a4 ad f2 06 b3 15   8U)<n;)Q........
+0080  ab 88 7d c5 15 47 11 7d bf 38 2f 64 41 b8 a4 73   ..}..G.}.8/dA..s
+0090  cc 17 29 0c a9 67 20 91 6a 20 66 9c 6b 62 e6 5a   ..)..g .j f.kb.Z
+00a0  da b5 31 18 b5 fa df 95 22                        ..1....."
+
+Frame 13: 113 bytes on wire (904 bits), 113 bytes captured (904 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jan  1, 1970 01:00:00.000012000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000012000 seconds
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.000012000 seconds]
+    Frame Number: 13
+    Frame Length: 113 bytes (904 bits)
+    Capture Length: 113 bytes (904 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:eapol]
+Ethernet II, Src: 0a:11:11:11:11:11 (0a:11:11:11:11:11), Dst: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+    Destination: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        Address: 0a:22:22:22:22:22 (0a:22:22:22:22:22)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        Address: 0a:11:11:11:11:11 (0a:11:11:11:11:11)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: 802.1X Authentication (0x888e)
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: Key (3)
+    Length: 95
+    Key Descriptor Type: EAPOL RSN Key (2)
+    Key Information: 0x030a
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .0.. .... = Install: Not set
+        .... .... 0... .... = Key ACK: Not set
+        .... ...1 .... .... = Key MIC: Set
+        .... ..1. .... .... = Secure: Set
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...0 .... .... .... = Encrypted Key Data: Not set
+        ..0. .... .... .... = SMK Message: Not set
+    Key Length: 0
+    Replay Counter: 2
+    WPA Key Nonce: 000000000000000000000000000000000000000000000000...
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: 825cd4428a791f0bc7f1293b98a4e946
+    WPA Key Data Length: 0
+
+0000  0a 22 22 22 22 22 0a 11 11 11 11 11 88 8e 02 03   ."""""..........
+0010  00 5f 02 03 0a 00 00 00 00 00 00 00 00 00 02 00   ._..............
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82   ................
+0060  5c d4 42 8a 79 1f 0b c7 f1 29 3b 98 a4 e9 46 00   \.B.y....);...F.
+0070  00                                                .
+
