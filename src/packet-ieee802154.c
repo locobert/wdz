@@ -2433,7 +2433,7 @@ dissect_ieee802154_pendaddr(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *t
  *
  * @param tvb the tv buffer
  * @param tree the tree to append this item to
- * @param start start of the IE (its TLV header) in tvb
+ * @param offset start of the IE (its TLV header) in tvb
  * @param ie_length the content length of the Header IE
  * @param hf field index
  * @param ett tree index
@@ -2456,7 +2456,7 @@ create_header_ie_tree(tvbuff_t *tvb, proto_tree *tree, guint offset, guint ie_le
     subtree = proto_item_add_subtree(subitem, ett);
 
     proto_tree_add_bitmask_with_flags(subtree, tvb, offset, hf_ieee802154_header_ie_tlv, ett_ieee802154_header_ie_tlv,
-                                      tlv_fields, ENC_LITTLE_ENDIAN, 0);
+                                      tlv_fields, ENC_LITTLE_ENDIAN, BMT_NO_FLAGS);
 
     *new_item = subitem;
     return subtree;
@@ -2488,7 +2488,7 @@ dissect_802154_hie_time_correction(tvbuff_t *tvb, packet_info *pinfo, proto_tree
     };
     guint16 time_sync_value;
     proto_tree_add_bitmask_with_flags(tree, tvb, 0, hf_ieee802154_hie_time_correction_time_sync_info, ett_ieee802154_header_ie,
-                                      fields, ENC_LITTLE_ENDIAN, 0);
+                                      fields, ENC_LITTLE_ENDIAN, BMT_NO_FLAGS);
     time_sync_value = tvb_get_letohs(tvb, 0);
     if (time_sync_value & ~(0x8fff)) {
         expert_add_info(pinfo, item, &ei_ieee802154_time_correction_error);
@@ -2519,14 +2519,14 @@ dissect_ieee802154_header_ie(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree
     proto_item *ies_item;
     proto_tree *ies_tree;
     proto_item *subitem;
-    proto_tree *subtree;
+    proto_tree *volatile subtree;  // may change in TRY block and is used in CATCH
     tvbuff_t   *content;
     guint16     ie_header;
     guint16     id;
     guint16     length;
     guint16     consumed;
-    guint       total_length = 0;
     const char *name;
+    volatile guint total_length = 0;  // silence spurious -Wclobber warning
 
     ies_item = proto_tree_add_item(tree, hf_ieee802154_header_ies, tvb, *offset, -1, ENC_NA);
     ies_tree = proto_item_add_subtree(ies_item, ett_ieee802154_header_ies);
