@@ -44,13 +44,17 @@ IEEE 802.15.4 Data, Src: 1e:af:fa:00:00:00:00:01
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IE
-        Payload IE, Unknown IE, Length: 34
+    Payload IEs, Unknown IE 0x0e
+        Unknown Payload IE: 0x0e
             Payload IE TLV: 0xf022, Type: Payload, Id: Unknown
                 1... .... .... .... = Type: Payload (1)
                 .111 0... .... .... = Id: Unknown (0xe)
                 .... .000 0010 0010 = Length: 34
-            Data: 200477777777777777777777777777777777777777777777...
+            Unknown Content: 20 04 77 77 77 77 77 77 77 77 77 77 77 77 77 77 ...
+            [Expert Info (Warning/Protocol): Unknown IE element ID]
+                [Unknown IE element ID]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 Frame (64 bytes):
 0000  09 e3 fe ca 01 00 00 00 00 fa af 1e 0e 01 00 00   ................

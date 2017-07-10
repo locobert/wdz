@@ -17,5 +17,5 @@
    17   0.000000              →              IEEE 802.15.4 58 False Data
    18   0.000000              →              IEEE 802.15.4 52 False Data[Malformed Packet]
    19   0.000000              →              IEEE 802.15.4 53 False Data[Malformed Packet]
-   20   0.000000              →              6LoWPAN 55 False Data[Malformed Packet]
+   20   0.000000              →              IEEE 802.15.4 55 False Data
    21   0.000000              →              IEEE 802.15.4 79 False Data

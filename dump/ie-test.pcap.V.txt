@@ -842,8 +842,8 @@ IEEE 802.15.4 Data
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IE
-        Payload IE, Payload Termination IE, Length: 0
+    Payload IEs, Payload Termination IE
+        Payload Termination IE
             Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
@@ -904,8 +904,8 @@ IEEE 802.15.4 Data
                 [Unexpected extra content for IE]
                 [Severity level: Warning]
                 [Group: Protocol]
-    Payload IE
-        Payload IE, Payload Termination IE, Length: 0
+    Payload IEs, Payload Termination IE
+        Payload Termination IE
             Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
@@ -961,7 +961,7 @@ IEEE 802.15.4 Data
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IE
+    Payload IEs
 [Malformed Packet: IEEE 802.15.4]
     [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
         [Malformed Packet (Exception occurred)]
@@ -1015,7 +1015,7 @@ IEEE 802.15.4 Data
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IE
+    Payload IEs
 [Malformed Packet: IEEE 802.15.4]
     [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
         [Malformed Packet (Exception occurred)]
@@ -1040,7 +1040,7 @@ Frame 20: 55 bytes on wire (440 bits), 53 bytes captured (424 bits)
     Capture Length: 53 bytes (424 bits)
     [Frame is marked: False]
     [Frame is ignored: False]
-    [Protocols in frame: wpan:6lowpan]
+    [Protocols in frame: wpan]
 IEEE 802.15.4 Data
     Frame Control Field: 0x2301, Frame Type: Data, Sequence Number Suppression, Information Elements Present, Destination Addressing Mode: None, Frame Version: IEEE Std 802.15.4-2015, Source Addressing Mode: None
         .... .... .... .001 = Frame Type: Data (0x1)
@@ -1069,18 +1069,17 @@ IEEE 802.15.4 Data
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IE
-        Payload IE, Payload Termination IE, Length: 1
+    Payload IEs, Payload Termination IE
+        Payload Termination IE
             Payload IE TLV: 0xf801, Type: Payload, Id: Payload Termination IE
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0001 = Length: 1
-6LoWPAN
-[Malformed Packet: 6LoWPAN]
-    [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
-        [Malformed Packet (Exception occurred)]
-        [Severity level: Error]
-        [Group: Malformed]
+            Unknown Content: 77
+            [Expert Info (Warning/Protocol): Unexpected extra content for IE]
+                [Unexpected extra content for IE]
+                [Severity level: Warning]
+                [Group: Protocol]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
 0010  50 54 20 74 6f 6f 20 20 6c 6f 6e 67 20 20 20 20   PT too  long    
@@ -1160,8 +1159,8 @@ IEEE 802.15.4 Data
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IE
-        Payload IE, Payload Termination IE, Length: 0
+    Payload IEs, Payload Termination IE
+        Payload Termination IE
             Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
