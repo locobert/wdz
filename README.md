@@ -3,7 +3,7 @@ Pcaps et al. for my Wireshark development
 
 # Pcap
 * `6LoWPAN.pcap`: 'IPv6 over IEEE 802.15.4.' from <https://wiki.wireshark.org/SampleCaptures>
-* `6tisch_6top_example.pcapng`: 'The IETF 6TiSCH Working Group implements the IEEE 802.15.4 Std, using the MAC-TSCH operation mode. Here, plenty of information go into some fields called Information Elements. This pcap file shows you all the information the nodes exchange in order to set and to maintain the network.' from <https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13005>
+* `6top-protocol-07.pcap`: '6top Protocol (6P) draft-07 support' from <https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13868>
 * `IEEE802.15.4-2015-Encrypted.pcapng`: example frame for 802.15.4-2015 encryption (cf. also <https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13805>)
 	- Decryption key: 0102030405060708090a0b0c0d0e0f10
 	- Key Index: 3

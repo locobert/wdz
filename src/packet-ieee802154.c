@@ -152,8 +152,7 @@ UAT_HEX_CB_DEF(addr_uat, pan, static_addr_t)
 UAT_BUFFER_CB_DEF(addr_uat, eui64, static_addr_t, eui64, eui64_len)
 
 /*
- * Key Decryption UAT
- *
+ * Decryption Keys UAT
  */
 
 /* UAT variables */
@@ -297,7 +296,7 @@ static tvbuff_t *dissect_ieee802154_decrypt(tvbuff_t *, guint, packet_info *, ie
 
 static gboolean ieee802154_set_mac_key(ieee802154_packet *packet, unsigned char *key, unsigned char *alt_key, ieee802154_key_t* uat_key);
 
-/*  Initialize Protocol and Registered fields */
+/* Initialize Protocol and Registered fields */
 static int proto_ieee802154_nonask_phy = -1;
 static int hf_ieee802154_nonask_phy_preamble = -1;
 static int hf_ieee802154_nonask_phy_sfd = -1;
@@ -343,6 +342,7 @@ static int hf_ieee802154_payload_ie_id = -1;
 static int hf_ieee802154_payload_ie_length = -1;
 static int hf_ieee802154_payload_ie_data = -1;
 static int hf_ieee802154_payload_ie_vendor_oui = -1;
+static int hf_ieee802154_payload_ie_ietf = -1;
 static int hf_ieee802154_timeslot_ie = -1;
 static int hf_ieee802154_enhanced_beacon_filter_ie = -1;
 static int hf_ieee802154_mlme_ie_data = -1;
@@ -381,14 +381,14 @@ static int hf_ieee802154_psie_eb_filter_attr_id = -1;
 static int hf_ieee802154_psie_eb_filter_attr_id_bitmap = -1;
 static int hf_ieee802154_p_ie_ietf_sub_id = -1;
 
+static int hf_ieee802154_6top = -1;
 static int hf_ieee802154_6top_version = -1;
 static int hf_ieee802154_6top_type = -1;
 static int hf_ieee802154_6top_flags_reserved = -1;
 static int hf_ieee802154_6top_code = -1;
 static int hf_ieee802154_6top_sfid = -1;
 static int hf_ieee802154_6top_seqnum = -1;
-static int hf_ieee802154_6top_gab = -1;
-static int hf_ieee802154_6top_gba = -1;
+static int hf_ieee802154_6top_gen = -1;
 static int hf_ieee802154_6top_metadata = -1;
 static int hf_ieee802154_6top_cell_options = -1;
 static int hf_ieee802154_6top_cell_option_tx = -1;
@@ -396,11 +396,16 @@ static int hf_ieee802154_6top_cell_option_rx = -1;
 static int hf_ieee802154_6top_cell_option_shared = -1;
 static int hf_ieee802154_6top_cell_option_reserved = -1;
 static int hf_ieee802154_6top_num_cells = -1;
+static int hf_ieee802154_6top_cell_list = -1;
+static int hf_ieee802154_6top_rel_cell_list = -1;
+static int hf_ieee802154_6top_cand_cell_list = -1;
+static int hf_ieee802154_6top_cell = -1;
 static int hf_ieee802154_6top_reserved = -1;
 static int hf_ieee802154_6top_offset = -1;
 static int hf_ieee802154_6top_max_num_cells = -1;
 static int hf_ieee802154_6top_slot_offset = -1;
 static int hf_ieee802154_6top_channel_offset = -1;
+static int hf_ieee802154_6top_total_num_cells = -1;
 
 static int proto_zboss = -1;
 static int hf_zboss_direction = -1;
@@ -421,7 +426,7 @@ static int hf_ieee802154_rssi = -1;
 static int hf_ieee802154_fcs_ok = -1;
 static int hf_ieee802154_correlation = -1;
 
-/*  Registered fields for Command Packets */
+/* Registered fields for Command Packets */
 static int hf_ieee802154_cmd_id = -1;
 static int hf_ieee802154_cinfo_alt_coord = -1;
 static int hf_ieee802154_cinfo_device_type = -1;
@@ -441,7 +446,7 @@ static int hf_ieee802154_gtsreq_len = -1;
 static int hf_ieee802154_gtsreq_dir = -1;
 static int hf_ieee802154_gtsreq_type = -1;
 
-/*  Registered fields for Beacon Packets */
+/* Registered fields for Beacon Packets */
 static int hf_ieee802154_beacon_order = -1;
 static int hf_ieee802154_superframe_order = -1;
 static int hf_ieee802154_cap = -1;
@@ -455,7 +460,7 @@ static int hf_ieee802154_gts_address = -1;
 static int hf_ieee802154_pending16 = -1;
 static int hf_ieee802154_pending64 = -1;
 
-/*  Registered fields for Auxiliary Security Header */
+/* Registered fields for Auxiliary Security Header */
 static int hf_ieee802154_aux_security_header = -1;
 static int hf_ieee802154_aux_sec_security_control = -1;
 static int hf_ieee802154_aux_sec_security_level = -1;
@@ -474,7 +479,7 @@ static int hf_ieee802154_key_number = -1;
 static int hf_ieee802154_sec_frame_counter = -1;
 static int hf_ieee802154_sec_key_sequence_counter = -1;
 
-/*  Initialize Subtree Pointers */
+/* Initialize Subtree Pointers */
 static gint ett_ieee802154_nonask_phy = -1;
 static gint ett_ieee802154_nonask_phy_phr = -1;
 static gint ett_ieee802154 = -1;
@@ -500,6 +505,7 @@ static gint ett_ieee802154_hie_ht2 = -1;
 static gint ett_ieee802154_hie_csl = -1;
 static gint ett_ieee802154_payload = -1;
 static gint ett_ieee802154_payload_ie = -1;
+static gint ett_ieee802154_payload_ie_ietf = -1;
 static gint ett_ieee802154_mlme = -1;
 static gint ett_ieee802154_mlme_payload = -1;
 static gint ett_ieee802154_mlme_payload_data = -1;
@@ -516,10 +522,10 @@ static gint ett_ieee802154_psie_slotframe_link_slotframes = -1;
 static gint ett_ieee802154_zigbee = -1;
 static gint ett_ieee802154_zboss = -1;
 static gint ett_ieee802154_p_ie_6top = -1;
-static gint ett_ieee802154_p_ie_6top_version_type = -1;
-static gint ett_ieee802154_p_ie_6top_seqnum_gab_gba = -1;
 static gint ett_ieee802154_p_ie_6top_cell_options = -1;
 static gint ett_ieee802154_p_ie_6top_cell_list = -1;
+static gint ett_ieee802154_p_ie_6top_cand_cell_list = -1;
+static gint ett_ieee802154_p_ie_6top_rel_cell_list = -1;
 static gint ett_ieee802154_p_ie_6top_cell = -1;
 
 static expert_field ei_ieee802154_invalid_addressing = EI_INIT;
@@ -746,11 +752,11 @@ static const value_string ieee802154_psie_names[] = {
 };
 
 static const value_string zboss_page_names[] = {
-	{ 0, "2.4 GHz" },
-	{ 28, "863-868 MHz band"},
-	{ 29, "868-870, 870-876 MHz band" },
-	{ 30, "870-876 MHz band" },
-	{ 31, "915-921 MHz band" },
+    { 0, "2.4 GHz" },
+    { 28, "863-868 MHz band"},
+    { 29, "868-870, 870-876 MHz band" },
+    { 30, "870-876 MHz band" },
+    { 31, "915-921 MHz band" },
     { 0, NULL }
 };
 
@@ -769,31 +775,46 @@ static const value_string ietf_6top_types[] = {
 };
 
 static const value_string ietf_6top_command_identifiers[] = {
-    { IETF_6TOP_CMD_ADD, "Add" },
-    { IETF_6TOP_CMD_DELETE, "Delete" },
-    { IETF_6TOP_CMD_STATUS, "Status" },
-    { IETF_6TOP_CMD_LIST, "List" },
-    { IETF_6TOP_CMD_CLEAR, "Clear" },
+    { IETF_6TOP_CMD_ADD, "ADD" },
+    { IETF_6TOP_CMD_DELETE, "DELETE" },
+    { IETF_6TOP_CMD_RELOCATE, "RELOCATE" },
+    { IETF_6TOP_CMD_COUNT, "COUNT" },
+    { IETF_6TOP_CMD_LIST, "LIST" },
+    { IETF_6TOP_CMD_CLEAR, "CLEAR" },
     { 0, NULL }
 };
 
 static const value_string ietf_6top_return_codes[] = {
     { IETF_6TOP_RC_SUCCESS, "SUCCESS" },
-    { IETF_6TOP_RC_ERR_VER, "ERR_VER" },
-    { IETF_6TOP_RC_ERR_SFID, "ERR_SFID" },
-    { IETF_6TOP_RC_ERR_GEN, "ERR_GEN" },
-    { IETF_6TOP_RC_ERR_BUSY, "ERR_BUSY" },
-    { IETF_6TOP_RC_ERR_NORES, "ERR_NORES" },
-    { IETF_6TOP_RC_ERR_RESET, "ERR_RESET" },
-    { IETF_6TOP_RC_ERR, "ERR" },
+    { IETF_6TOP_RC_ERROR, "ERROR" },
+    { IETF_6TOP_RC_EOL, "EOL" },
+    { IETF_6TOP_RC_RESET, "RESET" },
+    { IETF_6TOP_RC_VER_ERR, "VER_ERR" },
+    { IETF_6TOP_RC_SFID_ERR, "SFID_ERR" },
+    { IETF_6TOP_RC_GEN_ERR, "GEN_ERR" },
+    { IETF_6TOP_RC_BUSY, "BUSY" },
+    { IETF_6TOP_RC_NORES, "NORES" },
+    { IETF_6TOP_RC_CELLLIST_ERR, "CELLLIST_ERR" },
     { 0, NULL }
 };
 
 static const value_string ietf_6top_generation_numbers[] = {
-    { 0, "clean" },
-    { 1, "counter" },
-    { 2, "counter" },
-    { 3, "reserved" },
+    { 0, "Clear" },
+    { 1, "Lollipop Counter Value" },
+    { 2, "Lollipop Counter Value" },
+    { 3, "Lollipop Counter Value" },
+    { 4, "Lollipop Counter Value" },
+    { 5, "Lollipop Counter Value" },
+    { 6, "Lollipop Counter Value" },
+    { 7, "Lollipop Counter Value" },
+    { 8, "Lollipop Counter Value" },
+    { 9, "Lollipop Counter Value" },
+    { 10, "Reserved" },
+    { 11, "Reserved" },
+    { 12, "Reserved" },
+    { 13, "Reserved" },
+    { 14, "Reserved" },
+    { 15, "Reserved" },
     { 0, NULL}
 };
 
@@ -867,13 +888,13 @@ static int ieee802_15_4_short_address_len(void)
 /**
  * Dissector helper, parses and displays the frame control field.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields
- *@param tree pointer to data tree wireshark uses to display packet.
- *@param packet IEEE 802.15.4 packet information.
- *@param offset offset into the tvb to find the FCF.
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields
+ * @param tree pointer to data tree wireshark uses to display packet.
+ * @param packet IEEE 802.15.4 packet information.
+ * @param offset offset into the tvb to find the FCF.
  *
-*/
+ */
 static void
 dissect_ieee802154_fcf(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet, guint *offset)
 {
@@ -1039,13 +1060,13 @@ tvbuff_t *dissect_ieee802154_payload(tvbuff_t * tvb, guint offset, packet_info *
     return payload_tvb;
 }
 
-/*
- *Dissector for IEEE 802.15.4 non-ASK PHY packet with an FCS containing a 16-bit CRC value.
+/**
+ * Dissector for IEEE 802.15.4 non-ASK PHY packet with an FCS containing a 16-bit CRC value.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields
- *@param tree pointer to data tree wireshark uses to display packet.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields
+ * @param tree pointer to data tree wireshark uses to display packet.
+ */
 static int
 dissect_ieee802154_nonask_phy(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void* data _U_)
 {
@@ -1065,26 +1086,26 @@ dissect_ieee802154_nonask_phy(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tre
     /* Add the protocol name. */
     col_set_str(pinfo->cinfo, COL_PROTOCOL, "IEEE 802.15.4 non-ASK PHY");
 
-    phr=tvb_get_guint8(tvb,offset+4+1);
+    phr = tvb_get_guint8(tvb,offset+4+1);
 
-    if(tree) {
-        guint loffset=offset;
+    if (tree) {
+        guint loffset = offset;
         static const int * phr_fields[] = {
                     &hf_ieee802154_nonask_phy_length,
                     NULL
                 };
 
         proto_tree_add_item(ieee802154_tree, hf_ieee802154_nonask_phy_preamble, tvb, loffset, 4, ENC_LITTLE_ENDIAN);
-        loffset+=4;
+        loffset +=4 ;
         proto_tree_add_item(ieee802154_tree, hf_ieee802154_nonask_phy_sfd, tvb, loffset, 1, ENC_LITTLE_ENDIAN);
-        loffset+=1;
+        loffset +=1 ;
 
         proto_tree_add_bitmask(ieee802154_tree, tvb, loffset, hf_ieee802154_nonask_phr, ett_ieee802154_nonask_phy_phr,
             phr_fields, ENC_NA);
     }
 
-    offset+=4+2*1;
-    mac=tvb_new_subset_length_caplen(tvb,offset,-1, phr & IEEE802154_PHY_LENGTH_MASK);
+    offset += 4+2*1;
+    mac = tvb_new_subset_length_caplen(tvb,offset,-1, phr & IEEE802154_PHY_LENGTH_MASK);
 
     /* Call the common dissector. */
     dissect_ieee802154(mac, pinfo, ieee802154_tree, NULL);
@@ -1092,12 +1113,12 @@ dissect_ieee802154_nonask_phy(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tre
 } /* dissect_ieee802154_nonask_phy */
 
 /**
- *Dissector for IEEE 802.15.4 packet with an FCS containing a 16-bit CRC value.
+ * Dissector for IEEE 802.15.4 packet with an FCS containing a 16-bit CRC value.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields.
- *@param tree pointer to data tree wireshark uses to display packet.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields.
+ * @param tree pointer to data tree wireshark uses to display packet.
+ */
 static int
 dissect_ieee802154(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void* data _U_)
 {
@@ -1121,11 +1142,11 @@ dissect_ieee802154(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void* da
 /**
  * Dissector for IEEE 802.15.4 packet with no FCS present.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields
- *@param tree pointer to data tree wireshark uses to display packet.
- *@return captured length.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields
+ * @param tree pointer to data tree wireshark uses to display packet.
+ * @return captured length.
+ */
 static int
 dissect_ieee802154_nofcs(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void * data _U_)
 {
@@ -1148,11 +1169,11 @@ dissect_ieee802154_nofcs(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, vo
 /**
  * Dissector for IEEE 802.15.4 packet dump produced by ZBOSS
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields
- *@param tree pointer to data tree wireshark uses to display packet.
- *@return new tvb subset if this is really ZBOSS dump, else oririnal tvb.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields
+ * @param tree pointer to data tree wireshark uses to display packet.
+ * @return new tvb subset if this is really ZBOSS dump, else oririnal tvb.
+ */
 static tvbuff_t *
 dissect_zboss_specific(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tree)
 {
@@ -1194,14 +1215,14 @@ dissect_zboss_specific(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tree)
 } /* dissect_zboss_heur */
 
 /**
- *Dissector for IEEE 802.15.4 packet with a ChipCon/Texas
- *Instruments compatible FCS. This is typically called by
- *layers encapsulating an IEEE 802.15.4 packet.
+ * Dissector for IEEE 802.15.4 packet with a ChipCon/Texas
+ * Instruments compatible FCS. This is typically called by
+ * layers encapsulating an IEEE 802.15.4 packet.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields
- *@param tree pointer to data tree wireshark uses to display packet.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields
+ * @param tree pointer to data tree wireshark uses to display packet.
+ */
 static int
 dissect_ieee802154_cc24xx(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void * data _U_)
 {
@@ -1211,23 +1232,23 @@ dissect_ieee802154_cc24xx(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, v
 } /* dissect_ieee802154_cc24xx */
 
 /**
- *IEEE 802.15.4 packet dissection routine for Wireshark.
+ * IEEE 802.15.4 packet dissection routine for Wireshark.
  *
- *This function extracts all the information first before displaying.
- *If payload exists, that portion will be passed into another dissector
- *for further processing.
+ * This function extracts all the information first before displaying.
+ * If payload exists, that portion will be passed into another dissector
+ * for further processing.
  *
- *This is called after the individual dissect_ieee802154* functions
- *have been called to determine what sort of FCS is present.
- *The dissect_ieee802154* functions will set the parameters
- *in the ieee802154_packet structure, and pass it to this one
- *through the data parameter.
+ * This is called after the individual dissect_ieee802154* functions
+ * have been called to determine what sort of FCS is present.
+ * The dissect_ieee802154* functions will set the parameters
+ * in the ieee802154_packet structure, and pass it to this one
+ * through the data parameter.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields
- *@param tree pointer to data tree wireshark uses to display packet.
- *@param options bitwise or of dissector options (see DISSECT_IEEE802154_OPTION_xxx).
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields
+ * @param tree pointer to data tree wireshark uses to display packet.
+ * @param options bitwise or of dissector options (see DISSECT_IEEE802154_OPTION_xxx).
+ */
 static void
 dissect_ieee802154_common(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, guint options)
 {
@@ -1255,7 +1276,7 @@ dissect_ieee802154_common(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, g
     packet->short_table = ieee802154_map.short_table;
 
     /* Allocate frame data with hints for upper layers */
-    if(!pinfo->fd->flags.visited){
+    if (!pinfo->fd->flags.visited) {
         ieee_hints = wmem_new0(wmem_file_scope(), ieee802154_hints_t);
         p_add_proto_data(wmem_file_scope(), pinfo, proto_ieee802154, 0, ieee_hints);
     } else {
@@ -1286,15 +1307,15 @@ dissect_ieee802154_common(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, g
             expert_add_info(pinfo, proto_root, &ei_ieee802154_seqno_suppression);
         }
     } else { /* IEEE 802.15.4 Sequence Number Suppression */
-    packet->seqno = tvb_get_guint8(tvb, offset);
-    if (tree) {
-        proto_tree_add_uint(ieee802154_tree, hf_ieee802154_seqno, tvb, offset, 1, packet->seqno);
-        /* For Ack packets display this in the root. */
-        if (packet->frame_type == IEEE802154_FCF_ACK) {
-            proto_item_append_text(proto_root, ", Sequence Number: %u", packet->seqno);
+        packet->seqno = tvb_get_guint8(tvb, offset);
+        if (tree) {
+            proto_tree_add_uint(ieee802154_tree, hf_ieee802154_seqno, tvb, offset, 1, packet->seqno);
+            /* For Ack packets display this in the root. */
+            if (packet->frame_type == IEEE802154_FCF_ACK) {
+                proto_item_append_text(proto_root, ", Sequence Number: %u", packet->seqno);
+            }
         }
-    }
-    offset += 1;
+        offset += 1;
     }
 
     /*
@@ -1684,7 +1705,7 @@ dissect_ieee802154_common(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, g
         }
     }
 
-    /* Existance of the Auxiliary Security Header is controlled by the Security Enabled Field */
+    /* Existence of the Auxiliary Security Header is controlled by the Security Enabled Field */
     if ((packet->security_enable) && (packet->version != IEEE802154_VERSION_2003)) {
         dissect_ieee802154_aux_sec_header_and_key(tvb, pinfo, ieee802154_tree, packet, &offset);
     }
@@ -1703,7 +1724,7 @@ dissect_ieee802154_common(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, g
 
         if (packet->frame_type == IEEE802154_FCF_CMD) {
             /**
-             *  In IEEE802.15.4-2003 and 2006 the command identifier is considered to be part of the header
+             * In IEEE802.15.4-2003 and 2006 the command identifier is considered to be part of the header
              * and is thus not encrypted. For IEEE802.15.4-2012e and later the command id is considered to be
              * part of the payload, is encrypted, and follows the payload IEs. Thus we only parse the command id
              * here for 2006 and earlier frames. */
@@ -1824,7 +1845,7 @@ dissect_ieee802154_common(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, g
 
     offset = 0;
 
-    /* presence of Payload IEs is defined by the termination of the Header IEs */
+    /* Presence of Payload IEs is defined by the termination of the Header IEs */
     if (packet->payload_ie_present) {
         offset += dissect_ieee802154_payload_ie(payload_tvb, pinfo, ieee802154_tree, offset);
     }
@@ -1847,8 +1868,8 @@ dissect_ieee802154_common(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, g
     }
 
     if (offset > 0) {
-      payload_tvb = tvb_new_subset_remaining(payload_tvb, offset);
-      offset = 0;
+        payload_tvb = tvb_new_subset_remaining(payload_tvb, offset);
+        offset = 0;
     }
 
     /* If it is ok to dissect bad FCS, FCS might be absent, so still dissect
@@ -1978,17 +1999,18 @@ dissect_ieee802154_fcs:
 } /* dissect_ieee802154_common */
 
 /**
- * Subdissector for the MLME Channel Hopping IE
+ * Subdissector for the MLME Channel Hopping Payload IE
  *
  * Reference: IEEE 802.15.4-2015 - 7.4.4.31 Channel hopping IE
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param tree pointer to data tree wireshark uses to display packet.
- *@param psie_remaining size of the Information Element.
- *@param offset offset into the tvbuff to begin dissection.
+ * @param tvb pointer to buffer containing raw packet.
+ * @param tree pointer to data tree wireshark uses to display packet.
+ * @param psie_remaining size of the Information Element.
+ * @param offset offset into the tvbuff to begin dissection.
  */
 static void
-dissect_802154_channel_hopping(tvbuff_t *tvb, proto_tree *tree, guint16 psie_remaining, guint *offset){
+dissect_802154_channel_hopping(tvbuff_t *tvb, proto_tree *tree, guint16 psie_remaining, guint *offset)
+{
     proto_item  *tsch_channel_hopping_data_item = NULL;
     proto_tree  *tsch_channel_hopping_data_tree = NULL;
     static const int * fields_long[] = {
@@ -2005,21 +2027,22 @@ dissect_802154_channel_hopping(tvbuff_t *tvb, proto_tree *tree, guint16 psie_rem
 
     proto_tree_add_item(tsch_channel_hopping_data_tree, hf_ieee802154_tsch_hopping_sequence_id, tvb, (*offset), 1, ENC_LITTLE_ENDIAN);
 
-    if (psie_remaining > 1){
+    if (psie_remaining > 1) {
         proto_tree_add_item(tsch_channel_hopping_data_tree, hf_ieee802154_mlme_ie_data, tvb, *offset, psie_remaining, ENC_NA);
     }
     *offset += psie_remaining;
 } /* dissect_802154_channel_hopping */
 
 /**
- *Subdissector command for the Payload Information Element MLME TSCH Synchronization
+ * Subdissector for the Payload Information Element MLME TSCH Synchronization
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param tree pointer to data tree wireshark uses to display packet.
- *@param offset offset into the tvbuff to begin dissection.
+ * @param tvb pointer to buffer containing raw packet.
+ * @param tree pointer to data tree wireshark uses to display packet.
+ * @param offset offset into the tvbuff to begin dissection.
  */
 static void
-dissect_802154_tsch_time_sync(tvbuff_t *tvb, proto_tree *tree, int *offset, guint psie_remaining) {
+dissect_802154_tsch_time_sync(tvbuff_t *tvb, proto_tree *tree, int *offset, guint psie_remaining)
+{
     proto_item  *tsch_sync_data_item = NULL;
     proto_tree  *tsch_sync_data_tree = NULL;
 
@@ -2037,16 +2060,17 @@ dissect_802154_tsch_time_sync(tvbuff_t *tvb, proto_tree *tree, int *offset, guin
 }/* dissect_802154_tsch_time_sync*/
 
 /**
- *Subdissector command for the Payload Information Element MLME TSCH Slotframe and Link
+ * Subdissector for the Payload Information Element MLME TSCH Slotframe and Link
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param tree pointer to data tree wireshark uses to display packet.
- *@param psie_remaining size of the Information Element.
- *@param offset offset into the tvbuff to begin dissection.
+ * @param tvb pointer to buffer containing raw packet.
+ * @param tree pointer to data tree wireshark uses to display packet.
+ * @param psie_remaining size of the Information Element.
+ * @param offset offset into the tvbuff to begin dissection.
  */
 static void
 dissect_802154_tsch_slotframe_link(tvbuff_t *tvb, proto_tree *tree, guint16 psie_remaining, guint16 psie_id,
-                                   guint *offset){
+                                   guint *offset)
+{
     guint8      nb_slotframes;
     guint8      nb_slotframes_aux;
     guint8      nb_links;
@@ -2077,7 +2101,7 @@ dissect_802154_tsch_slotframe_link(tvbuff_t *tvb, proto_tree *tree, guint16 psie
     *offset += 1;
 
     slotframe_index = 1;
-    while(nb_slotframes_aux > 0){
+    while (nb_slotframes_aux > 0) {
         nb_links     = tvb_get_guint8(tvb, *offset + 3);
         nb_links_aux = nb_links;
 
@@ -2105,33 +2129,32 @@ dissect_802154_tsch_slotframe_link(tvbuff_t *tvb, proto_tree *tree, guint16 psie
 }/* dissect_802154_tsch_slotframe_link */
 
 /**
- *Subdissector command for the 6TOP Protocol contained within the Payload Information Elements.
+ * Subdissector for the 6TOP Protocol contained within the Payload Information Elements.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields.
- *@param p_inf_elem_tree pointer to data tree wireshark uses to display packet.
- *@param offset offset into the tvbuff to begin dissection.
- *@param pie_length size of the 6TOP message
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields.
+ * @param p_inf_elem_tree pointer to data tree wireshark uses to display packet.
+ * @param offset offset into the tvbuff to begin dissection.
+ * @param pie_length size of the 6TOP message
  */
 static int
 dissect_ieee802154_6top(tvbuff_t *tvb, packet_info *pinfo, proto_tree *p_inf_elem_tree, guint offset, gint pie_length)
 {
-    const guint8 supported_6p_version = 1;
+    const guint8 supported_6p_version = 0x00;
 
     guint8     subie;
     guint8     version;
     guint8     type;
     guint8     code;
-    guint8     seqnum;
-    guint8     gab;
-    guint8     gba;
+    guint8     num_cells;
     int        orig_offset = offset;
     gboolean   have_cell_list = FALSE;
     int        i;
+    proto_item *sixtop_item = NULL;
     proto_tree *sixtop_tree = NULL;
-    proto_tree *version_type_tree = NULL;
-    proto_tree *seqnum_gab_gba_tree = NULL;
+    proto_item *cell_list_item = NULL;
     proto_tree *cell_list_tree = NULL;
+    proto_item *cell_item = NULL;
     proto_tree *cell_tree = NULL;
     proto_item *type_item = NULL;
     proto_item *code_item = NULL;
@@ -2157,25 +2180,19 @@ dissect_ieee802154_6top(tvbuff_t *tvb, packet_info *pinfo, proto_tree *p_inf_ele
 
     type = (tvb_get_guint8(tvb, offset + 1) & IETF_6TOP_TYPE) >> 4;
     code = tvb_get_guint8(tvb, offset + 2);
-    seqnum = tvb_get_guint8(tvb, offset + 4) & IETF_6TOP_SEQNUM;
-    gab = (tvb_get_guint8(tvb, offset + 4) & IETF_6TOP_GAB) >> 4;
-    gba = (tvb_get_guint8(tvb, offset + 4) & IETF_6TOP_GBA) >> 6;
 
     proto_tree_add_item(p_inf_elem_tree, hf_ieee802154_p_ie_ietf_sub_id, tvb, offset, 1, ENC_LITTLE_ENDIAN);
 
-    sixtop_tree = proto_tree_add_subtree_format(p_inf_elem_tree, tvb, offset, pie_length, ett_ieee802154_p_ie_6top, NULL, "6top IE Content");
-    version_type_tree = proto_tree_add_subtree_format(sixtop_tree, tvb, offset + 1, 1, ett_ieee802154_p_ie_6top_version_type, NULL,
-                                                      "Version: %u, Type: %s", version, val_to_str_const(type, ietf_6top_types,"Unknown"));
-    proto_tree_add_item(version_type_tree, hf_ieee802154_6top_version, tvb, offset + 1, 1, ENC_LITTLE_ENDIAN);
-    type_item = proto_tree_add_item(version_type_tree, hf_ieee802154_6top_type, tvb, offset + 1, 1, ENC_LITTLE_ENDIAN);
-    proto_tree_add_item(version_type_tree, hf_ieee802154_6top_flags_reserved, tvb, offset + 1, 1, ENC_LITTLE_ENDIAN);
+    sixtop_item = proto_tree_add_item(p_inf_elem_tree, hf_ieee802154_6top, tvb, offset, pie_length, ENC_NA);
+    sixtop_tree = proto_item_add_subtree(sixtop_item, ett_ieee802154_p_ie_6top);
+
+    proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_version, tvb, offset + 1, 1, ENC_LITTLE_ENDIAN);
+    type_item = proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_type, tvb, offset + 1, 1, ENC_LITTLE_ENDIAN);
+    proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_flags_reserved, tvb, offset + 1, 1, ENC_LITTLE_ENDIAN);
     code_item = proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_code, tvb, offset + 2, 1, ENC_LITTLE_ENDIAN);
     proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_sfid, tvb, offset + 3, 1, ENC_LITTLE_ENDIAN);
-    seqnum_gab_gba_tree = proto_tree_add_subtree_format(sixtop_tree, tvb, offset + 4, 1, ett_ieee802154_p_ie_6top_seqnum_gab_gba, NULL,
-                                                        "Seqnum: %u, GAB: %u, GBA: %u", seqnum, gab, gba);
-    proto_tree_add_item(seqnum_gab_gba_tree, hf_ieee802154_6top_seqnum, tvb, offset + 4, 1, ENC_LITTLE_ENDIAN);
-    proto_tree_add_item(seqnum_gab_gba_tree, hf_ieee802154_6top_gab, tvb, offset + 4, 1, ENC_LITTLE_ENDIAN);
-    proto_tree_add_item(seqnum_gab_gba_tree, hf_ieee802154_6top_gba, tvb, offset + 4, 1, ENC_LITTLE_ENDIAN);
+    proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_seqnum, tvb, offset + 4, 1, ENC_LITTLE_ENDIAN);
+    proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_gen, tvb, offset + 4, 1, ENC_LITTLE_ENDIAN);
 
     col_set_str(pinfo->cinfo, COL_PROTOCOL, "6top");
     if (type == IETF_6TOP_TYPE_REQUEST) {
@@ -2192,22 +2209,24 @@ dissect_ieee802154_6top(tvbuff_t *tvb, packet_info *pinfo, proto_tree *p_inf_ele
     pie_length -= 5;
 
     if (type == IETF_6TOP_TYPE_REQUEST) {
-        switch(code) {
+        switch (code) {
         case IETF_6TOP_CMD_ADD:
         case IETF_6TOP_CMD_DELETE:
+        case IETF_6TOP_CMD_RELOCATE:
             if (pie_length < 4) {
                 break;
             }
             proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_metadata, tvb, offset, 2, ENC_LITTLE_ENDIAN);
             proto_tree_add_bitmask(sixtop_tree, tvb, offset + 2, hf_ieee802154_6top_cell_options, ett_ieee802154_p_ie_6top_cell_options, cell_options, ENC_LITTLE_ENDIAN);
             proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_num_cells, tvb, offset + 3, 1, ENC_LITTLE_ENDIAN);
+            num_cells = tvb_get_guint8(tvb, offset + 3);
             pie_length -= 4;
             offset += 4;
             if (pie_length > 0 && (pie_length % 4) == 0) {
                 have_cell_list = TRUE;
             }
             break;
-        case IETF_6TOP_CMD_STATUS:
+        case IETF_6TOP_CMD_COUNT:
             if (pie_length < 3) {
                 break;
             }
@@ -2245,22 +2264,28 @@ dissect_ieee802154_6top(tvbuff_t *tvb, packet_info *pinfo, proto_tree *p_inf_ele
         switch(code) {
         case IETF_6TOP_RC_SUCCESS:
             if (pie_length > 0) {
-                if (pie_length == 1) {
-                    proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_num_cells, tvb, offset, 1, ENC_LITTLE_ENDIAN);
-                    pie_length -= 1;
-                    offset += 1;
-                } else if ((pie_length % 4) == 0) {
+                if (pie_length == 2) {
+                    proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_total_num_cells, tvb, offset, 2, ENC_LITTLE_ENDIAN);
+                    pie_length -= 2;
+                    offset += 2;
+                } else if (pie_length > 0 && (pie_length % 4) == 0) {
                     have_cell_list = TRUE;
                 }
             }
             break;
-        case IETF_6TOP_RC_ERR_VER:
-        case IETF_6TOP_RC_ERR_SFID:
-        case IETF_6TOP_RC_ERR_GEN:
-        case IETF_6TOP_RC_ERR_BUSY:
-        case IETF_6TOP_RC_ERR_NORES:
-        case IETF_6TOP_RC_ERR_RESET:
-        case IETF_6TOP_RC_ERR:
+        case IETF_6TOP_RC_EOL:
+            if(pie_length > 0 && (pie_length % 4) == 0) {
+                have_cell_list = TRUE;
+            }
+            break;
+        case IETF_6TOP_RC_ERROR:
+        case IETF_6TOP_RC_RESET:
+        case IETF_6TOP_RC_VER_ERR:
+        case IETF_6TOP_RC_SFID_ERR:
+        case IETF_6TOP_RC_GEN_ERR:
+        case IETF_6TOP_RC_BUSY:
+        case IETF_6TOP_RC_NORES:
+        case IETF_6TOP_RC_CELLLIST_ERR:
             /* They have no other field */
             break;
         default:
@@ -2274,13 +2299,34 @@ dissect_ieee802154_6top(tvbuff_t *tvb, packet_info *pinfo, proto_tree *p_inf_ele
     }
 
     if (have_cell_list) {
-        cell_list_tree = proto_tree_add_subtree_format(sixtop_tree, tvb, offset, pie_length, ett_ieee802154_p_ie_6top_cell_list, NULL,
-                                                       "Cell List");
-        for (i = 0; pie_length > 0; pie_length -= 4, offset += 4, i++){
-            cell_tree = proto_tree_add_subtree_format(cell_list_tree, tvb, offset, 4, ett_ieee802154_p_ie_6top_cell, NULL,
-                                                      "Cell [%u]", i);
-            proto_tree_add_item(cell_tree, hf_ieee802154_6top_slot_offset, tvb, offset, 2, ENC_LITTLE_ENDIAN);
-            proto_tree_add_item(cell_tree, hf_ieee802154_6top_channel_offset, tvb, offset + 2, 2, ENC_LITTLE_ENDIAN);
+        if (type == IETF_6TOP_TYPE_REQUEST && code == IETF_6TOP_CMD_RELOCATE) {
+            cell_list_item = proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_rel_cell_list, tvb, offset, pie_length, ENC_NA);
+            cell_list_tree = proto_item_add_subtree(cell_list_item, ett_ieee802154_p_ie_6top_rel_cell_list);
+            /* num_cells is expected to be set properly */
+            for (i = 0; i < num_cells; offset += 4, i++) {
+                cell_item = proto_tree_add_item(cell_list_tree, hf_ieee802154_6top_cell, tvb, offset, 4, ENC_NA);
+                cell_tree = proto_item_add_subtree(cell_item, ett_ieee802154_p_ie_6top_cell);
+                proto_tree_add_item(cell_tree, hf_ieee802154_6top_slot_offset, tvb, offset, 2, ENC_LITTLE_ENDIAN);
+                proto_tree_add_item(cell_tree, hf_ieee802154_6top_channel_offset, tvb, offset + 2, 2, ENC_LITTLE_ENDIAN);
+            }
+            pie_length -= num_cells * 4;
+            cell_list_item = proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_cand_cell_list, tvb, offset, pie_length, ENC_NA);
+            cell_list_tree = proto_item_add_subtree(cell_list_item, ett_ieee802154_p_ie_6top_cand_cell_list);
+            for (i = 0; pie_length > 0; pie_length -= 4, offset += 4, i++) {
+                cell_item = proto_tree_add_item(cell_list_tree, hf_ieee802154_6top_cell, tvb, offset, 4, ENC_NA);
+                cell_tree = proto_item_add_subtree(cell_item, ett_ieee802154_p_ie_6top_cell);
+                proto_tree_add_item(cell_tree, hf_ieee802154_6top_slot_offset, tvb, offset, 2, ENC_LITTLE_ENDIAN);
+                proto_tree_add_item(cell_tree, hf_ieee802154_6top_channel_offset, tvb, offset + 2, 2, ENC_LITTLE_ENDIAN);
+            }
+        } else {
+            cell_list_item = proto_tree_add_item(sixtop_tree, hf_ieee802154_6top_cell_list, tvb, offset, pie_length, ENC_NA);
+            cell_list_tree = proto_item_add_subtree(cell_list_item, ett_ieee802154_p_ie_6top_cell_list);
+            for (i = 0; pie_length > 0; pie_length -= 4, offset += 4, i++) {
+                cell_item = proto_tree_add_item(cell_list_tree, hf_ieee802154_6top_cell, tvb, offset, 4, ENC_NA);
+                cell_tree = proto_item_add_subtree(cell_item, ett_ieee802154_p_ie_6top_cell);
+                proto_tree_add_item(cell_tree, hf_ieee802154_6top_slot_offset, tvb, offset, 2, ENC_LITTLE_ENDIAN);
+                proto_tree_add_item(cell_tree, hf_ieee802154_6top_channel_offset, tvb, offset + 2, 2, ENC_LITTLE_ENDIAN);
+            }
         }
     }
 
@@ -2288,13 +2334,13 @@ dissect_ieee802154_6top(tvbuff_t *tvb, packet_info *pinfo, proto_tree *p_inf_ele
 } /* dissect_ieee802154_6top */
 
 /**
- *Subdissector command for the Superframe specification sub-field within the beacon frame.
+ * Subdissector for the Superframe specification sub-field within the beacon frame.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields (unused).
- *@param tree pointer to command subtree.
- *@param offset offset into the tvbuff to begin dissection.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to command subtree.
+ * @param offset offset into the tvbuff to begin dissection.
+ */
 void
 dissect_ieee802154_superframe(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tree, guint *offset)
 {
@@ -2313,13 +2359,13 @@ dissect_ieee802154_superframe(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree 
 } /* dissect_ieee802154_superframe */
 
 /**
- *Subdissector command for the GTS information fields within the beacon frame.
+ * Subdissector for the GTS information fields within the beacon frame.
  *
- *@param tvb            - pointer to buffer containing raw packet.
- *@param pinfo          - pointer to packet information fields (unused).
- *@param tree           - pointer to command subtree.
- *@param offset         - offset into the tvbuff to begin dissection.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to command subtree.
+ * @param offset offset into the tvbuff to begin dissection.
+ */
 void
 dissect_ieee802154_gtsinfo(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tree, guint *offset)
 {
@@ -2392,13 +2438,13 @@ dissect_ieee802154_gtsinfo(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tr
 } /* dissect_ieee802154_gtsinfo */
 
 /**
- *Subdissector command for the pending address list fields within the beacon frame.
+ * Subdissector for the pending address list fields within the beacon frame.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields (unused).
- *@param tree pointer to command subtree.
- *@offset offset into the tvbuff to begin dissection.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to command subtree.
+ * @param offset into the tvbuff to begin dissection.
+ */
 void
 dissect_ieee802154_pendaddr(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tree, guint *offset)
 {
@@ -2444,7 +2490,7 @@ dissect_ieee802154_pendaddr(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *t
  * @param ett tree index
  * @param new_item pointer to store the item created for this Header IE
  * @returns the tree created for the Header IE
-*/
+ */
 static proto_tree*
 create_header_ie_tree(tvbuff_t *tvb, proto_tree *tree, guint offset, guint ie_length, int hf, gint ett, proto_item** new_item)
 {
@@ -2644,16 +2690,15 @@ dissect_ieee802154_header_ie(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree
 } /* dissect_ieee802154_header_ie */
 
 /**
- * Subdissector command for MAC Layer Management Entitiy (MLME)
- * Payload Sub IEs (Information Elements)
+ * Subdissector for MAC Layer Management Entitiy (MLME) Payload Sub IEs
  *
  * Reference: IEEE 802.15.4-2015: 7.4.3.2 MLME IE
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields (unused).
- *@param tree pointer to command subtree.
- *@param offset offset into the tvbuff to begin dissection.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to command subtree.
+ * @param offset offset into the tvbuff to begin dissection.
+ */
 static int
 dissect_ieee802154_payload_mlme_sub_ie(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tree, int offset)
 {
@@ -2811,11 +2856,13 @@ dissect_ieee802154_payload_mlme_sub_ie(tvbuff_t *tvb, packet_info *pinfo _U_, pr
 }
 
 /**
+ * Subdissector for MAC Layer Management Entitiy (MLME) Payload Sub IEs
  *
  * Reference: IEEE 802.15.4-2015 - 7.4.4.4 TSCH Timeslot IE
  */
 static void
-dissect_802154_tsch_timeslot(tvbuff_t *tvb, proto_tree *tree, guint psie_remaining, guint16 psie_id, int *offset){
+dissect_802154_tsch_timeslot(tvbuff_t *tvb, proto_tree *tree, guint psie_remaining, guint16 psie_id, int *offset)
+{
     proto_tree * timeslot_tree;
     proto_item * timeslot_item;
 
@@ -2834,8 +2881,8 @@ dissect_802154_tsch_timeslot(tvbuff_t *tvb, proto_tree *tree, guint psie_remaini
 }
 
 static void
-dissect_802154_enhanced_beacon_filter(tvbuff_t *tvb, proto_tree *tree, guint16 psie_remaining, gint *offset){
-
+dissect_802154_enhanced_beacon_filter(tvbuff_t *tvb, proto_tree *tree, guint16 psie_remaining, gint *offset)
+{
     guint8  filter;
     guint8  attr_len;
     guint32 attr_bitmap = 0;
@@ -2882,14 +2929,14 @@ dissect_802154_enhanced_beacon_filter(tvbuff_t *tvb, proto_tree *tree, guint16 p
 }
 
 /**
- *Subdissector command for Vendor Specific IEs (Information Elements)
+ * Subdissector for Vendor Specific IEs (Information Elements)
  *
- *@param tvb pointer to buffer containing the Vendor Specific IE
- *@param pinfo pointer to packet information fields (unused).
- *@param tree pointer to command subtree.
- *@param offset offset into the tvbuff to begin dissection.
- *@param pie_length the length of the Vendor Payload IE
-*/
+ * @param tvb pointer to buffer containing the Vendor Specific IE
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to command subtree.
+ * @param offset offset into the tvbuff to begin dissection.
+ * @param pie_length the length of the Vendor Payload IE
+ */
 static int
 dissect_ieee802154_vendor_ie(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, gint offset, gint pie_length)
 {
@@ -2920,13 +2967,13 @@ dissect_ieee802154_vendor_ie(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree
 }
 
 /**
- *Subdissector command for Payload IEs (Information Elements)
+ * Subdissector for Payload IEs (Information Elements)
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields (unused).
- *@param tree pointer to command subtree.
- *@param offset offset into the tvbuff to begin dissection.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to command subtree.
+ * @param offset offset into the tvbuff to begin dissection.
+ */
 static int
 dissect_ieee802154_payload_ie(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree *tree, int offset)
 {
@@ -2935,6 +2982,8 @@ dissect_ieee802154_payload_ie(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree 
     proto_tree *payload_tree;
     proto_item *mlme_item;
     proto_tree *mlme_subtree;
+    proto_item *ietf_item;
+    proto_tree *ietf_subtree;
     guint16     payload_ie;
     guint16     pie_id;
     int         pie_length;
@@ -2990,12 +3039,13 @@ dissect_ieee802154_payload_ie(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree 
                 break;
 
             case IEEE802154_PAYLOAD_IE_IETF:
-                subtree = proto_tree_add_subtree(payload_tree, tvb, offset, pie_length + 2, ett_ieee802154_payload, NULL, "Payload IE");
-                proto_item_append_text(subtree, ", %s, Length: %d", val_to_str_const(pie_id, ieee802154_payload_ie_names, "Unknown IE"), pie_length);
-                proto_tree_add_bitmask(subtree, tvb, (const guint) offset, hf_ieee802154_payload_ie_tlv, ett_ieee802154_payload_ie, fields, ENC_LITTLE_ENDIAN);
+                ietf_item = proto_tree_add_item(payload_tree, hf_ieee802154_payload_ie_ietf, tvb, offset, pie_length + 2, ENC_NA);
+                ietf_subtree = proto_item_add_subtree(ietf_item, ett_ieee802154_payload_ie_ietf);
+                proto_item_append_text(ietf_item, ", Length: %d", pie_length);
+                proto_tree_add_bitmask(ietf_subtree, tvb, (const guint) offset, hf_ieee802154_payload_ie_tlv, ett_ieee802154_payload_ie, fields, ENC_LITTLE_ENDIAN);
                 offset += 2;
 
-                offset += dissect_ieee802154_6top(tvb, pinfo, subtree, (guint) offset, pie_length);
+                offset += dissect_ieee802154_6top(tvb, pinfo, ietf_subtree, (guint) offset, pie_length);
                 break;
 
             default:
@@ -3009,7 +3059,7 @@ dissect_ieee802154_payload_ie(tvbuff_t *tvb, packet_info *pinfo _U_, proto_tree 
                     offset += pie_length;
                 }
         }
-    } while ((tvb_reported_length_remaining(tvb, offset) - IEEE802154_FCS_LEN > 1)
+    } while ((tvb_reported_length_remaining(tvb, offset) > 1)
              && (pie_id != IEEE802154_PAYLOAD_IE_GID_TERM));
 
     // Once the dissection is over, the length of the header is known
@@ -3022,13 +3072,13 @@ static const true_false_string tfs_cinfo_device_type = { "FFD", "RFD" };
 static const true_false_string tfs_cinfo_power_src = { "AC/Mains Power", "Battery" };
 
 /**
- *Command subdissector routine for the Association request command.
+ * Command subdissector routine for the Association request command.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields.
- *@param tree pointer to protocol tree.
- *@param packet IEEE 802.15.4 packet information.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields.
+ * @param tree pointer to protocol tree.
+ * @param packet IEEE 802.15.4 packet information.
+ */
 
 static void
 dissect_ieee802154_assoc_req(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet)
@@ -3062,13 +3112,13 @@ dissect_ieee802154_assoc_req(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree
 } /* dissect_ieee802154_assoc_req */
 
 /**
- *Command subdissector routine for the Association response command.
+ * Command subdissector routine for the Association response command.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields.
- *@param tree pointer to protocol tree.
- *@param packet IEEE 802.15.4 packet information.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields.
+ * @param tree pointer to protocol tree.
+ * @param packet IEEE 802.15.4 packet information.
+ */
 static void
 dissect_ieee802154_assoc_rsp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet)
 {
@@ -3128,11 +3178,11 @@ dissect_ieee802154_assoc_rsp(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree
 /**
  * Command subdissector routine for the Disassociate command.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields.
- *@param tree pointer to protocol tree.
- *@param packet IEEE 802.15.4 packet information.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields.
+ * @param tree pointer to protocol tree.
+ * @param packet IEEE 802.15.4 packet information.
+ */
 static void
 dissect_ieee802154_disassoc(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet)
 {
@@ -3148,7 +3198,7 @@ dissect_ieee802154_disassoc(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree,
     reason = tvb_get_guint8(tvb, 0);
     if (tree) {
         ti = proto_tree_add_uint(subtree, hf_ieee802154_disassoc_reason, tvb, 0, 1, reason);
-        switch(reason) {
+        switch (reason) {
             case 0x01:
                 proto_item_append_text(ti, " (Coordinator requests device to leave)");
                 break;
@@ -3181,11 +3231,11 @@ dissect_ieee802154_disassoc(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree,
 /**
  * Command subdissector routine for the Coordinator Realignment command.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields.
- *@param tree pointer to protocol tree.
- *@param packet IEEE 802.15.4 packet information.
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields.
+ * @param tree pointer to protocol tree.
+ * @param packet IEEE 802.15.4 packet information.
+ */
 static void
 dissect_ieee802154_realign(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet)
 {
@@ -3255,18 +3305,18 @@ static const true_false_string tfs_gtsreq_dir = { "Receive", "Transmit" };
 static const true_false_string tfs_gtsreq_type= { "Allocate GTS", "Deallocate GTS" };
 
 /**
- *Command subdissector routine for the GTS request command.
+ * Command subdissector routine for the GTS request command.
  *
- *Assumes that COL_INFO will be set to the command name,
- *command name will already be appended to the command subtree
- *and protocol root. In addition, assumes that the command ID
- *has already been parsed.
+ * Assumes that COL_INFO will be set to the command name,
+ * command name will already be appended to the command subtree
+ * and protocol root. In addition, assumes that the command ID
+ * has already been parsed.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields (unused).
- *@param tree pointer to protocol tree.
- *@param packet IEEE 802.15.4 packet information (unused).
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to protocol tree.
+ * @param packet IEEE 802.15.4 packet information (unused).
+ */
 
 static void
 dissect_ieee802154_gtsreq(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet)
@@ -3294,11 +3344,11 @@ dissect_ieee802154_gtsreq(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, i
 /**
  * Subdissector routine all commands.
  *
- *@param tvb pointer to buffer containing raw packet.
- *@param pinfo pointer to packet information fields (unused).
- *@param tree pointer to protocol tree.
- *@param packet IEEE 802.15.4 packet information (unused).
-*/
+ * @param tvb pointer to buffer containing raw packet.
+ * @param pinfo pointer to packet information fields (unused).
+ * @param tree pointer to protocol tree.
+ * @param packet IEEE 802.15.4 packet information (unused).
+ */
 static void
 dissect_ieee802154_command(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet)
 {
@@ -3405,19 +3455,19 @@ dissect_ieee802154_command(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, 
 } /* dissect_ieee802154_command */
 
 /**
- *IEEE 802.15.4 decryption algorithm. Tries to find the
- *appropriate key from the information in the IEEE 802.15.4
- *packet structure and dissector config.
+ * IEEE 802.15.4 decryption algorithm. Tries to find the
+ * appropriate key from the information in the IEEE 802.15.4
+ * packet structure and dissector config.
  *
- *This function implements the security proceedures for the
- *2006 version of the spec only. IEEE 802.15.4-2003 is
- *unsupported.
- *@param tvb IEEE 802.15.4 packet.
- *@param pinfo Packet info structure.
- *@param offset Offset where the ciphertext 'c' starts.
- *@param packet IEEE 802.15.4 packet information.
- *@return decrypted payload.
-*/
+ * This function implements the security proceedures for the
+ * 2006 version of the spec only. IEEE 802.15.4-2003 is
+ * unsupported.
+ * @param tvb IEEE 802.15.4 packet.
+ * @param pinfo Packet info structure.
+ * @param offset Offset where the ciphertext 'c' starts.
+ * @param packet IEEE 802.15.4 packet information.
+ * @return decrypted payload.
+ */
 static tvbuff_t *
 dissect_ieee802154_decrypt(tvbuff_t *tvb,
                            guint offset,
@@ -3583,16 +3633,16 @@ dissect_ieee802154_decrypt(tvbuff_t *tvb,
 } /* dissect_ieee802154_decrypt */
 
 /**
- *Creates the CCM* initial block value for IEEE 802.15.4.
+ * Creates the CCM* initial block value for IEEE 802.15.4.
  *
- *@param block Output pointer for the initial block.
- *@param adata TRUE if additional auth data is present
- *@param M CCM* parameter M.
- *@param addr Source extended address.
- *@param frame_counter Packet frame counter
- *@param level Security level or key_sequence_counter for 802.15.4-2003
- *@param ctr_val Value in the last L bytes of the block.
-*/
+ * @param block Output pointer for the initial block.
+ * @param adata TRUE if additional auth data is present
+ * @param M CCM* parameter M.
+ * @param addr Source extended address.
+ * @param frame_counter Packet frame counter
+ * @param level Security level or key_sequence_counter for 802.15.4-2003
+ * @param ctr_val Value in the last L bytes of the block.
+ */
 void
 ccm_init_block(gchar *block, gboolean adata, gint M, guint64 addr, guint32 frame_counter, guint8 level, gint ctr_val)
 {
@@ -3623,16 +3673,16 @@ ccm_init_block(gchar *block, gboolean adata, gint M, guint64 addr, guint32 frame
     block[i] = (guint8)((ctr_val >> 0) & 0xff);
 } /* ccm_init_block */
 
-/*
+/**
  * Perform an in-place CTR-mode encryption/decryption.
  *
- *@param key Encryption Key.
- *@param iv Counter initial value.
- *@param mic MIC to encrypt/decrypt.
- *@param data Buffer to encrypt/decrypt.
- *@param length Length of the buffer.
- *@return TRUE on SUCCESS, FALSE on error.
-*/
+ * @param key Encryption Key.
+ * @param iv Counter initial value.
+ * @param mic MIC to encrypt/decrypt.
+ * @param data Buffer to encrypt/decrypt.
+ * @param length Length of the buffer.
+ * @return TRUE on SUCCESS, FALSE on error.
+ */
 gboolean
 ccm_ctr_encrypt(const gchar *key, const gchar *iv, gchar *mic, gchar *data, gint length)
 {
@@ -3670,16 +3720,16 @@ ccm_ctr_encrypt(const gchar *key, const gchar *iv, gchar *mic, gchar *data, gint
 } /* ccm_ctr_encrypt */
 
 /**
- *Generate a CBC-MAC of the decrypted payload and additional authentication headers.
- *@param key Encryption Key.
- *@param iv Counter initial value.
- *@param a Additional auth headers.
- *@param a_len Length of the additional headers.
- *@param m Plaintext message.
- *@param m_len Length of plaintext message.
- *@param mic Output for CBC-MAC.
- *@return  TRUE on SUCCESS, FALSE on error.
-*/
+ * Generate a CBC-MAC of the decrypted payload and additional authentication headers.
+ * @param key Encryption Key.
+ * @param iv Counter initial value.
+ * @param a Additional auth headers.
+ * @param a_len Length of the additional headers.
+ * @param m Plaintext message.
+ * @param m_len Length of plaintext message.
+ * @param mic Output for CBC-MAC.
+ * @return  TRUE on SUCCESS, FALSE on error.
+ */
 gboolean
 ccm_cbc_mac(const gchar *key, const gchar *iv, const gchar *a, gint a_len, const gchar *m, gint m_len, gchar *mic)
 {
@@ -3823,14 +3873,14 @@ static gboolean ieee802154_set_mac_key(ieee802154_packet *packet, unsigned char 
 }
 
 /**
- *Creates a record that maps the given short address and pan to a long (extended) address.
- *@param short_addr 16-bit short address
- *@param pan 16-bit PAN id
- *@param long_addr 64-bit long (extended) address
- *@param proto pointer to name of current protocol
- *@param fnum Frame number this mapping became valid
- *@return TRUE Record was updated, FALSE Couldn't find it
-*/
+ * Creates a record that maps the given short address and pan to a long (extended) address.
+ * @param short_addr 16-bit short address
+ * @param pan 16-bit PAN id
+ * @param long_addr 64-bit long (extended) address
+ * @param proto pointer to name of current protocol
+ * @param fnum Frame number this mapping became valid
+ * @return TRUE Record was updated, FALSE Couldn't find it
+ */
 ieee802154_map_rec *ieee802154_addr_update(ieee802154_map_tab_t *au_ieee802154_map,
         guint16 short_addr, guint16 pan, guint64 long_addr, const char *proto, guint fnum)
 {
@@ -3884,15 +3934,15 @@ ieee802154_map_rec *ieee802154_addr_update(ieee802154_map_tab_t *au_ieee802154_m
 } /* ieee802154_addr_update */
 
 /**
- *Marks a mapping record associated with device with short_addr
- *as invalid at a certain frame number, typically when a
- *disassociation occurs.
+ * Marks a mapping record associated with device with short_addr
+ * as invalid at a certain frame number, typically when a
+ * disassociation occurs.
  *
- *@param short_addr 16-bit short address
- *@param pan 16-bit PAN id
- *@param fnum Frame number when mapping became invalid
- *@return TRUE Record was updated, FALSE Couldn't find it
-*/
+ * @param short_addr 16-bit short address
+ * @param pan 16-bit PAN id
+ * @param fnum Frame number when mapping became invalid
+ * @return TRUE Record was updated, FALSE Couldn't find it
+ */
 gboolean ieee802154_short_addr_invalidate(guint16 short_addr, guint16 pan, guint fnum)
 {
     ieee802154_short_addr  addr16;
@@ -3916,10 +3966,10 @@ gboolean ieee802154_short_addr_invalidate(guint16 short_addr, guint16 pan, guint
  * as invalid at a certain frame number, typically when a
  * disassociation occurs.
  *
- *@param long_addr 16-bit short address
- *@param fnum Frame number when mapping became invalid
- *@return TRUE If record was updated, FALSE otherwise
-*/
+ * @param long_addr 16-bit short address
+ * @param fnum Frame number when mapping became invalid
+ * @return TRUE If record was updated, FALSE otherwise
+ */
 gboolean ieee802154_long_addr_invalidate(guint64 long_addr, guint fnum)
 {
     ieee802154_map_rec   *map_rec;
@@ -3939,7 +3989,7 @@ gboolean ieee802154_long_addr_invalidate(guint64 long_addr, guint fnum)
  * tables for mapping between 16-bit to 64-bit addresses and
  * populates them with static address pairs from a UAT
  * preference table.
-*/
+ */
 static void
 proto_init_ieee802154(void)
 {
@@ -3956,7 +4006,7 @@ proto_init_ieee802154(void)
 
 /**
  * Cleanup for the IEEE 802.15.4 dissector.
-*/
+ */
 static void
 proto_cleanup_ieee802154(void)
 {
@@ -3988,7 +4038,7 @@ static gpointer ieee802154_da_value(packet_info *pinfo _U_)
 
 /**
  * IEEE 802.15.4 protocol registration routine.
-*/
+ */
 void proto_register_ieee802154(void)
 {
     /* Protocol fields  */
@@ -4008,7 +4058,7 @@ void proto_register_ieee802154(void)
             IEEE802154_PHY_LENGTH_MASK, NULL, HFILL }},
 
         { &hf_ieee802154_nonask_phr,
-        { "PHR",                   "wpan-nonask-phy.phr", FT_UINT8, BASE_HEX, NULL,
+        { "PHR",                            "wpan-nonask-phy.phr", FT_UINT8, BASE_HEX, NULL,
             0x0, NULL, HFILL }},
     };
 
@@ -4205,7 +4255,7 @@ void proto_register_ieee802154(void)
         { "Enhanced Beacon Filter IE",      "wpan.enhanced_beacon_filter", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
 
         { &hf_ieee802154_payload_ie_tlv,
-        { "Payload IE TLV",                         "wpan.payload_ie_tlv", FT_UINT16, BASE_HEX, NULL,
+        { "Payload IE TLV",                 "wpan.payload_ie_tlv", FT_UINT16, BASE_HEX, NULL,
             0x0, NULL, HFILL }},
 
         { &hf_ieee802154_payload_ie_type,
@@ -4237,7 +4287,7 @@ void proto_register_ieee802154(void)
                 IEEE802154_PSIE_LENGTH_MASK_SHORT, NULL, HFILL }},
 
         { &hf_ieee802154_psie_long,
-        { "Payload Sub IE (long)",         "wpan.payload_sub_ie.long", FT_UINT16, BASE_HEX, NULL,
+        { "Payload Sub IE (long)",          "wpan.payload_sub_ie.long", FT_UINT16, BASE_HEX, NULL,
             0x0, NULL, HFILL }},
 
         { &hf_ieee802154_psie_type_long,
@@ -4261,40 +4311,40 @@ void proto_register_ieee802154(void)
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_asn,
-        { "Absolute Slot Number",                  "wpan.tsch.asn", FT_UINT40, BASE_DEC, NULL, 0x0,
+        { "Absolute Slot Number",           "wpan.tsch.asn", FT_UINT40, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_join_metric,
-        { "Join Metric",                           "wpan.tsch.join_metric", FT_UINT8, BASE_DEC, NULL, 0x0,
+        { "Join Metric",                    "wpan.tsch.join_metric", FT_UINT8, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_channel_hopping,
-        { "Channel Hopping IE",                    "wpan.channel_hopping", FT_NONE, BASE_NONE, NULL, 0x0,
+        { "Channel Hopping IE",             "wpan.channel_hopping", FT_NONE, BASE_NONE, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotframe,
-        { "Slotframe IE",   "wpan.tsch.slotframe", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
+        { "Slotframe IE", "wpan.tsch.slotframe", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotframe_list,
-        { "Slotframe info list",   "wpan.tsch.slotframe_list", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
+        { "Slotframe info list", "wpan.tsch.slotframe_list", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
 
         { &hf_ieee802154_tsch_link_info,
-        { "Link Information",   "wpan.tsch.link_info", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
+        { "Link Information", "wpan.tsch.link_info", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotf_link_nb_slotf,
-        { "Number of Slotframes",                   "wpan.tsch.slotframe_num", FT_UINT8, BASE_DEC, NULL, 0x0,
+        { "Number of Slotframes",           "wpan.tsch.slotframe_num", FT_UINT8, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotf_link_slotf_handle,
-        { "Slotframe handle",                       "wpan.tsch.slotframe_handle", FT_UINT8, BASE_DEC, NULL, 0x0,
+        { "Slotframe handle",               "wpan.tsch.slotframe_handle", FT_UINT8, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotf_size,
-        { "Slotframe size",                       "wpan.tsch.slotframe_size", FT_UINT16, BASE_DEC, NULL, 0x0,
+        { "Slotframe size",                 "wpan.tsch.slotframe_size", FT_UINT16, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotf_link_nb_links,
-        { "Number of Links",                       "wpan.tsch.nb_links", FT_UINT8, BASE_DEC, NULL, 0x0,
+        { "Number of Links",                "wpan.tsch.nb_links", FT_UINT8, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotf_link_timeslot,
@@ -4302,15 +4352,15 @@ void proto_register_ieee802154(void)
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotf_link_channel_offset,
-        { "Channel Offset",                       "wpan.tsch.channel_offset", FT_UINT16, BASE_DEC, NULL, 0x0,
+        { "Channel Offset",                 "wpan.tsch.channel_offset", FT_UINT16, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_slotf_link_options,
-        { "Link Options",                       "wpan.tsch.link_options", FT_UINT8, BASE_DEC, NULL, 0x0,
+        { "Link Options",                   "wpan.tsch.link_options", FT_UINT8, BASE_DEC, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_tsch_hopping_sequence_id,
-        { "Hopping Sequence ID",                   "wpan.tsch.hopping_sequence_id", FT_UINT8, BASE_HEX, NULL, 0x0,
+        { "Hopping Sequence ID",            "wpan.tsch.hopping_sequence_id", FT_UINT8, BASE_HEX, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_psie_eb_filter_pjoin,
@@ -4348,6 +4398,9 @@ void proto_register_ieee802154(void)
         { "Vendor OUI",                      "wpan.payload_ie.vendor_oui", FT_UINT24, BASE_HEX, NULL,
             0x0, NULL, HFILL }},
 
+        { &hf_ieee802154_payload_ie_ietf,
+        { "Payload IE, IETF IE",             "wpan.payload_ie.ietf", FT_NONE, BASE_NONE, NULL, 0x0, NULL, HFILL }},
+
         { &hf_ieee802154_mlme_ie_data,
         { "Data",                            "wpan.mlme_sub_ie.data", FT_BYTES, BASE_NONE, NULL, 0x0, NULL, HFILL }},
 
@@ -4358,6 +4411,9 @@ void proto_register_ieee802154(void)
           NULL, HFILL }},
 
         /* IETF IE - 6top IE */
+        { &hf_ieee802154_6top,
+        { "6top IE", "wpan.6top", FT_NONE, BASE_NONE, NULL, 0x0,
+          NULL, HFILL }},
 
         { &hf_ieee802154_6top_version,
         { "6P Version", "wpan.6top_version", FT_UINT8, BASE_DEC, NULL, IETF_6TOP_VERSION,
@@ -4383,12 +4439,8 @@ void proto_register_ieee802154(void)
         { "SeqNum", "wpan.6top_seqnum", FT_UINT8, BASE_DEC, NULL, IETF_6TOP_SEQNUM,
           NULL, HFILL }},
 
-        { &hf_ieee802154_6top_gab,
-        { "GAB", "wpan.6top_gab", FT_UINT8, BASE_DEC, VALS(ietf_6top_generation_numbers), IETF_6TOP_GAB,
-          NULL, HFILL }},
-
-        { &hf_ieee802154_6top_gba,
-        { "GBA", "wpan.6top_gba", FT_UINT8, BASE_DEC, VALS(ietf_6top_generation_numbers), IETF_6TOP_GBA,
+        { &hf_ieee802154_6top_gen,
+        { "GEN", "wpan.6top_gen", FT_UINT8, BASE_DEC, VALS(ietf_6top_generation_numbers), IETF_6TOP_GEN,
           NULL, HFILL }},
 
         { &hf_ieee802154_6top_metadata,
@@ -4416,7 +4468,23 @@ void proto_register_ieee802154(void)
           NULL, HFILL }},
 
         { &hf_ieee802154_6top_num_cells,
-        { "Number of Cells", "wpan.6top_num_cells", FT_UINT16, BASE_DEC, NULL, 0x0,
+        { "Number of Cells", "wpan.6top_num_cells", FT_UINT8, BASE_DEC, NULL, 0x0,
+          NULL, HFILL }},
+
+        { &hf_ieee802154_6top_cell_list,
+        { "CellList", "wpan.6top_cell_list", FT_NONE, BASE_NONE, NULL, 0x0,
+          NULL, HFILL }},
+
+        { &hf_ieee802154_6top_rel_cell_list,
+        { "Rel. CellList", "wpan.6top_rel_cell_list", FT_NONE, BASE_NONE, NULL, 0x0,
+          NULL, HFILL }},
+
+        { &hf_ieee802154_6top_cand_cell_list,
+        { "Cand. CellList", "wpan.6top_cand_cell_list", FT_NONE, BASE_NONE, NULL, 0x0,
+          NULL, HFILL }},
+
+        { &hf_ieee802154_6top_cell,
+        { "Cell", "wpan.6top_cell", FT_BYTES, BASE_NONE, NULL, 0x0,
           NULL, HFILL }},
 
         { &hf_ieee802154_6top_reserved,
@@ -4437,6 +4505,10 @@ void proto_register_ieee802154(void)
 
         { &hf_ieee802154_6top_channel_offset,
         { "Channel Offset", "wpan.6top_channel_offset", FT_UINT16, BASE_HEX, NULL, 0x0,
+          NULL, HFILL }},
+
+        { &hf_ieee802154_6top_total_num_cells,
+        { "Total Number of Cells", "wpan.6top_total_num_cells", FT_UINT16, BASE_DEC, NULL, 0x0,
           NULL, HFILL }},
 
         /* Command Frame Specific Fields */
@@ -4559,7 +4631,7 @@ void proto_register_ieee802154(void)
             "A flag defining the direction of the GTS Slot.", HFILL }},
 
         { &hf_ieee802154_gts_address,
-        { "Address",                  "wpan.gts.address", FT_UINT16, BASE_HEX, NULL, 0x0,
+        { "Address",                    "wpan.gts.address", FT_UINT16, BASE_HEX, NULL, 0x0,
             NULL, HFILL }},
 
         { &hf_ieee802154_pending16,
@@ -4681,6 +4753,7 @@ void proto_register_ieee802154(void)
         &ett_ieee802154_hie_csl,
         &ett_ieee802154_payload,
         &ett_ieee802154_payload_ie,
+        &ett_ieee802154_payload_ie_ietf,
         &ett_ieee802154_tsch_timeslot,
         &ett_ieee802154_tsch_synch,
         &ett_ieee802154_channel_hopping,
@@ -4697,10 +4770,10 @@ void proto_register_ieee802154(void)
         &ett_ieee802154_zigbee,
         &ett_ieee802154_zboss,
         &ett_ieee802154_p_ie_6top,
-        &ett_ieee802154_p_ie_6top_version_type,
-        &ett_ieee802154_p_ie_6top_seqnum_gab_gba,
         &ett_ieee802154_p_ie_6top_cell_options,
         &ett_ieee802154_p_ie_6top_cell_list,
+        &ett_ieee802154_p_ie_6top_rel_cell_list,
+        &ett_ieee802154_p_ie_6top_cand_cell_list,
         &ett_ieee802154_p_ie_6top_cell
     };
 
@@ -4732,11 +4805,11 @@ void proto_register_ieee802154(void)
         { &ei_ieee802154_6top_unsupported_type, { "wpan.6top_unsupported_type", PI_PROTOCOL, PI_WARN,
                 "Unsupported Type of Message", EXPFILL }},
         { &ei_ieee802154_6top_unsupported_command, { "wpan.6top_unsupported_command", PI_PROTOCOL, PI_WARN,
-                "Unsupported 6Top command", EXPFILL }},
+                "Unsupported 6top command", EXPFILL }},
         { &ei_ieee802154_time_correction_error, { "wpan.time_correction.error", PI_PROTOCOL, PI_WARN,
                 "Incorrect value. Reference: IEEE-802.15.4-2015. Table 7-8: Values of the Time Sync Info field for ACK with timing Information", EXPFILL}},
         { &ei_ieee802154_6top_unsupported_return_code, { "wpan.6top_unsupported_code", PI_PROTOCOL, PI_WARN,
-                "Unsupported 6Top return code", EXPFILL }},
+                "Unsupported 6top return code", EXPFILL }},
         { &ei_ieee802154_ie_unsupported_element_id, { "wpan.ie_unsupported_element_id", PI_PROTOCOL, PI_WARN,
                 "Unsupported IE element ID", EXPFILL }},
         { &ei_ieee802154_ie_unknown_element_id, { "wpan.ie_unknown_element_id", PI_PROTOCOL, PI_WARN,
@@ -4901,7 +4974,7 @@ void proto_reg_handoff_ieee802154(void)
     static gboolean            prefs_initialized = FALSE;
     static unsigned int        old_ieee802154_ethertype;
 
-    if (!prefs_initialized){
+    if (!prefs_initialized) {
         /* Get the dissector handles. */
         zigbee_beacon_handle = find_dissector_add_dependency("zbee_beacon", proto_ieee802154);
         zigbee_ie_handle = find_dissector_add_dependency("zbee_ie", proto_ieee802154);
