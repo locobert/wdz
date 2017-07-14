@@ -36,7 +36,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
         MLME IE
-            Payload IE TLV: 0x8811, Type: Payload, Id: MLME IE
+            IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
@@ -48,7 +48,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 Absolute Slot Number: 14
                 Join Metric: 0
             TSCH Timeslot IE
-                Payload IE TLV: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
                     .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
@@ -109,7 +109,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa815, Type: Payload, Id: IETF IE
+            IE Header: 0xa815, Type: Payload, Id: IETF IE, Length: 21
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0001 0101 = Length: 21
@@ -140,7 +140,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                         Slot Offset: 0xf00d
                         Channel Offset: 0xbaad
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -232,7 +232,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa809, Type: Payload, Id: IETF IE
+            IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1001 = Length: 9
@@ -250,7 +250,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                         Slot Offset: 0xbeef
                         Channel Offset: 0xdead
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -341,7 +341,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa809, Type: Payload, Id: IETF IE
+            IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1001 = Length: 9
@@ -362,7 +362,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                     0000 0... = Reserved: 0x00
                 Number of Cells: 1
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -453,7 +453,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa811, Type: Payload, Id: IETF IE
+            IE Header: 0xa811, Type: Payload, Id: IETF IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0001 0001 = Length: 17
@@ -477,7 +477,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                         Slot Offset: 0xf00d
                         Channel Offset: 0xbaad
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -568,7 +568,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa809, Type: Payload, Id: IETF IE
+            IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1001 = Length: 9
@@ -586,7 +586,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                         Slot Offset: 0xbeef
                         Channel Offset: 0xdead
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -677,7 +677,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa815, Type: Payload, Id: IETF IE
+            IE Header: 0xa815, Type: Payload, Id: IETF IE, Length: 21
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0001 0101 = Length: 21
@@ -708,7 +708,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                         Slot Offset: 0xf00d
                         Channel Offset: 0xbaad
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -800,7 +800,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa809, Type: Payload, Id: IETF IE
+            IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1001 = Length: 9
@@ -818,7 +818,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                         Slot Offset: 0xbeef
                         Channel Offset: 0xdead
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -909,7 +909,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa809, Type: Payload, Id: IETF IE
+            IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1001 = Length: 9
@@ -930,7 +930,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                     0000 0... = Reserved: 0x00
                 Number of Cells: 1
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1021,7 +1021,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa811, Type: Payload, Id: IETF IE
+            IE Header: 0xa811, Type: Payload, Id: IETF IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0001 0001 = Length: 17
@@ -1045,7 +1045,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                         Slot Offset: 0xf00d
                         Channel Offset: 0xbaad
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1136,7 +1136,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa809, Type: Payload, Id: IETF IE
+            IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1001 = Length: 9
@@ -1154,7 +1154,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                         Slot Offset: 0xbeef
                         Channel Offset: 0xdead
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1245,7 +1245,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa821, Type: Payload, Id: IETF IE
+            IE Header: 0xa821, Type: Payload, Id: IETF IE, Length: 33
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0010 0001 = Length: 33
@@ -1286,7 +1286,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                         Slot Offset: 0xab1e
                         Channel Offset: 0xbadc
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1378,7 +1378,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa809, Type: Payload, Id: IETF IE
+            IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1001 = Length: 9
@@ -1396,7 +1396,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                         Slot Offset: 0xcafe
                         Channel Offset: 0xbaad
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1487,7 +1487,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa808, Type: Payload, Id: IETF IE
+            IE Header: 0xa808, Type: Payload, Id: IETF IE, Length: 8
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1000 = Length: 8
@@ -1507,7 +1507,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                     .... .1.. = SHARED Cell: 0x1
                     0000 0... = Reserved: 0x00
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1598,7 +1598,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -1613,7 +1613,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Total Number of Cells: 240
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1704,7 +1704,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa80d, Type: Payload, Id: IETF IE
+            IE Header: 0xa80d, Type: Payload, Id: IETF IE, Length: 13
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1101 = Length: 13
@@ -1727,7 +1727,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 Offset: 15
                 Maximum Number of Requested Cells: 240
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1818,7 +1818,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa81d, Type: Payload, Id: IETF IE
+            IE Header: 0xa81d, Type: Payload, Id: IETF IE, Length: 29
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0001 1101 = Length: 29
@@ -1851,7 +1851,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                         Slot Offset: 0xab1e
                         Channel Offset: 0xbadc
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -1943,7 +1943,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa80d, Type: Payload, Id: IETF IE
+            IE Header: 0xa80d, Type: Payload, Id: IETF IE, Length: 13
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 1101 = Length: 13
@@ -1966,7 +1966,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 Offset: 15
                 Maximum Number of Requested Cells: 240
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2057,7 +2057,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa81d, Type: Payload, Id: IETF IE
+            IE Header: 0xa81d, Type: Payload, Id: IETF IE, Length: 29
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0001 1101 = Length: 29
@@ -2090,7 +2090,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                         Slot Offset: 0xab1e
                         Channel Offset: 0xbadc
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2182,7 +2182,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -2197,7 +2197,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2288,7 +2288,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -2302,7 +2302,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1000 = SeqNum: 8
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2393,7 +2393,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -2408,7 +2408,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2499,7 +2499,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -2513,7 +2513,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1001 = SeqNum: 9
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2604,7 +2604,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -2619,7 +2619,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2710,7 +2710,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -2724,7 +2724,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1010 = SeqNum: 10
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2815,7 +2815,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -2830,7 +2830,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -2921,7 +2921,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -2935,7 +2935,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1011 = SeqNum: 11
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3026,7 +3026,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -3041,7 +3041,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3132,7 +3132,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -3146,7 +3146,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1100 = SeqNum: 12
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3237,7 +3237,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -3252,7 +3252,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3343,7 +3343,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -3357,7 +3357,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1101 = SeqNum: 13
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3448,7 +3448,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -3463,7 +3463,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3554,7 +3554,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -3568,7 +3568,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1110 = SeqNum: 14
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3659,7 +3659,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
         MLME IE
-            Payload IE TLV: 0x8811, Type: Payload, Id: MLME IE
+            IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
@@ -3671,7 +3671,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 Absolute Slot Number: 1547
                 Join Metric: 0
             TSCH Timeslot IE
-                Payload IE TLV: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
                     .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
@@ -3732,7 +3732,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -3747,7 +3747,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3838,7 +3838,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -3852,7 +3852,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 1111 = SeqNum: 15
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -3943,7 +3943,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -3958,7 +3958,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -4049,7 +4049,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -4063,7 +4063,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 0000 = SeqNum: 0
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -4154,7 +4154,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa807, Type: Payload, Id: IETF IE
+            IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0111 = Length: 7
@@ -4169,7 +4169,7 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
                 0101 .... = GEN: Lollipop Counter Value (5)
                 Metadata: 0xcafe
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -4260,7 +4260,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, IETF IE, Payload Termination IE
         IETF Payload IE
-            Payload IE TLV: 0xa805, Type: Payload, Id: IETF IE
+            IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .010 1... .... .... = Id: IETF IE (0x5)
                 .... .000 0000 0101 = Length: 5
@@ -4274,7 +4274,7 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
                 .... 0001 = SeqNum: 1
                 0101 .... = GEN: Lollipop Counter Value (5)
         Payload Termination IE
-            Payload IE TLV: 0xf800, Type: Payload, Id: Payload Termination IE
+            IE Header: 0xf800, Type: Payload, Id: Payload Termination IE, Length: 0
                 1... .... .... .... = Type: Payload (1)
                 .111 1... .... .... = Id: Payload Termination IE (0xf)
                 .... .000 0000 0000 = Length: 0
@@ -4365,7 +4365,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
         MLME IE
-            Payload IE TLV: 0x8811, Type: Payload, Id: MLME IE
+            IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
@@ -4377,7 +4377,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 Absolute Slot Number: 2800
                 Join Metric: 0
             TSCH Timeslot IE
-                Payload IE TLV: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
                     .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
@@ -4438,7 +4438,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
         MLME IE
-            Payload IE TLV: 0x8811, Type: Payload, Id: MLME IE
+            IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
@@ -4450,7 +4450,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 Absolute Slot Number: 4256
                 Join Metric: 0
             TSCH Timeslot IE
-                Payload IE TLV: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
                     .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
@@ -4511,7 +4511,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
         MLME IE
-            Payload IE TLV: 0x8811, Type: Payload, Id: MLME IE
+            IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
@@ -4523,7 +4523,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 Absolute Slot Number: 5502
                 Join Metric: 0
             TSCH Timeslot IE
-                Payload IE TLV: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
                     .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
@@ -4584,7 +4584,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
         MLME IE
-            Payload IE TLV: 0x8811, Type: Payload, Id: MLME IE
+            IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
@@ -4596,7 +4596,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 Absolute Slot Number: 6986
                 Join Metric: 0
             TSCH Timeslot IE
-                Payload IE TLV: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
                     .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
@@ -4657,7 +4657,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
         MLME IE
-            Payload IE TLV: 0x8811, Type: Payload, Id: MLME IE
+            IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
@@ -4669,7 +4669,7 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
                 Absolute Slot Number: 8519
                 Join Metric: 0
             TSCH Timeslot IE
-                Payload IE TLV: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
                     .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1

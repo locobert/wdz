@@ -46,13 +46,13 @@ IEEE 802.15.4 Data, Src: 1e:af:fa:00:00:00:00:01
                 .... .... .000 0000 = Length: 0
     Payload IEs, Unknown IE 0x0e
         Unknown Payload IE: 0x0e
-            Payload IE TLV: 0xf022, Type: Payload, Id: Unknown
+            IE Header: 0xf022, Type: Payload, Id: Unknown, Length: 34
                 1... .... .... .... = Type: Payload (1)
                 .111 0... .... .... = Id: Unknown (0xe)
                 .... .000 0010 0010 = Length: 34
             Unknown Content: 20 04 77 77 77 77 77 77 77 77 77 77 77 77 77 77 ...
-            [Expert Info (Warning/Protocol): Unknown IE element ID]
-                [Unknown IE element ID]
+            [Expert Info (Warning/Protocol): Unsupported IE ID]
+                [Unsupported IE ID]
                 [Severity level: Warning]
                 [Group: Protocol]
 

@@ -25,14 +25,14 @@ IEEE 802.15.4 Data
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
     Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unknown Header IE: 0xff
+        Unsupported Header IE: 0xff
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
                 .... .... .010 1100 = Length: 44
             Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4d 50 58 20 ...
-            [Expert Info (Warning/Protocol): Unknown IE element ID]
-                [Unknown IE element ID]
+            [Expert Info (Warning/Protocol): Unsupported IE ID]
+                [Unsupported IE ID]
                 [Severity level: Warning]
                 [Group: Protocol]
         Header Termination 1 IE (Payload IEs follow)
@@ -42,7 +42,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9807, Type: Payload, Id: MPX IE
+            IE Header: 0x9807, Type: Payload, Id: MPX IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 0111 = Length: 7
@@ -86,14 +86,14 @@ IEEE 802.15.4 Data
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
     Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unknown Header IE: 0xff
+        Unsupported Header IE: 0xff
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
                 .... .... .010 1100 = Length: 44
             Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4d 50 58 20 ...
-            [Expert Info (Warning/Protocol): Unknown IE element ID]
-                [Unknown IE element ID]
+            [Expert Info (Warning/Protocol): Unsupported IE ID]
+                [Unsupported IE ID]
                 [Severity level: Warning]
                 [Group: Protocol]
         Header Termination 1 IE (Payload IEs follow)
@@ -103,7 +103,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -147,14 +147,14 @@ IEEE 802.15.4 Data
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
     Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unknown Header IE: 0xff
+        Unsupported Header IE: 0xff
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
                 .... .... .010 1100 = Length: 44
             Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4d 50 58 20 ...
-            [Expert Info (Warning/Protocol): Unknown IE element ID]
-                [Unknown IE element ID]
+            [Expert Info (Warning/Protocol): Unsupported IE ID]
+                [Unsupported IE ID]
                 [Severity level: Warning]
                 [Group: Protocol]
         Header Termination 1 IE (Payload IEs follow)
@@ -164,7 +164,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9805, Type: Payload, Id: MPX IE
+            IE Header: 0x9805, Type: Payload, Id: MPX IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 0101 = Length: 5
@@ -206,14 +206,14 @@ IEEE 802.15.4 Data
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
     Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unknown Header IE: 0xff
+        Unsupported Header IE: 0xff
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
                 .... .... .010 1100 = Length: 44
             Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4d 50 58 20 ...
-            [Expert Info (Warning/Protocol): Unknown IE element ID]
-                [Unknown IE element ID]
+            [Expert Info (Warning/Protocol): Unsupported IE ID]
+                [Unsupported IE ID]
                 [Severity level: Warning]
                 [Group: Protocol]
         Header Termination 1 IE (Payload IEs follow)
@@ -223,7 +223,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9805, Type: Payload, Id: MPX IE
+            IE Header: 0x9805, Type: Payload, Id: MPX IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 0101 = Length: 5
@@ -265,14 +265,14 @@ IEEE 802.15.4 Data
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
     Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unknown Header IE: 0xff
+        Unsupported Header IE: 0xff
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
                 .... .... .010 1100 = Length: 44
             Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4d 50 58 20 ...
-            [Expert Info (Warning/Protocol): Unknown IE element ID]
-                [Unknown IE element ID]
+            [Expert Info (Warning/Protocol): Unsupported IE ID]
+                [Unsupported IE ID]
                 [Severity level: Warning]
                 [Group: Protocol]
         Header Termination 1 IE (Payload IEs follow)
@@ -282,7 +282,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9801, Type: Payload, Id: MPX IE
+            IE Header: 0x9801, Type: Payload, Id: MPX IE, Length: 1
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 0001 = Length: 1
@@ -322,14 +322,14 @@ IEEE 802.15.4 Data
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
     Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unknown Header IE: 0xff
+        Unsupported Header IE: 0xff
             IE Header: 0x7fad, Type: Header, Id: Unknown, Length: 45
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
                 .... .... .010 1101 = Length: 45
             Unknown Content: 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 4d 50 58 20 ...
-            [Expert Info (Warning/Protocol): Unknown IE element ID]
-                [Unknown IE element ID]
+            [Expert Info (Warning/Protocol): Unsupported IE ID]
+                [Unsupported IE ID]
                 [Severity level: Warning]
                 [Group: Protocol]
         Header Termination 1 IE (Payload IEs follow)
@@ -339,7 +339,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9803, Type: Payload, Id: MPX IE
+            IE Header: 0x9803, Type: Payload, Id: MPX IE, Length: 3
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 0011 = Length: 3
@@ -387,7 +387,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9845, Type: Payload, Id: MPX IE
+            IE Header: 0x9845, Type: Payload, Id: MPX IE, Length: 69
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0100 0101 = Length: 69
@@ -459,7 +459,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980b, Type: Payload, Id: MPX IE
+            IE Header: 0x980b, Type: Payload, Id: MPX IE, Length: 11
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1011 = Length: 11
@@ -514,7 +514,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980b, Type: Payload, Id: MPX IE
+            IE Header: 0x980b, Type: Payload, Id: MPX IE, Length: 11
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1011 = Length: 11
@@ -569,7 +569,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980b, Type: Payload, Id: MPX IE
+            IE Header: 0x980b, Type: Payload, Id: MPX IE, Length: 11
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1011 = Length: 11
@@ -624,7 +624,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9817, Type: Payload, Id: MPX IE
+            IE Header: 0x9817, Type: Payload, Id: MPX IE, Length: 23
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0001 0111 = Length: 23
@@ -680,7 +680,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -739,7 +739,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x98f7, Type: Payload, Id: MPX IE
+            IE Header: 0x98f7, Type: Payload, Id: MPX IE, Length: 247
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 1111 0111 = Length: 247
@@ -931,7 +931,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9c06, Type: Payload, Id: MPX IE
+            IE Header: 0x9c06, Type: Payload, Id: MPX IE, Length: 1030
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .100 0000 0110 = Length: 1030
@@ -1054,7 +1054,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -1113,7 +1113,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9c06, Type: Payload, Id: MPX IE
+            IE Header: 0x9c06, Type: Payload, Id: MPX IE, Length: 1030
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .100 0000 0110 = Length: 1030
@@ -1236,7 +1236,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -1295,7 +1295,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9c06, Type: Payload, Id: MPX IE
+            IE Header: 0x9c06, Type: Payload, Id: MPX IE, Length: 1030
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .100 0000 0110 = Length: 1030
@@ -1418,7 +1418,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -1477,7 +1477,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9a4d, Type: Payload, Id: MPX IE
+            IE Header: 0x9a4d, Type: Payload, Id: MPX IE, Length: 589
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .010 0100 1101 = Length: 589
@@ -2075,7 +2075,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9d24, Type: Payload, Id: MPX IE
+            IE Header: 0x9d24, Type: Payload, Id: MPX IE, Length: 1316
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .101 0010 0100 = Length: 1316
@@ -2216,7 +2216,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -2275,7 +2275,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9d20, Type: Payload, Id: MPX IE
+            IE Header: 0x9d20, Type: Payload, Id: MPX IE, Length: 1312
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .101 0010 0000 = Length: 1312
@@ -2415,7 +2415,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -2474,7 +2474,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9bb9, Type: Payload, Id: MPX IE
+            IE Header: 0x9bb9, Type: Payload, Id: MPX IE, Length: 953
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .011 1011 1001 = Length: 953
@@ -3038,7 +3038,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x984b, Type: Payload, Id: MPX IE
+            IE Header: 0x984b, Type: Payload, Id: MPX IE, Length: 75
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0100 1011 = Length: 75
@@ -3113,7 +3113,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980c, Type: Payload, Id: MPX IE
+            IE Header: 0x980c, Type: Payload, Id: MPX IE, Length: 12
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1100 = Length: 12
@@ -3172,7 +3172,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x980a, Type: Payload, Id: MPX IE
+            IE Header: 0x980a, Type: Payload, Id: MPX IE, Length: 10
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0000 1010 = Length: 10
@@ -3225,7 +3225,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x987b, Type: Payload, Id: MPX IE
+            IE Header: 0x987b, Type: Payload, Id: MPX IE, Length: 123
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0111 1011 = Length: 123
@@ -3310,7 +3310,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x987b, Type: Payload, Id: MPX IE
+            IE Header: 0x987b, Type: Payload, Id: MPX IE, Length: 123
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0111 1011 = Length: 123
@@ -3415,7 +3415,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x989d, Type: Payload, Id: MPX IE
+            IE Header: 0x989d, Type: Payload, Id: MPX IE, Length: 157
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 1001 1101 = Length: 157
@@ -3496,7 +3496,7 @@ IEEE 802.15.4 Data
                 .... .... .000 0000 = Length: 0
     Payload IEs, MPX IE
         MPX IE
-            Payload IE TLV: 0x9865, Type: Payload, Id: MPX IE
+            IE Header: 0x9865, Type: Payload, Id: MPX IE, Length: 101
                 1... .... .... .... = Type: Payload (1)
                 .001 1... .... .... = Id: MPX IE (0x3)
                 .... .000 0110 0101 = Length: 101
