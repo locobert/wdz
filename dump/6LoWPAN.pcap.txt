@@ -1,331 +1,331 @@
-    1   0.000000 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-    2   0.045504 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-    3   4.064607 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-    4   6.111420 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-    5   6.165656 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-    6   6.222875 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-    7   6.282528 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-    8   6.332083 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-    9   6.378531 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   10   8.446555 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   11   8.503769 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   12   8.554498 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   13  10.617398 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   14  10.675631 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   15  10.732859 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   16  10.793507 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   17  10.844067 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   18  10.892426 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   19  12.927075 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   20  12.967605 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   21  15.023514 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   22  15.081756 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   23  15.137809 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   24  15.196462 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   25  15.242355 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   26  15.290894 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   27  17.330102 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   28  17.375594 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   29  19.395687 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-   30  23.443484 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   31  23.501535 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   32  23.545268 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   33  25.591492 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   34  25.644729 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   35  25.698888 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   36  25.753454 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   37  25.801019 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   38  25.851376 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   39  29.905535 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   40  29.959780 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   41  30.015824 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   42  30.073648 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   43  30.118203 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   44  30.162571 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   45  34.212549 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   46  34.269988 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   47  34.329843 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   48  34.390499 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   49  34.442065 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   50  34.492427 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   51  38.546604 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   52  38.602810 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   53  38.650552 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   54  40.702588 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   55  40.759688 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   56  40.809409 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   57  44.865610 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   58  44.918929 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   59  44.973899 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   60  45.029583 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   61  45.078120 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   62  45.123476 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   63  51.184594 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-   64  55.234216 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   65  55.280717 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   66  59.324253 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   67  59.370908 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   68  61.396696 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-   69  65.463747 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   70  65.521988 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   71  65.579023 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   72  65.639738 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   73  65.689593 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   74  65.736942 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   75  67.791688 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   76  67.846714 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   77  67.893482 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   78  69.945609 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   79  69.998871 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   80  70.053937 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   81  70.109650 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   82  70.159132 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   83  70.206498 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   84  72.263344 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   85  72.307827 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   86  76.363793 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   87  76.422819 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   88  76.468557 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   89  78.526713 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   90  78.582919 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   91  78.631491 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-   92  80.678360 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   93  82.730402 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-   94  84.787790 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   95  84.845031 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   96  84.899084 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   97  84.952736 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-   98  84.996477 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-   99  85.040242 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  100  87.078401 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  101  87.120894 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  102  91.164382 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  103  93.218755 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  104  93.279007 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  105  93.339049 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  106  93.396708 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  107  93.441434 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  108  93.485803 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  109  95.518365 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  110  97.574797 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  111  97.634845 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  112  97.683433 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  113  99.731820 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  114  99.786066 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  115  99.843287 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  116  99.902952 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  117  99.950825 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  118  99.995214 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  119 104.024810 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  120 104.055928 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  121 110.108791 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  122 110.168028 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  123 110.227079 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  124 110.283896 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  125 110.335447 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  126 110.386811 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  127 112.448888 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  128 112.509138 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  129 112.569176 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  130 112.626831 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  131 112.672548 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  132 112.718925 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  133 116.782447 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  134 116.823947 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  135 118.875862 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  136 118.930084 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  137 118.973810 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  138 121.032909 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  139 121.089125 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  140 121.150279 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  141 121.209848 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  142 121.257561 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  143 121.301180 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  144 123.322142 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  145 125.373991 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  146 125.431331 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  147 125.486284 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  148 125.543101 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  149 125.592823 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  150 125.641793 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  151 127.680612 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  152 129.723545 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  153 131.762563 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  154 131.804322 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  155 133.842480 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  156 133.884983 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  157 135.908134 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  158 135.938432 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  159 137.983528 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  160 144.022570 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  161 144.065076 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  162 146.117884 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  163 146.175140 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  164 146.229179 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  165 146.283841 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  166 146.330401 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  167 146.378750 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  168 150.412198 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  169 150.437522 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  170 152.482613 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  171 152.525110 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  172 154.578943 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  173 154.638196 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  174 154.697224 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  175 154.753047 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  176 154.802590 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  177 154.849963 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  178 156.877278 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  179 156.904600 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  180 160.922202 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  181 160.947524 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  182 163.007036 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  183 163.063280 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  184 163.111931 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  185 165.162100 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  186 165.216297 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  187 165.273538 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  188 165.334194 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  189 165.385737 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  190 165.436096 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  191 169.456411 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  192 169.480715 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  193 175.533153 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  194 175.588377 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  195 175.647462 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  196 175.704182 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  197 175.753894 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  198 175.801521 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  199 177.853162 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  200 177.909408 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  201 177.969456 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  202 178.028101 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  203 178.073820 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  204 178.121463 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  205 180.158750 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  206 180.201328 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  207 182.229133 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  208 182.260258 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  209 184.319120 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  210 184.379367 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  211 184.439406 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  212 184.497065 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  213 184.542805 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  214 184.590158 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  215 186.618372 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  216 186.647681 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  217 188.691956 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  218 188.731272 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  219 190.782207 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  220 190.837203 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  221 190.884110 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  222 194.924818 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  223 194.971310 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  224 199.028192 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  225 199.087226 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  226 199.134974 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  227 203.173782 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  228 203.217287 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  229 205.242456 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  230 205.268757 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  231 213.328259 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  232 213.386301 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  233 213.431200 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  234 215.484295 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  235 215.542693 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  236 215.599589 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  237 215.660238 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  238 215.710943 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  239 215.761512 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  240 217.804879 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  241 217.851357 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  242 223.909265 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  243 223.968486 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  244 224.026565 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  245 224.081355 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  246 224.127928 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  247 224.176266 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  248 226.207848 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  249 226.247350 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  250 228.272373 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  251 230.322495 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  252 230.376629 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  253 230.433904 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  254 230.494548 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  255 230.544269 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  256 230.593050 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  257 234.644342 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  258 234.701580 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  259 234.755650 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  260 234.809308 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  261 234.854025 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  262 234.900575 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  263 238.943983 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  264 238.988468 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  265 241.044302 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  266 241.101524 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  267 241.156584 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  268 241.212480 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  269 241.260950 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  270 241.306290 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  271 243.324492 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  272 243.354804 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  273 245.408256 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  274 245.466300 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  275 245.512039 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  276 247.565391 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  277 247.624640 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  278 247.683689 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  279 247.740346 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  280 247.791066 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  281 247.840615 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  282 249.897331 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  283 249.953743 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  284 250.014806 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  285 250.075441 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  286 250.127013 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  287 250.177524 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  288 252.223060 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  289 252.264476 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  290 258.317327 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  291 258.373675 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  292 258.424302 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  293 260.474436 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  294 260.532489 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  295 260.576213 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  296 262.623423 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  297 262.678624 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  298 262.736665 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  299 262.790469 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  300 262.835045 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  301 262.879404 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  302 266.901705 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  303 266.926019 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  304 268.960021 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  305 269.004515 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 False 1025 → 61617 Len=17
-  306 273.024449 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  307 273.053656 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 False 1025 → 61617 Len=17
-  308 279.073740 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  309 281.126498 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  310 281.180681 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  311 281.224597 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  312 283.242717 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  313 283.268036 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 False 1025 → 61617 Len=17
-  314 285.326514 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  315 285.379760 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  316 285.433877 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  317 285.487471 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  318 285.532376 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  319 285.577900 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  320 289.636582 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  321 289.691015 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  322 289.747080 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  323 289.805893 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  324 289.851610 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 False 1025 → 61617 Len=215
-  325 289.899169 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  326 291.952510 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  327 292.006758 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  328 292.062991 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  329 292.121616 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
-  330 292.169206 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 False 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
-  331 292.219549 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 False Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+    1   0.000000 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+    2   0.045504 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+    3   4.064607 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+    4   6.111420 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+    5   6.165656 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+    6   6.222875 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+    7   6.282528 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+    8   6.332083 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+    9   6.378531 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   10   8.446555 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   11   8.503769 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   12   8.554498 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   13  10.617398 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   14  10.675631 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   15  10.732859 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   16  10.793507 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   17  10.844067 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   18  10.892426 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   19  12.927075 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   20  12.967605 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   21  15.023514 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   22  15.081756 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   23  15.137809 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   24  15.196462 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   25  15.242355 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   26  15.290894 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   27  17.330102 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   28  17.375594 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   29  19.395687 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+   30  23.443484 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   31  23.501535 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   32  23.545268 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   33  25.591492 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   34  25.644729 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   35  25.698888 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   36  25.753454 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   37  25.801019 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   38  25.851376 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   39  29.905535 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   40  29.959780 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   41  30.015824 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   42  30.073648 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   43  30.118203 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   44  30.162571 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   45  34.212549 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   46  34.269988 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   47  34.329843 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   48  34.390499 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   49  34.442065 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   50  34.492427 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   51  38.546604 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   52  38.602810 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   53  38.650552 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   54  40.702588 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   55  40.759688 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   56  40.809409 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   57  44.865610 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   58  44.918929 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   59  44.973899 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   60  45.029583 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   61  45.078120 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   62  45.123476 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   63  51.184594 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+   64  55.234216 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   65  55.280717 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   66  59.324253 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   67  59.370908 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   68  61.396696 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+   69  65.463747 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   70  65.521988 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   71  65.579023 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   72  65.639738 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   73  65.689593 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   74  65.736942 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   75  67.791688 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   76  67.846714 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   77  67.893482 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   78  69.945609 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   79  69.998871 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   80  70.053937 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   81  70.109650 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   82  70.159132 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   83  70.206498 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   84  72.263344 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   85  72.307827 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   86  76.363793 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   87  76.422819 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   88  76.468557 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   89  78.526713 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   90  78.582919 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   91  78.631491 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+   92  80.678360 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   93  82.730402 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+   94  84.787790 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   95  84.845031 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   96  84.899084 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   97  84.952736 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+   98  84.996477 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+   99  85.040242 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  100  87.078401 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  101  87.120894 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  102  91.164382 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  103  93.218755 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  104  93.279007 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  105  93.339049 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  106  93.396708 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  107  93.441434 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  108  93.485803 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  109  95.518365 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  110  97.574797 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  111  97.634845 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  112  97.683433 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  113  99.731820 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  114  99.786066 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  115  99.843287 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  116  99.902952 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  117  99.950825 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  118  99.995214 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  119 104.024810 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  120 104.055928 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  121 110.108791 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  122 110.168028 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  123 110.227079 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  124 110.283896 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  125 110.335447 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  126 110.386811 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  127 112.448888 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  128 112.509138 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  129 112.569176 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  130 112.626831 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  131 112.672548 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  132 112.718925 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  133 116.782447 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  134 116.823947 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  135 118.875862 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  136 118.930084 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  137 118.973810 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  138 121.032909 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  139 121.089125 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  140 121.150279 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  141 121.209848 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  142 121.257561 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  143 121.301180 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  144 123.322142 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  145 125.373991 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  146 125.431331 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  147 125.486284 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  148 125.543101 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  149 125.592823 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  150 125.641793 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  151 127.680612 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  152 129.723545 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  153 131.762563 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  154 131.804322 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  155 133.842480 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  156 133.884983 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  157 135.908134 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  158 135.938432 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  159 137.983528 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  160 144.022570 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  161 144.065076 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  162 146.117884 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  163 146.175140 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  164 146.229179 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  165 146.283841 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  166 146.330401 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  167 146.378750 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  168 150.412198 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  169 150.437522 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  170 152.482613 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  171 152.525110 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  172 154.578943 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  173 154.638196 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  174 154.697224 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  175 154.753047 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  176 154.802590 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  177 154.849963 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  178 156.877278 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  179 156.904600 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  180 160.922202 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  181 160.947524 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  182 163.007036 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  183 163.063280 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  184 163.111931 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  185 165.162100 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  186 165.216297 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  187 165.273538 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  188 165.334194 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  189 165.385737 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  190 165.436096 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  191 169.456411 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  192 169.480715 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  193 175.533153 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  194 175.588377 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  195 175.647462 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  196 175.704182 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  197 175.753894 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  198 175.801521 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  199 177.853162 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  200 177.909408 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  201 177.969456 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  202 178.028101 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  203 178.073820 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  204 178.121463 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  205 180.158750 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  206 180.201328 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  207 182.229133 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  208 182.260258 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  209 184.319120 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  210 184.379367 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  211 184.439406 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  212 184.497065 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  213 184.542805 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  214 184.590158 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  215 186.618372 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  216 186.647681 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  217 188.691956 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  218 188.731272 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  219 190.782207 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  220 190.837203 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  221 190.884110 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  222 194.924818 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  223 194.971310 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  224 199.028192 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  225 199.087226 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  226 199.134974 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  227 203.173782 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  228 203.217287 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  229 205.242456 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  230 205.268757 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  231 213.328259 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  232 213.386301 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  233 213.431200 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  234 215.484295 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  235 215.542693 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  236 215.599589 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  237 215.660238 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  238 215.710943 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  239 215.761512 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  240 217.804879 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  241 217.851357 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  242 223.909265 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  243 223.968486 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  244 224.026565 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  245 224.081355 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  246 224.127928 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  247 224.176266 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  248 226.207848 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  249 226.247350 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  250 228.272373 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  251 230.322495 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  252 230.376629 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  253 230.433904 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  254 230.494548 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  255 230.544269 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  256 230.593050 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  257 234.644342 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  258 234.701580 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  259 234.755650 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  260 234.809308 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  261 234.854025 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  262 234.900575 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  263 238.943983 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  264 238.988468 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  265 241.044302 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  266 241.101524 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  267 241.156584 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  268 241.212480 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  269 241.260950 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  270 241.306290 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  271 243.324492 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  272 243.354804 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  273 245.408256 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  274 245.466300 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  275 245.512039 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  276 247.565391 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  277 247.624640 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  278 247.683689 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  279 247.740346 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  280 247.791066 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  281 247.840615 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  282 249.897331 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  283 249.953743 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  284 250.014806 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  285 250.075441 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  286 250.127013 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  287 250.177524 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  288 252.223060 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  289 252.264476 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  290 258.317327 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  291 258.373675 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  292 258.424302 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  293 260.474436 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  294 260.532489 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  295 260.576213 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  296 262.623423 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  297 262.678624 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  298 262.736665 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  299 262.790469 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  300 262.835045 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  301 262.879404 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  302 266.901705 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  303 266.926019 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  304 268.960021 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  305 269.004515 fe80::1c:daff:ff00:1888 → fe80::1c:daff:ff00:188a UDP 163 1025 → 61617 Len=17
+  306 273.024449 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  307 273.053656 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 125 1025 → 61617 Len=17
+  308 279.073740 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  309 281.126498 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  310 281.180681 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  311 281.224597 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  312 283.242717 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  313 283.268036 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 123 1025 → 61617 Len=17
+  314 285.326514 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  315 285.379760 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  316 285.433877 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  317 285.487471 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  318 285.532376 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  319 285.577900 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  320 289.636582 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  321 289.691015 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  322 289.747080 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  323 289.805893 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  324 289.851610 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 173 1025 → 61617 Len=215
+  325 289.899169 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 173 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  326 291.952510 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  327 292.006758 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 197 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  328 292.062991 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  329 292.121616 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 198 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88
+  330 292.169206 fe80::21c:daff:ff00:1888 → fe80::21c:daff:ff00:188a UDP 175 1025 → 61617 [BAD UDP LENGTH 262 > IP PAYLOAD LENGTH] Len=254
+  331 292.219549 00:1c:da:ff:ff:00:18:88 → 00:1c:da:ff:ff:00:18:8a 6LoWPAN 175 Data, Dst: ExeginTe_ff:ff:00:18:8a, Src: ExeginTe_ff:ff:00:18:88

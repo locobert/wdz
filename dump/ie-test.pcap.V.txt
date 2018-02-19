@@ -24,8 +24,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 2 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 2 IE (Payload follows)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -75,8 +75,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 2 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 2 IE (Payload follows)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -131,8 +131,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -182,8 +182,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE: NACK
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE: NACK
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -233,8 +233,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -284,8 +284,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE: NACK
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE: NACK
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -335,8 +335,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE: NACK
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE: NACK
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -390,8 +390,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -443,8 +443,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE, Header Termination 2 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE, Header Termination 2 IE (Payload follows)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -504,8 +504,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -560,8 +560,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, CSL IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, CSL IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -610,8 +610,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, CSL IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, CSL IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -661,8 +661,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, CSL IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, CSL IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -717,8 +717,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, CSL IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, CSL IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -771,8 +771,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, CSL IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, CSL IE
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -826,8 +826,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -883,8 +883,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -945,8 +945,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -999,8 +999,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -1053,8 +1053,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -1112,8 +1112,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Time Correction IE, CSL IE, Time Correction IE: NACK, CSL IE, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Time Correction IE, CSL IE, Time Correction IE: NACK, CSL IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)

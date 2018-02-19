@@ -8,19 +8,7 @@
  * By Gerald Combs <gerald@wireshark.org>
  * Copyright 1998 Gerald Combs
  *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * SPDX-License-Identifier: GPL-2.0-or-later
  */
 #ifndef PACKET_IEEE802154_H
 #define PACKET_IEEE802154_H
@@ -34,6 +22,7 @@
 /* Dissector tables for the Header IEs and Payload IEs */
 #define IEEE802154_HEADER_IE_DTABLE         "wpan.header_ie"
 #define IEEE802154_PAYLOAD_IE_DTABLE        "wpan.payload_ie"
+#define IEEE802154_MLME_IE_DTABLE           "wpan.mlme_ie"
 
 /*  Packet Overhead from MAC header + footer (excluding addressing) */
 #define IEEE802154_MAX_FRAME_LEN            127
@@ -177,7 +166,6 @@
 #define IEEE802154_MLME_PSIE_EB_FLT_ATTR_LEN  0x18
 
 /* Vendor OUIs */
-#define IEEE802154_VENDOR_OUI_ZIGBEE      0x4A191B
 
 /*  Bit-masks for CC24xx style FCS */
 #define IEEE802154_CC24xx_CORRELATION       0x7F00
@@ -248,7 +236,7 @@ typedef enum {
 #define IEEE802154_HEADER_IE_RCC_CAP        0x27
 #define IEEE802154_HEADER_IE_RCCN           0x28
 #define IEEE802154_HEADER_IE_GLOBAL_TIME    0x29
-/* Assigned to External Organization: 0x2a    */
+#define IEEE802154_HEADER_IE_WISUN          0x2a
 #define IEEE802154_HEADER_IE_DA_IE          0x2b
 /* Reserved 0x2c-0x7d */
 #define IEEE802154_HEADER_IE_HT1            0x7e
@@ -260,7 +248,7 @@ typedef enum {
 #define IEEE802154_PAYLOAD_IE_MLME           0x1 /* Media Access Control (MAC) subLayer Management Entity */
 #define IEEE802154_PAYLOAD_IE_VENDOR         0x2 /* Vendor Specific */
 #define IEEE802154_PAYLOAD_IE_MPX            0x3 /* MPX IE (802.15.9) */
-/* Reserved 0x4 */
+#define IEEE802154_PAYLOAD_IE_WISUN          0x4 /* Wi-SUN IE */
 #define IEEE802154_PAYLOAD_IE_IETF           0x5 /* IETF IE, RFC 8137 */
 /* Reserved 0x6-0xe */
 #define IEEE802154_PAYLOAD_IE_TERMINATION    0xf
@@ -362,6 +350,7 @@ typedef enum {
 #define IEEE802159_MPX_ABORT                      6
 /* IEEE 802.15.9 Table 20 */
 #define IEEE802159_MPX_MULTIPLEX_ID_KMP           1
+#define IEEE802159_MPX_MULTIPLEX_ID_WISUN         2
 /* IEEE 802.15.9 Table 21 */
 #define IEEE802159_MPX_KMP_ID_IEEE8021X           1
 #define IEEE802159_MPX_KMP_ID_HIP                 2
@@ -372,6 +361,10 @@ typedef enum {
 #define IEEE802159_MPX_KMP_ID_IEEE80211_GKH       7
 #define IEEE802159_MPX_KMP_ID_ETSI_TS_102_887_2   8
 #define IEEE802159_MPX_KMP_ID_VENDOR_SPECIFIC   255
+/* Wi-SUN MPX Sub-ID values. */
+#define IEEE802159_MPX_WISUN_SUBID_MHDS           0
+#define IEEE802159_MPX_WISUN_SUBID_6LOWPAN        1
+#define IEEE802159_MPX_WISUN_SUBID_SECURITY       2
 
 /*  Structure containing information regarding all necessary packet fields. */
 typedef struct {
@@ -476,9 +469,12 @@ void dissect_ieee802154_superframe      (tvbuff_t *, packet_info *, proto_tree *
 void dissect_ieee802154_gtsinfo         (tvbuff_t *, packet_info *, proto_tree *, guint *);
 void dissect_ieee802154_pendaddr        (tvbuff_t *, packet_info *, proto_tree *, guint *);
 void dissect_ieee802154_aux_sec_header_and_key(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, ieee802154_packet *packet, guint *offset);
-void ccm_init_block(gchar *block, gboolean adata, gint M, guint64 addr, guint32 frame_counter, guint8 level, gint ctr_val);
+void ccm_init_block(gchar *block, gboolean adata, gint M, guint64 addr, guint32 frame_counter, guint8 level, gint ctr_val, const gchar *generic_nonce);
 gboolean ccm_ctr_encrypt(const gchar *key, const gchar *iv, gchar *mic, gchar *data, gint length);
 gboolean ccm_cbc_mac(const gchar *key, const gchar *iv, const gchar *a, gint a_len, const gchar *m, gint m_len, gchar *mic);
+
+proto_tree *ieee802154_create_hie_tree(tvbuff_t *tvb, proto_tree *tree, int hf, gint ett);
+proto_tree *ieee802154_create_pie_tree(tvbuff_t *tvb, proto_tree *tree, int hf, gint ett);
 
 typedef struct {
     unsigned char* rx_mic;

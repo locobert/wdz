@@ -28,41 +28,41 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
     Destination: 0xffff
     Source PAN: 0xabcd
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
-        MLME IE
+        MLME IE, TSCH Synchronization IE, TSCH Timeslot IE, Channel Hopping IE, Slotframe IE
             IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
-            Time Synchronization IE
-                Payload Sub IE (short): 0x1a06, Type: Short, Sub Id (Short): TSCH Synchronization IE
+            TSCH Synchronization IE
+                MLME Sub IE: 0x1a06, Type: Short, Sub ID: TSCH Synchronization IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1010 .... .... = Sub Id (Short): TSCH Synchronization IE (0x1a)
+                    .001 1010 .... .... = Sub ID: TSCH Synchronization IE (0x1a)
                     .... .... 0000 0110 = Length: 6
                 Absolute Slot Number: 14
                 Join Metric: 0
             TSCH Timeslot IE
-                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                MLME Sub IE: 0x1c01, Type: Short, Sub ID: TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
+                    .001 1100 .... .... = Sub ID: TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
-                Data: 00
+                Timeslot ID: 0x00
             Channel Hopping IE
-                Payload Sub IE (long): 0xc801, Type: Long, Sub Id (Long): Channel Hopping IE
+                MLME Sub IE: 0xc801, Type: Long, Sub ID: Channel Hopping IE
                     1... .... .... .... = Type: Long (1)
-                    .100 1... .... .... = Sub Id (Long): Channel Hopping IE (0x9)
+                    .100 1... .... .... = Sub ID: Channel Hopping IE (0x9)
                     .... .000 0000 0001 = Length: 1
                 Hopping Sequence ID: 0x00
-            TSCH Slotframe and Link IE
-                Payload Sub IE (short): 0x1b01, Type: Short, Sub Id (Short): TSCH Slotframe and Link IE
+            Slotframe IE
+                MLME Sub IE: 0x1b01, Type: Short, Sub ID: TSCH Slotframe and Link IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1011 .... .... = Sub Id (Short): TSCH Slotframe and Link IE (0x1b)
+                    .001 1011 .... .... = Sub ID: TSCH Slotframe and Link IE (0x1b)
                     .... .... 0000 0001 = Length: 1
                 Number of Slotframes: 0
     FCS: 0xafc8 (Correct)
@@ -101,13 +101,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa815, Type: Payload, Id: IETF IE, Length: 21
                 1... .... .... .... = Type: Payload (1)
@@ -224,13 +224,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
@@ -333,13 +333,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
@@ -445,13 +445,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa811, Type: Payload, Id: IETF IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
@@ -560,13 +560,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
@@ -669,13 +669,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa815, Type: Payload, Id: IETF IE, Length: 21
                 1... .... .... .... = Type: Payload (1)
@@ -792,13 +792,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
@@ -901,13 +901,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
@@ -1013,13 +1013,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa811, Type: Payload, Id: IETF IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
@@ -1128,13 +1128,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
@@ -1237,13 +1237,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa821, Type: Payload, Id: IETF IE, Length: 33
                 1... .... .... .... = Type: Payload (1)
@@ -1370,13 +1370,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa809, Type: Payload, Id: IETF IE, Length: 9
                 1... .... .... .... = Type: Payload (1)
@@ -1479,13 +1479,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa808, Type: Payload, Id: IETF IE, Length: 8
                 1... .... .... .... = Type: Payload (1)
@@ -1590,13 +1590,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -1696,13 +1696,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa80d, Type: Payload, Id: IETF IE, Length: 13
                 1... .... .... .... = Type: Payload (1)
@@ -1810,13 +1810,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa81d, Type: Payload, Id: IETF IE, Length: 29
                 1... .... .... .... = Type: Payload (1)
@@ -1935,13 +1935,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa80d, Type: Payload, Id: IETF IE, Length: 13
                 1... .... .... .... = Type: Payload (1)
@@ -2049,13 +2049,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa81d, Type: Payload, Id: IETF IE, Length: 29
                 1... .... .... .... = Type: Payload (1)
@@ -2174,13 +2174,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -2280,13 +2280,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -2385,13 +2385,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -2491,13 +2491,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -2596,13 +2596,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -2702,13 +2702,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -2807,13 +2807,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -2913,13 +2913,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -3018,13 +3018,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -3124,13 +3124,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -3229,13 +3229,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -3335,13 +3335,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -3440,13 +3440,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -3546,13 +3546,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -3651,41 +3651,41 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
     Destination: 0xffff
     Source PAN: 0xabcd
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
-        MLME IE
+        MLME IE, TSCH Synchronization IE, TSCH Timeslot IE, Channel Hopping IE, Slotframe IE
             IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
-            Time Synchronization IE
-                Payload Sub IE (short): 0x1a06, Type: Short, Sub Id (Short): TSCH Synchronization IE
+            TSCH Synchronization IE
+                MLME Sub IE: 0x1a06, Type: Short, Sub ID: TSCH Synchronization IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1010 .... .... = Sub Id (Short): TSCH Synchronization IE (0x1a)
+                    .001 1010 .... .... = Sub ID: TSCH Synchronization IE (0x1a)
                     .... .... 0000 0110 = Length: 6
                 Absolute Slot Number: 1547
                 Join Metric: 0
             TSCH Timeslot IE
-                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                MLME Sub IE: 0x1c01, Type: Short, Sub ID: TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
+                    .001 1100 .... .... = Sub ID: TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
-                Data: 00
+                Timeslot ID: 0x00
             Channel Hopping IE
-                Payload Sub IE (long): 0xc801, Type: Long, Sub Id (Long): Channel Hopping IE
+                MLME Sub IE: 0xc801, Type: Long, Sub ID: Channel Hopping IE
                     1... .... .... .... = Type: Long (1)
-                    .100 1... .... .... = Sub Id (Long): Channel Hopping IE (0x9)
+                    .100 1... .... .... = Sub ID: Channel Hopping IE (0x9)
                     .... .000 0000 0001 = Length: 1
                 Hopping Sequence ID: 0x00
-            TSCH Slotframe and Link IE
-                Payload Sub IE (short): 0x1b01, Type: Short, Sub Id (Short): TSCH Slotframe and Link IE
+            Slotframe IE
+                MLME Sub IE: 0x1b01, Type: Short, Sub ID: TSCH Slotframe and Link IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1011 .... .... = Sub Id (Short): TSCH Slotframe and Link IE (0x1b)
+                    .001 1011 .... .... = Sub ID: TSCH Slotframe and Link IE (0x1b)
                     .... .... 0000 0001 = Length: 1
                 Number of Slotframes: 0
     FCS: 0xc136 (Correct)
@@ -3724,13 +3724,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -3830,13 +3830,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -3935,13 +3935,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -4041,13 +4041,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -4146,13 +4146,13 @@ IEEE 802.15.4 Data, Dst: EquipTra_01:00:01:00:01, Src: NetSys_02:00:02:00:02
     Destination PAN: 0xabcd
     Destination: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
     Extended Source: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa807, Type: Payload, Id: IETF IE, Length: 7
                 1... .... .... .... = Type: Payload (1)
@@ -4252,13 +4252,13 @@ IEEE 802.15.4 Data, Dst: NetSys_02:00:02:00:02, Src: EquipTra_01:00:01:00:01
     Destination PAN: 0xabcd
     Destination: NetSys_02:00:02:00:02 (00:02:00:02:00:02:00:02)
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, IETF IE, Payload Termination IE
+    Payload IEs, IETF Payload IE, Payload Termination IE
         IETF Payload IE
             IE Header: 0xa805, Type: Payload, Id: IETF IE, Length: 5
                 1... .... .... .... = Type: Payload (1)
@@ -4357,41 +4357,41 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
     Destination: 0xffff
     Source PAN: 0xabcd
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
-        MLME IE
+        MLME IE, TSCH Synchronization IE, TSCH Timeslot IE, Channel Hopping IE, Slotframe IE
             IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
-            Time Synchronization IE
-                Payload Sub IE (short): 0x1a06, Type: Short, Sub Id (Short): TSCH Synchronization IE
+            TSCH Synchronization IE
+                MLME Sub IE: 0x1a06, Type: Short, Sub ID: TSCH Synchronization IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1010 .... .... = Sub Id (Short): TSCH Synchronization IE (0x1a)
+                    .001 1010 .... .... = Sub ID: TSCH Synchronization IE (0x1a)
                     .... .... 0000 0110 = Length: 6
                 Absolute Slot Number: 2800
                 Join Metric: 0
             TSCH Timeslot IE
-                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                MLME Sub IE: 0x1c01, Type: Short, Sub ID: TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
+                    .001 1100 .... .... = Sub ID: TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
-                Data: 00
+                Timeslot ID: 0x00
             Channel Hopping IE
-                Payload Sub IE (long): 0xc801, Type: Long, Sub Id (Long): Channel Hopping IE
+                MLME Sub IE: 0xc801, Type: Long, Sub ID: Channel Hopping IE
                     1... .... .... .... = Type: Long (1)
-                    .100 1... .... .... = Sub Id (Long): Channel Hopping IE (0x9)
+                    .100 1... .... .... = Sub ID: Channel Hopping IE (0x9)
                     .... .000 0000 0001 = Length: 1
                 Hopping Sequence ID: 0x00
-            TSCH Slotframe and Link IE
-                Payload Sub IE (short): 0x1b01, Type: Short, Sub Id (Short): TSCH Slotframe and Link IE
+            Slotframe IE
+                MLME Sub IE: 0x1b01, Type: Short, Sub ID: TSCH Slotframe and Link IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1011 .... .... = Sub Id (Short): TSCH Slotframe and Link IE (0x1b)
+                    .001 1011 .... .... = Sub ID: TSCH Slotframe and Link IE (0x1b)
                     .... .... 0000 0001 = Length: 1
                 Number of Slotframes: 0
     FCS: 0x1f1a (Correct)
@@ -4430,41 +4430,41 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
     Destination: 0xffff
     Source PAN: 0xabcd
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
-        MLME IE
+        MLME IE, TSCH Synchronization IE, TSCH Timeslot IE, Channel Hopping IE, Slotframe IE
             IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
-            Time Synchronization IE
-                Payload Sub IE (short): 0x1a06, Type: Short, Sub Id (Short): TSCH Synchronization IE
+            TSCH Synchronization IE
+                MLME Sub IE: 0x1a06, Type: Short, Sub ID: TSCH Synchronization IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1010 .... .... = Sub Id (Short): TSCH Synchronization IE (0x1a)
+                    .001 1010 .... .... = Sub ID: TSCH Synchronization IE (0x1a)
                     .... .... 0000 0110 = Length: 6
                 Absolute Slot Number: 4256
                 Join Metric: 0
             TSCH Timeslot IE
-                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                MLME Sub IE: 0x1c01, Type: Short, Sub ID: TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
+                    .001 1100 .... .... = Sub ID: TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
-                Data: 00
+                Timeslot ID: 0x00
             Channel Hopping IE
-                Payload Sub IE (long): 0xc801, Type: Long, Sub Id (Long): Channel Hopping IE
+                MLME Sub IE: 0xc801, Type: Long, Sub ID: Channel Hopping IE
                     1... .... .... .... = Type: Long (1)
-                    .100 1... .... .... = Sub Id (Long): Channel Hopping IE (0x9)
+                    .100 1... .... .... = Sub ID: Channel Hopping IE (0x9)
                     .... .000 0000 0001 = Length: 1
                 Hopping Sequence ID: 0x00
-            TSCH Slotframe and Link IE
-                Payload Sub IE (short): 0x1b01, Type: Short, Sub Id (Short): TSCH Slotframe and Link IE
+            Slotframe IE
+                MLME Sub IE: 0x1b01, Type: Short, Sub ID: TSCH Slotframe and Link IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1011 .... .... = Sub Id (Short): TSCH Slotframe and Link IE (0x1b)
+                    .001 1011 .... .... = Sub ID: TSCH Slotframe and Link IE (0x1b)
                     .... .... 0000 0001 = Length: 1
                 Number of Slotframes: 0
     FCS: 0xe22c (Correct)
@@ -4503,41 +4503,41 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
     Destination: 0xffff
     Source PAN: 0xabcd
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
-        MLME IE
+        MLME IE, TSCH Synchronization IE, TSCH Timeslot IE, Channel Hopping IE, Slotframe IE
             IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
-            Time Synchronization IE
-                Payload Sub IE (short): 0x1a06, Type: Short, Sub Id (Short): TSCH Synchronization IE
+            TSCH Synchronization IE
+                MLME Sub IE: 0x1a06, Type: Short, Sub ID: TSCH Synchronization IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1010 .... .... = Sub Id (Short): TSCH Synchronization IE (0x1a)
+                    .001 1010 .... .... = Sub ID: TSCH Synchronization IE (0x1a)
                     .... .... 0000 0110 = Length: 6
                 Absolute Slot Number: 5502
                 Join Metric: 0
             TSCH Timeslot IE
-                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                MLME Sub IE: 0x1c01, Type: Short, Sub ID: TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
+                    .001 1100 .... .... = Sub ID: TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
-                Data: 00
+                Timeslot ID: 0x00
             Channel Hopping IE
-                Payload Sub IE (long): 0xc801, Type: Long, Sub Id (Long): Channel Hopping IE
+                MLME Sub IE: 0xc801, Type: Long, Sub ID: Channel Hopping IE
                     1... .... .... .... = Type: Long (1)
-                    .100 1... .... .... = Sub Id (Long): Channel Hopping IE (0x9)
+                    .100 1... .... .... = Sub ID: Channel Hopping IE (0x9)
                     .... .000 0000 0001 = Length: 1
                 Hopping Sequence ID: 0x00
-            TSCH Slotframe and Link IE
-                Payload Sub IE (short): 0x1b01, Type: Short, Sub Id (Short): TSCH Slotframe and Link IE
+            Slotframe IE
+                MLME Sub IE: 0x1b01, Type: Short, Sub ID: TSCH Slotframe and Link IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1011 .... .... = Sub Id (Short): TSCH Slotframe and Link IE (0x1b)
+                    .001 1011 .... .... = Sub ID: TSCH Slotframe and Link IE (0x1b)
                     .... .... 0000 0001 = Length: 1
                 Number of Slotframes: 0
     FCS: 0x80c3 (Correct)
@@ -4576,41 +4576,41 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
     Destination: 0xffff
     Source PAN: 0xabcd
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
-        MLME IE
+        MLME IE, TSCH Synchronization IE, TSCH Timeslot IE, Channel Hopping IE, Slotframe IE
             IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
-            Time Synchronization IE
-                Payload Sub IE (short): 0x1a06, Type: Short, Sub Id (Short): TSCH Synchronization IE
+            TSCH Synchronization IE
+                MLME Sub IE: 0x1a06, Type: Short, Sub ID: TSCH Synchronization IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1010 .... .... = Sub Id (Short): TSCH Synchronization IE (0x1a)
+                    .001 1010 .... .... = Sub ID: TSCH Synchronization IE (0x1a)
                     .... .... 0000 0110 = Length: 6
                 Absolute Slot Number: 6986
                 Join Metric: 0
             TSCH Timeslot IE
-                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                MLME Sub IE: 0x1c01, Type: Short, Sub ID: TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
+                    .001 1100 .... .... = Sub ID: TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
-                Data: 00
+                Timeslot ID: 0x00
             Channel Hopping IE
-                Payload Sub IE (long): 0xc801, Type: Long, Sub Id (Long): Channel Hopping IE
+                MLME Sub IE: 0xc801, Type: Long, Sub ID: Channel Hopping IE
                     1... .... .... .... = Type: Long (1)
-                    .100 1... .... .... = Sub Id (Long): Channel Hopping IE (0x9)
+                    .100 1... .... .... = Sub ID: Channel Hopping IE (0x9)
                     .... .000 0000 0001 = Length: 1
                 Hopping Sequence ID: 0x00
-            TSCH Slotframe and Link IE
-                Payload Sub IE (short): 0x1b01, Type: Short, Sub Id (Short): TSCH Slotframe and Link IE
+            Slotframe IE
+                MLME Sub IE: 0x1b01, Type: Short, Sub ID: TSCH Slotframe and Link IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1011 .... .... = Sub Id (Short): TSCH Slotframe and Link IE (0x1b)
+                    .001 1011 .... .... = Sub ID: TSCH Slotframe and Link IE (0x1b)
                     .... .... 0000 0001 = Length: 1
                 Number of Slotframes: 0
     FCS: 0xa649 (Correct)
@@ -4649,41 +4649,41 @@ IEEE 802.15.4 Enhanced Beacon, Dst: Broadcast, Src: EquipTra_01:00:01:00:01
     Destination: 0xffff
     Source PAN: 0xabcd
     Extended Source: EquipTra_01:00:01:00:01 (00:01:00:01:00:01:00:01)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
     Payload IEs, MLME IE
-        MLME IE
+        MLME IE, TSCH Synchronization IE, TSCH Timeslot IE, Channel Hopping IE, Slotframe IE
             IE Header: 0x8811, Type: Payload, Id: MLME IE, Length: 17
                 1... .... .... .... = Type: Payload (1)
                 .000 1... .... .... = Id: MLME IE (0x1)
                 .... .000 0001 0001 = Length: 17
-            Time Synchronization IE
-                Payload Sub IE (short): 0x1a06, Type: Short, Sub Id (Short): TSCH Synchronization IE
+            TSCH Synchronization IE
+                MLME Sub IE: 0x1a06, Type: Short, Sub ID: TSCH Synchronization IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1010 .... .... = Sub Id (Short): TSCH Synchronization IE (0x1a)
+                    .001 1010 .... .... = Sub ID: TSCH Synchronization IE (0x1a)
                     .... .... 0000 0110 = Length: 6
                 Absolute Slot Number: 8519
                 Join Metric: 0
             TSCH Timeslot IE
-                IE Header: 0x1c01, Type: Short, Sub Id (Short): TSCH Timeslot IE
+                MLME Sub IE: 0x1c01, Type: Short, Sub ID: TSCH Timeslot IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1100 .... .... = Sub Id (Short): TSCH Timeslot IE (0x1c)
+                    .001 1100 .... .... = Sub ID: TSCH Timeslot IE (0x1c)
                     .... .... 0000 0001 = Length: 1
-                Data: 00
+                Timeslot ID: 0x00
             Channel Hopping IE
-                Payload Sub IE (long): 0xc801, Type: Long, Sub Id (Long): Channel Hopping IE
+                MLME Sub IE: 0xc801, Type: Long, Sub ID: Channel Hopping IE
                     1... .... .... .... = Type: Long (1)
-                    .100 1... .... .... = Sub Id (Long): Channel Hopping IE (0x9)
+                    .100 1... .... .... = Sub ID: Channel Hopping IE (0x9)
                     .... .000 0000 0001 = Length: 1
                 Hopping Sequence ID: 0x00
-            TSCH Slotframe and Link IE
-                Payload Sub IE (short): 0x1b01, Type: Short, Sub Id (Short): TSCH Slotframe and Link IE
+            Slotframe IE
+                MLME Sub IE: 0x1b01, Type: Short, Sub ID: TSCH Slotframe and Link IE
                     0... .... .... .... = Type: Short (0)
-                    .001 1011 .... .... = Sub Id (Short): TSCH Slotframe and Link IE (0x1b)
+                    .001 1011 .... .... = Sub ID: TSCH Slotframe and Link IE (0x1b)
                     .... .... 0000 0001 = Length: 1
                 Number of Slotframes: 0
     FCS: 0xf677 (Correct)

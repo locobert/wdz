@@ -24,8 +24,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -85,8 +85,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -112,7 +112,7 @@ IEEE 802.15.4 Data
                 .... .010 = Transfer Type: Non-last Fragment (0x2)
             Fragment Number: 0
             Total Frame Size: 1284
-            Multiplex ID: Unknown (0x0123)
+            Multiplex ID: 0x0123
             Upper-Layer Frame Fragment: 06 07 08 09 0a 0b
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
@@ -146,8 +146,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -205,8 +205,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -264,8 +264,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fac, Type: Header, Id: Unknown, Length: 44
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -321,8 +321,8 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Unknown IE 0xff, Header Termination 1 IE
-        Unsupported Header IE: 0xff
+    Header IEs, Unsupported Header IE, Header Termination 1 IE (Payload IEs follow)
+        Unsupported Header IE
             IE Header: 0x7fad, Type: Header, Id: Unknown, Length: 45
                 0... .... .... .... = Type: Header (0)
                 .111 1111 1... .... = Id: Unknown (0xff)
@@ -379,7 +379,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -451,7 +451,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -506,7 +506,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -561,7 +561,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -616,7 +616,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -672,7 +672,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -731,7 +731,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -923,7 +923,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -1046,7 +1046,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -1105,7 +1105,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -1228,7 +1228,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -1287,7 +1287,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -1410,7 +1410,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -1456,7 +1456,7 @@ Frame 20: 597 bytes on wire (4776 bits), 595 bytes captured (4760 bits)
     Capture Length: 595 bytes (4760 bits)
     [Frame is marked: False]
     [Frame is ignored: False]
-    [Protocols in frame [truncated]: wpan:eapol:ssl:pkcs-1:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:pkcs-1:x509ce:x509ce:x509ce:x509sat:x509sat:x509sat:ns_cert_exts:x509ce:x509ce:pkcs-1:pkcs-1:x509sat:x509sat:x509sat:x509sat:x509sat:x509]
+    [Protocols in frame [truncated]: wpan:eapol:ssl:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509ce:x509ce:x509ce:x509sat:x509sat:x509sat:ns_cert_exts:x509ce:x509ce:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509ce:x509ce:x509sat:x5]
 IEEE 802.15.4 Data
     Frame Control Field: 0x2301, Frame Type: Data, Sequence Number Suppression, Information Elements Present, Destination Addressing Mode: None, Frame Version: IEEE Std 802.15.4-2015, Source Addressing Mode: None
         .... .... .... .001 = Frame Type: Data (0x1)
@@ -1469,7 +1469,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -2067,7 +2067,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -2208,7 +2208,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -2267,7 +2267,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -2407,7 +2407,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -2453,7 +2453,7 @@ Frame 25: 961 bytes on wire (7688 bits), 959 bytes captured (7672 bits)
     Capture Length: 959 bytes (7672 bits)
     [Frame is marked: False]
     [Frame is ignored: False]
-    [Protocols in frame [truncated]: wpan:eapol:ssl:pkcs-1:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:pkcs-1:x509ce:x509ce:x509ce:x509sat:x509sat:x509sat:ns_cert_exts:x509ce:x509ce:pkcs-1:pkcs-1:x509sat:x509sat:x509sat:x509sat:x509sat:x509]
+    [Protocols in frame [truncated]: wpan:eapol:ssl:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509ce:x509ce:x509ce:x509sat:x509sat:x509sat:ns_cert_exts:x509ce:x509ce:x509sat:x509sat:x509sat:x509sat:x509sat:x509sat:x509ce:x509ce:x509sat:x5]
 IEEE 802.15.4 Data
     Frame Control Field: 0x2301, Frame Type: Data, Sequence Number Suppression, Information Elements Present, Destination Addressing Mode: None, Frame Version: IEEE Std 802.15.4-2015, Source Addressing Mode: None
         .... .... .... .001 = Frame Type: Data (0x1)
@@ -2466,7 +2466,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3030,7 +3030,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3105,7 +3105,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3164,7 +3164,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3217,7 +3217,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3238,6 +3238,7 @@ IEEE 802.15.4 Data
     Type: Key (3)
     Length: 117
     Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 1]
     Key Information: 0x008a
         .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
         .... .... .... 1... = Key Type: Pairwise Key
@@ -3259,10 +3260,10 @@ IEEE 802.15.4 Data
     WPA Key MIC: 00000000000000000000000000000000
     WPA Key Data Length: 22
     WPA Key Data: dd14000fac04a00ccdd228e9f59b29d5a28f4acc7a60
-        Tag: Vendor Specific: Ieee8021: RSN
+        Tag: Vendor Specific: IEEE 802.11: RSN
             Tag Number: Vendor Specific (221)
             Tag length: 20
-            OUI: 00-0f-ac (Ieee8021)
+            OUI: 00:0f:ac (IEEE 802.11)
             Vendor Specific OUI Type: 4
             RSN PMKID: a00ccdd228e9f59b29d5a28f4acc7a60
 
@@ -3302,7 +3303,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3323,6 +3324,7 @@ IEEE 802.15.4 Data
     Type: Key (3)
     Length: 117
     Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 2]
     Key Information: 0x010a
         .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
         .... .... .... 1... = Key Type: Pairwise Key
@@ -3348,18 +3350,18 @@ IEEE 802.15.4 Data
             Tag Number: RSN Information (48)
             Tag length: 20
             RSN Version: 1
-            Group Cipher Suite: 00-0f-ac (Ieee8021) AES (CCM)
-                Group Cipher Suite OUI: 00-0f-ac (Ieee8021)
+            Group Cipher Suite: 00:0f:ac (IEEE 802.11) AES (CCM)
+                Group Cipher Suite OUI: 00:0f:ac (IEEE 802.11)
                 Group Cipher Suite type: AES (CCM) (4)
             Pairwise Cipher Suite Count: 1
-            Pairwise Cipher Suite List 00-0f-ac (Ieee8021) AES (CCM)
-                Pairwise Cipher Suite: 00-0f-ac (Ieee8021) AES (CCM)
-                    Pairwise Cipher Suite OUI: 00-0f-ac (Ieee8021)
+            Pairwise Cipher Suite List 00:0f:ac (IEEE 802.11) AES (CCM)
+                Pairwise Cipher Suite: 00:0f:ac (IEEE 802.11) AES (CCM)
+                    Pairwise Cipher Suite OUI: 00:0f:ac (IEEE 802.11)
                     Pairwise Cipher Suite type: AES (CCM) (4)
             Auth Key Management (AKM) Suite Count: 1
-            Auth Key Management (AKM) List 00-0f-ac (Ieee8021) WPA
-                Auth Key Management (AKM) Suite: 00-0f-ac (Ieee8021) WPA
-                    Auth Key Management (AKM) OUI: 00-0f-ac (Ieee8021)
+            Auth Key Management (AKM) List 00:0f:ac (IEEE 802.11) WPA
+                Auth Key Management (AKM) Suite: 00:0f:ac (IEEE 802.11) WPA
+                    Auth Key Management (AKM) OUI: 00:0f:ac (IEEE 802.11)
                     Auth Key Management (AKM) type: WPA (1)
             RSN Capabilities: 0x0000
                 .... .... .... ...0 = RSN Pre-Auth capabilities: Transmitter does not support pre-authentication
@@ -3407,7 +3409,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3428,6 +3430,7 @@ IEEE 802.15.4 Data
     Type: Key (3)
     Length: 151
     Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 3]
     Key Information: 0x13ca
         .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
         .... .... .... 1... = Key Type: Pairwise Key
@@ -3488,7 +3491,7 @@ IEEE 802.15.4 Data
         .... 00.. .... .... = Destination Addressing Mode: None (0x0)
         ..10 .... .... .... = Frame Version: IEEE Std 802.15.4-2015 (2)
         00.. .... .... .... = Source Addressing Mode: None (0x0)
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
@@ -3509,6 +3512,7 @@ IEEE 802.15.4 Data
     Type: Key (3)
     Length: 95
     Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 4]
     Key Information: 0x030a
         .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
         .... .... .... 1... = Key Type: Pairwise Key

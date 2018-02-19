@@ -13,7 +13,7 @@ Frame 1: 66 bytes on wire (528 bits), 64 bytes captured (512 bits) on interface 
     Capture Length: 64 bytes (512 bits)
     [Frame is marked: False]
     [Frame is ignored: False]
-    [Protocols in frame: wpan]
+    [Protocols in frame: wpan:data]
 IEEE 802.15.4 Data, Src: 1e:af:fa:00:00:00:00:01
     Frame Control Field: 0xe309, Frame Type: Data, Security Enabled, Sequence Number Suppression, Information Elements Present, Destination Addressing Mode: None, Frame Version: IEEE Std 802.15.4-2015, Source Addressing Mode: Long/64-bit
         .... .... .... .001 = Frame Type: Data (0x1)
@@ -38,31 +38,22 @@ IEEE 802.15.4 Data, Src: 1e:af:fa:00:00:00:00:01
         Frame Counter: 1
         Key Identifier Field
             Key Index: 0x03
-    Header IEs, Header Termination 1 IE
+    Header IEs, Header Termination 1 IE (Payload IEs follow)
         Header Termination 1 IE (Payload IEs follow)
             IE Header: 0x3f00, Type: Header, Id: Header Termination 1 IE, Length: 0
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs, Unknown IE 0x0e
-        Unknown Payload IE: 0x0e
-            IE Header: 0xf022, Type: Payload, Id: Unknown, Length: 34
-                1... .... .... .... = Type: Payload (1)
-                .111 0... .... .... = Id: Unknown (0xe)
-                .... .000 0010 0010 = Length: 34
-            Unknown Content: 20 04 77 77 77 77 77 77 77 77 77 77 77 77 77 77 ...
-            [Expert Info (Warning/Protocol): Unsupported IE ID]
-                [Unsupported IE ID]
-                [Severity level: Warning]
-                [Group: Protocol]
+    [Expert Info (Warning/Undecoded): No encryption key set - can't decrypt]
+        [No encryption key set - can't decrypt]
+        [Severity level: Warning]
+        [Group: Undecoded]
+Data (44 bytes)
+    Data: b9153469e7d5b21fa48ece5c9a2a77eb1eb40e75275e0411...
+    [Length: 44]
 
-Frame (64 bytes):
 0000  09 e3 fe ca 01 00 00 00 00 fa af 1e 0e 01 00 00   ................
 0010  00 03 00 3f b9 15 34 69 e7 d5 b2 1f a4 8e ce 5c   ...?..4i.......\
 0020  9a 2a 77 eb 1e b4 0e 75 27 5e 04 11 30 cd a0 44   .*w....u'^..0..D
 0030  4c 89 66 3c 29 c3 d3 c8 c6 76 d1 cb 75 49 6a e6   L.f<)....v..uIj.
-Decrypted IEEE 802.15.4 payload (36 bytes):
-0000  22 f0 20 04 77 77 77 77 77 77 77 77 77 77 77 77   ". .wwwwwwwwwwww
-0010  77 77 77 77 77 77 77 77 77 77 77 77 77 77 77 77   wwwwwwwwwwwwwwww
-0020  77 77 77 77                                       wwww
 
