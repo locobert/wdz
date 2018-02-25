@@ -15,7 +15,7 @@
    15   0.000000              →              IEEE 802.15.4 57 Data
    16   0.000000              →              IEEE 802.15.4 57 Data
    17   0.000000              →              IEEE 802.15.4 58 Data
-   18   0.000000              →              IEEE 802.15.4 52 Data[Malformed Packet]
+   18   0.000000              →              IEEE 802.15.4 52 Data
    19   0.000000              →              IEEE 802.15.4 53 Data[Malformed Packet]
    20   0.000000              →              IEEE 802.15.4 55 Data
    21   0.000000              →              IEEE 802.15.4 79 Data

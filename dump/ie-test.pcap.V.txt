@@ -961,11 +961,9 @@ IEEE 802.15.4 Data
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs
-[Malformed Packet: IEEE 802.15.4]
-    [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
-        [Malformed Packet (Exception occurred)]
-        [Severity level: Error]
+    [Expert Info (Warning/Malformed): Payload IE indicated by Header Termination, but no Payload IE present]
+        [Payload IE indicated by Header Termination, but no Payload IE present]
+        [Severity level: Warning]
         [Group: Malformed]
 
 0000  01 23 ac 7f 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d   .#..------------
@@ -986,7 +984,7 @@ Frame 19: 53 bytes on wire (424 bits), 51 bytes captured (408 bits)
     Capture Length: 51 bytes (408 bits)
     [Frame is marked: False]
     [Frame is ignored: False]
-    [Protocols in frame: wpan]
+    [Protocols in frame: wpan:zbee_nwk]
 IEEE 802.15.4 Data
     Frame Control Field: 0x2301, Frame Type: Data, Sequence Number Suppression, Information Elements Present, Destination Addressing Mode: None, Frame Version: IEEE Std 802.15.4-2015, Source Addressing Mode: None
         .... .... .... .001 = Frame Type: Data (0x1)
@@ -1015,8 +1013,11 @@ IEEE 802.15.4 Data
                 0... .... .... .... = Type: Header (0)
                 .011 1111 0... .... = Id: Header Termination 1 IE (0x7e)
                 .... .... .000 0000 = Length: 0
-    Payload IEs
-[Malformed Packet: IEEE 802.15.4]
+    [Expert Info (Warning/Malformed): Payload IE indicated by Header Termination, but no Payload IE present]
+        [Payload IE indicated by Header Termination, but no Payload IE present]
+        [Severity level: Warning]
+        [Group: Malformed]
+[Malformed Packet: ZigBee]
     [Expert Info (Error/Malformed): Malformed Packet (Exception occurred)]
         [Malformed Packet (Exception occurred)]
         [Severity level: Error]
