@@ -1,0 +1,88 @@
+Frame 1: 32 bytes on wire (256 bits), 32 bytes captured (256 bits)
+    Encapsulation type: IEEE 802.15.4 Wireless PAN with FCS not present (127)
+    Arrival Time: Jan  1, 1970 01:00:00.000000000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 0.000000000 seconds
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.000000000 seconds]
+    Frame Number: 1
+    Frame Length: 32 bytes (256 bits)
+    Capture Length: 32 bytes (256 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: wpan:6lowpan:ipv6:udp:data]
+IEEE 802.15.4 Data, Dst: 0x010c, Src: 0x002a
+    Frame Control Field: 0x8861, Frame Type: Data, Acknowledge Request, PAN ID Compression, Destination Addressing Mode: Short/16-bit, Frame Version: IEEE Std 802.15.4-2003, Source Addressing Mode: Short/16-bit
+        .... .... .... .001 = Frame Type: Data (0x1)
+        .... .... .... 0... = Security Enabled: False
+        .... .... ...0 .... = Frame Pending: False
+        .... .... ..1. .... = Acknowledge Request: True
+        .... .... .1.. .... = PAN ID Compression: True
+        .... ...0 .... .... = Sequence Number Suppression: False
+        .... ..0. .... .... = Information Elements Present: False
+        .... 10.. .... .... = Destination Addressing Mode: Short/16-bit (0x2)
+        ..00 .... .... .... = Frame Version: IEEE Std 802.15.4-2003 (0)
+        10.. .... .... .... = Source Addressing Mode: Short/16-bit (0x2)
+    Sequence Number: 145
+    Destination PAN: 0x781d
+    Destination: 0x010c
+    Source: 0x002a
+6LoWPAN
+    IPHC Header
+        011. .... = Pattern: IP header compression (0x03)
+        ...1 1... .... .... = Traffic class and flow label: Version, traffic class, and flow label compressed (0x3)
+        .... .1.. .... .... = Next header: Compressed
+        .... ..00 .... .... = Hop limit: Inline (0x0)
+        .... .... 0... .... = Context identifier extension: False
+        .... .... .0.. .... = Source address compression: Stateless
+        .... .... ..11 .... = Source address mode: Compressed (0x0003)
+        .... .... .... 0... = Multicast address compression: False
+        .... .... .... .0.. = Destination address compression: Stateless
+        .... .... .... ..11 = Destination address mode: Compressed (0x0003)
+        [Source context: fe80::]
+        [Destination context: fe80::]
+    Hop limit: 4
+    Source: fe80::ff:fe00:2a
+    Destination: fe80::ff:fe00:10c
+    UDP header compression
+        1111 0... = Pattern: UDP compression header (0x1e)
+        .... .1.. = Checksum: Compressed
+        .... ..00 = Ports: Inline (0)
+    Source port: 291
+    Destination port: 39030
+Internet Protocol Version 6, Src: fe80::ff:fe00:2a, Dst: fe80::ff:fe00:10c
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... .... .... 0000 0000 0000 0000 0000 = Flow Label: 0x00000
+    Payload Length: 23
+    Next Header: UDP (17)
+    Hop Limit: 4
+    Source: fe80::ff:fe00:2a
+    Destination: fe80::ff:fe00:10c
+User Datagram Protocol, Src Port: 291, Dst Port: 39030
+    Source Port: 291
+    Destination Port: 39030
+    Length: 23
+    Checksum: 0 (Illegal)
+        [Expert Info (Error/Checksum): Illegal Checksum value (0)]
+            [Illegal Checksum value (0)]
+            [Severity level: Error]
+            [Group: Checksum]
+        [Checksum Status: Unknown]
+    [Stream index: 0]
+Data (15 bytes)
+    Data: 112233445566778899aabbccddeeff
+    [Length: 15]
+
+Frame (32 bytes):
+0000  61 88 91 1d 78 0c 01 2a 00 7c 33 04 f4 01 23 98   a...x..*.|3...#.
+0010  76 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff   v."3DUfw........
+Decompressed 6LoWPAN IPHC (63 bytes):
+0000  60 00 00 00 00 17 11 04 fe 80 00 00 00 00 00 00   `...............
+0010  00 00 00 ff fe 00 00 2a fe 80 00 00 00 00 00 00   .......*........
+0020  00 00 00 ff fe 00 01 0c 01 23 98 76 00 17 00 00   .........#.v....
+0030  11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff      ."3DUfw........
+
